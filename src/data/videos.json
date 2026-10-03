@@ -1,0 +1,1743 @@
+{
+ "CHE1013|General Chemistry I": [
+  {
+   "id": "oOVLkiBnq6o",
+   "t": "Quantum Numbers | What are the 4 Quantum Numbers? Chemistry",
+   "ch": "Najam Academy",
+   "len": "12:10"
+  },
+  {
+   "id": "KrXE_SzRoqw",
+   "t": "Quantum numbers | Electronic structure of atoms | Chemistry | Khan Academy",
+   "ch": "Khan Academy Organic Chemistry",
+   "len": "12:00"
+  },
+  {
+   "id": "NIwcDnFjj98",
+   "t": "Electron Configuration - Basic introduction",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "10:19"
+  }
+ ],
+ "CHE1013|Structure and Reactivity": [
+  {
+   "id": "yrvV85H737o",
+   "t": "Nucleophilic Substitution Reactions - SN1 and SN2 Mechanism, Organic Chemistry",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "17:54"
+  },
+  {
+   "id": "VpFGcpYgwy8",
+   "t": "Nucleophilic Substitution Reactions | SN1 Reaction and SN2 Reaction",
+   "ch": "Najam Academy",
+   "len": "8:03"
+  },
+  {
+   "id": "xoA1zMiCEB4",
+   "t": "Nucleophiles, Electrophiles, Leaving Groups, and the SN2 Reaction",
+   "ch": "Professor Dave Explains",
+   "len": "6:05"
+  }
+ ],
+ "CHE1013|Chemical Thermodynamics": [
+  {
+   "id": "8N1BxHgsoOw",
+   "t": "The Laws of Thermodynamics, Entropy, and Gibbs Free Energy",
+   "ch": "Professor Dave Explains",
+   "len": "8:12"
+  },
+  {
+   "id": "DWiCaDPM7Hk",
+   "t": "Second Law of Thermodynamics - Heat Energy, Entropy & Spontaneous Processes",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "4:11"
+  },
+  {
+   "id": "OjhZYx1FbhI",
+   "t": "16. Thermodynamics: Gibbs Free Energy and Entropy",
+   "ch": "MIT OpenCourseWare",
+   "len": "32:01"
+  }
+ ],
+ "CHE1023|General Chemistry II": [
+  {
+   "id": "iV-YnU6xGWU",
+   "t": "Molecular Orbital Theory (MO Theory) | 9.5 General Chemistry",
+   "ch": "Chad's Prep",
+   "len": "45:53"
+  },
+  {
+   "id": "wj4u5hM6QhI",
+   "t": "VSEPR Theory | Chemistry",
+   "ch": "Najam Academy",
+   "len": "14:04"
+  },
+  {
+   "id": "pdJeQUd2g_4",
+   "t": "Hybridization of Atomic Orbitals - Sigma & Pi Bonds - Sp Sp2 Sp3",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "10:55"
+  }
+ ],
+ "CHE1023|Kinetic Molecular Theory and Chemical Kinetics": [
+  {
+   "id": "jX4dEOFwaLQ",
+   "t": "Collision Theory - Arrhenius Equation & Activation Energy - Chemical Kinetics",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "31:50"
+  },
+  {
+   "id": "wYqQCojggyM",
+   "t": "Kinetics: Initial Rates and Integrated Rate Laws",
+   "ch": "Professor Dave Explains",
+   "len": "9:10"
+  },
+  {
+   "id": "ShzW1LoQgoc",
+   "t": "Reaction mechanism and rate law | Kinetics | AP Chemistry | Khan Academy",
+   "ch": "Khan Academy Organic Chemistry",
+   "len": "8:42"
+  }
+ ],
+ "CHE1023|Stereochemistry": [
+  {
+   "id": "yzfcrwJ37kI",
+   "t": "Stereochemistry - R S Configuration & Fischer Projections",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "27:42"
+  },
+  {
+   "id": "lf6hLBl6wxo",
+   "t": "Fischer Projection Stereochemistry How to find R and S configurations FAST: Chirality Vid 6",
+   "ch": "Leah4sci",
+   "len": "9:24"
+  },
+  {
+   "id": "rMsEuzT5t0s",
+   "t": "Cahn-Ingold-Prelog Convention (Determining R/S)",
+   "ch": "Professor Dave Explains",
+   "len": "11:12"
+  }
+ ],
+ "CHE1081|Laboratory Orientation": [
+  {
+   "id": "MEIXRLcC6RA",
+   "t": "General Lab Safety",
+   "ch": "Amoeba Sisters",
+   "len": "5:54"
+  },
+  {
+   "id": "VRWRmIEHr3A",
+   "t": "Lab Techniques & Safety: Crash Course Chemistry #21",
+   "ch": "CrashCourse",
+   "len": "9:03"
+  },
+  {
+   "id": "RwBUgVDeRqw",
+   "t": "Common Scientific Glassware and the Undergraduate Chemistry Laboratory",
+   "ch": "Professor Dave Explains",
+   "len": "16:22"
+  }
+ ],
+ "CHE1081|Qualitative Organic Analysis": [
+  {
+   "id": "dPXgUFDqSik",
+   "t": "Qualitative tests for organic functional groups – practical video | 16–18 years",
+   "ch": "Royal Society of Chemistry",
+   "len": "14:39"
+  },
+  {
+   "id": "m9jM8lWxrAE",
+   "t": "Functional Groups",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "20:20"
+  },
+  {
+   "id": "mxvB1xLmPI4",
+   "t": "Test for unsaturation : Organic qualitative analysis",
+   "ch": "vibzz lab",
+   "len": "3:44"
+  }
+ ],
+ "CHE1091|Quantitative Analysis": [
+  {
+   "id": "HJvALCcKYAc",
+   "t": "Acid Base Titration Problems, Basic Introduction, Calculations, Examples, Solution Stoichiometry",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "18:35"
+  },
+  {
+   "id": "d1XTOsnNlgg",
+   "t": "Acid–base titrations | Chemical reactions | AP Chemistry | Khan Academy",
+   "ch": "Khan Academy Organic Chemistry",
+   "len": "8:50"
+  },
+  {
+   "id": "ovx-Sro4NXM",
+   "t": "How To Do Titration Calculations | Chemical Calculations | Chemistry | FuseSchool",
+   "ch": "FuseSchool - Global Education",
+   "len": "5:13"
+  }
+ ],
+ "CHE1091|Qualitative Inorganic Analysis": [
+  {
+   "id": "nkXMrCm1xdU",
+   "t": "Salt Analysis Class 12 Practical",
+   "ch": "Najam Academy",
+   "len": "11:29"
+  },
+  {
+   "id": "yMChYvgTfkQ",
+   "t": "Salt Analysis Tricks for practical exams",
+   "ch": "Komali Mam",
+   "len": "13:45"
+  },
+  {
+   "id": "jltLlzZ6FqU",
+   "t": "Qualitative Analysis of Cations",
+   "ch": "chemistry edb",
+   "len": "7:37"
+  }
+ ],
+ "CHE2112|Trends in the Periodic Table": [
+  {
+   "id": "hePb00CqvP0",
+   "t": "The Periodic Table: Atomic Radius, Ionization Energy, and Electronegativity",
+   "ch": "Professor Dave Explains",
+   "len": "7:53"
+  },
+  {
+   "id": "2HZZXonSIRo",
+   "t": "Periodic Trends in Periodic Table | Mastering Periodic Trends in 14 Minutes | Chemistry Class 11",
+   "ch": "Najam Academy",
+   "len": "14:11"
+  },
+  {
+   "id": "1bpYfRFYBZ8",
+   "t": "Inert pair effect | The p-block elements | Inorganic Chemistry | Khan Academy",
+   "ch": "Khan Academy India - English",
+   "len": "7:48"
+  }
+ ],
+ "CHE2112|Coordination Chemistry": [
+  {
+   "id": "rNQUmESlb_A",
+   "t": "Crystal Field Theory | Easy Trick",
+   "ch": "Najam Academy",
+   "len": "15:32"
+  },
+  {
+   "id": "uhLp_ShMORM",
+   "t": "Worked example: Crystal field theory | Coordination compounds | Class 12 | Chemistry | Khan Academy",
+   "ch": "Khan Academy India - English",
+   "len": "8:26"
+  },
+  {
+   "id": "8lT21wKoXyQ",
+   "t": "Crystal Field Theory",
+   "ch": "Professor Dave Explains",
+   "len": "7:42"
+  }
+ ],
+ "CHE2112|Solid State Chemistry": [
+  {
+   "id": "R0sw85RkKCY",
+   "t": "18. Introduction to Crystallography (Intro to Solid-State Chemistry)",
+   "ch": "MIT OpenCourseWare",
+   "len": "48:06"
+  },
+  {
+   "id": "HCWwRh5CXYU",
+   "t": "Unit Cell Chemistry   Simple Cubic, Body Centered Cubic, Face Centered Cubic Crystal Lattice Structu",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "17:22"
+  },
+  {
+   "id": "s2iY1pMcyRc",
+   "t": "What are Bravais lattices? | Solids | Chemistry | Khan Academy",
+   "ch": "Khan Academy India - English",
+   "len": "14:42"
+  }
+ ],
+ "CHE2112|Molecular Symmetry": [
+  {
+   "id": "Zb1dZK8giGE",
+   "t": "Symmetry Elements of Molecules",
+   "ch": "Physical Chemistry",
+   "len": "17:50"
+  },
+  {
+   "id": "WukUvN721Ag",
+   "t": "Basics of GROUP THEORY (Part-1) | Understanding Symmetry Operations",
+   "ch": "All 'Bout Chemistry",
+   "len": "46:10"
+  },
+  {
+   "id": "d3MBw91iCzQ",
+   "t": "Symmetry in Chemistry: The Key to Unlocking Molecular Secrets!",
+   "ch": "RojasLab",
+   "len": "18:08"
+  }
+ ],
+ "CHE2122|Organometallic Chemistry": [
+  {
+   "id": "x4qDjP-1d2M",
+   "t": "The 18 Electron Rule for Transition Metal Complexes",
+   "ch": "Professor Dave Explains",
+   "len": "10:45"
+  },
+  {
+   "id": "SUji-XQVOeA",
+   "t": "18 electron rule for organometallic compounds|Organometallic chemistry|inorganic chemistry CSIR-NET",
+   "ch": "J Chemistry",
+   "len": "39:19"
+  },
+  {
+   "id": "gq0kX-M7alY",
+   "t": "6.11. Transition Metal Carbonyls and the Eighteen Electron Rule",
+   "ch": "Christopher Barile",
+   "len": "8:49"
+  }
+ ],
+ "CHE2122|Basic Radiochemistry": [
+  {
+   "id": "KWAsz59F8gA",
+   "t": "Nuclear Chemistry: Crash Course Chemistry #38",
+   "ch": "CrashCourse",
+   "len": "9:58"
+  },
+  {
+   "id": "WTQvfvoOF3g",
+   "t": "Half Life Chemistry Problems - Nuclear Radioactive Decay Calculations Practice Examples",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "18:02"
+  },
+  {
+   "id": "fES21E0qebw",
+   "t": "Nuclear Reactions, Radioactivity, Fission and Fusion",
+   "ch": "Professor Dave Explains",
+   "len": "14:12"
+  }
+ ],
+ "CHE2122|Chemistry of Transition Metals": [
+  {
+   "id": "3Tp2lfnA_UI",
+   "t": "Periodic Table Part 10: Transition Metals, Lanthanides and Actinides",
+   "ch": "Professor Dave Explains",
+   "len": "14:28"
+  },
+  {
+   "id": "Noh6m5A92wg",
+   "t": "Lanthanoid Contraction | Causes of Lanthanide Contraction | Class 12",
+   "ch": "Najam Academy",
+   "len": "8:30"
+  },
+  {
+   "id": "AxWQTXwtTVA",
+   "t": "Variation in atomic size | D and F block elements | Grade 12 | Chemistry | Khan Academy",
+   "ch": "Khan Academy India - English",
+   "len": "10:46"
+  }
+ ],
+ "CHE2181|Laboratory Manual": [
+  {
+   "id": "zKZfKVluFZw",
+   "t": "Chapter 12: EDTA Introduction | CHM 214 | 117",
+   "ch": "Jacob Stewart",
+   "len": "3:00"
+  },
+  {
+   "id": "hTy9JBllUVg",
+   "t": "Calcium-EDTA titration",
+   "ch": "crharrison",
+   "len": "3:04"
+  },
+  {
+   "id": "7i6sGH5Me6g",
+   "t": "Complexometric Titration with EDTA||Eriochrome Black-T||Metal ion Indicators||#Chemistrycubicle",
+   "ch": "Chemistry Cubicle",
+   "len": "10:01"
+  }
+ ],
+ "CHE2212|Organic Reaction Mechanisms I": [
+  {
+   "id": "LoU048BKMkk",
+   "t": "Claisen Condensation Reaction Mechanism",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "18:45"
+  },
+  {
+   "id": "sBuM8hTGlag",
+   "t": "Kinetic and thermodynamic enolates | Alpha Carbon Chemistry | Organic chemistry | Khan Academy",
+   "ch": "Khan Academy Organic Chemistry",
+   "len": "8:19"
+  },
+  {
+   "id": "gZ7pMORZ6U0",
+   "t": "Enols and Enolates - Reactivity, Halogenation, and Alkylation: Crash Course Organic Chemistry #43",
+   "ch": "CrashCourse",
+   "len": "12:20"
+  }
+ ],
+ "CHE2212|Introduction to Organic Synthesis": [
+  {
+   "id": "sjMsyk-rP8I",
+   "t": "Aldol condensation | Alpha Carbon Chemistry | Organic chemistry | Khan Academy",
+   "ch": "Khan Academy Organic Chemistry",
+   "len": "11:23"
+  },
+  {
+   "id": "ndanAqud8Ps",
+   "t": "Aldol Reactions | 21.5 Organic Chemistry",
+   "ch": "Chad's Prep",
+   "len": "32:18"
+  },
+  {
+   "id": "vGSVpd-VP0Y",
+   "t": "Aldol Condensation | Trick to Find Aldol Condensation",
+   "ch": "Najam Academy",
+   "len": "8:04"
+  }
+ ],
+ "CHE2212|Complete Notes": [
+  {
+   "id": "2seAPy1sZHE",
+   "t": "Aldehydes and Ketones",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "1:13:40"
+  },
+  {
+   "id": "632MAqIB14E",
+   "t": "Formation of hydrates | Aldehydes and ketones | Organic chemistry | Khan Academy",
+   "ch": "Khan Academy Organic Chemistry",
+   "len": "7:27"
+  },
+  {
+   "id": "3zYqM0aUwFg",
+   "t": "Nucleophilic Addition: Aldehydes vs Ketones | 19.3 Organic Chemistry",
+   "ch": "Chad's Prep",
+   "len": "13:17"
+  }
+ ],
+ "CHE2282|Spectroscopy I": [
+  {
+   "id": "WTmj_9VT5oE",
+   "t": "IR Spectroscopy - Basic Introduction",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "15:33"
+  },
+  {
+   "id": "xMa1BQ8z9C0",
+   "t": "IR Spectroscopy and Mass Spectrometry: Crash Course Organic Chemistry #5",
+   "ch": "CrashCourse",
+   "len": "13:51"
+  },
+  {
+   "id": "QSztChmDY44",
+   "t": "Spectroscopy Introduction: Using NMR, IR, and Mass Spec in Organic Chemistry",
+   "ch": "Leah4sci",
+   "len": "5:35"
+  }
+ ],
+ "CHE2282|Laboratory Techniques": [
+  {
+   "id": "7LBGQHjgHEw",
+   "t": "Recrystallization | MIT Digital Lab Techniques Manual",
+   "ch": "MIT OpenCourseWare",
+   "len": "19:35"
+  },
+  {
+   "id": "I4u_1ST7Ezk",
+   "t": "Thin Layer Chromatography (TLC)",
+   "ch": "Professor Dave Explains",
+   "len": "9:28"
+  },
+  {
+   "id": "esBgihsV02A",
+   "t": "Synthesis, Distillation, & Recrystallization: Crash Course Organic Chemistry #40",
+   "ch": "CrashCourse",
+   "len": "13:58"
+  }
+ ],
+ "CHE2313|Quantum Mechanics": [
+  {
+   "id": "S-_PFdnImLM",
+   "t": "5. Quantum Mechanics: Free Particle and Particle in 1D Box",
+   "ch": "MIT OpenCourseWare",
+   "len": "54:39"
+  },
+  {
+   "id": "uK60QAKooyM",
+   "t": "Quantum Chemistry 3.5 - Particle in a Box",
+   "ch": "TMP Chem",
+   "len": "7:59"
+  },
+  {
+   "id": "LBB39u8dNw0",
+   "t": "Particle in a Box Part 1: Solving the Schrödinger Equation",
+   "ch": "Professor Dave Explains",
+   "len": "16:35"
+  }
+ ],
+ "CHE2313|Atomic Structure and Atomic Spectra": [
+  {
+   "id": "mXxsT1ut35Q",
+   "t": "Bohr Model of the Hydrogen Atom, Electron Transitions, Atomic Energy Levels, Lyman & Balmer Series",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "21:44"
+  },
+  {
+   "id": "V-RPM3e8Ws0",
+   "t": "6. Hydrogen Atom Wavefunctions (Orbitals)",
+   "ch": "MIT OpenCourseWare",
+   "len": "1:00:39"
+  },
+  {
+   "id": "WUTgyBruBa8",
+   "t": "Quantum Chemistry 7.3 - Hydrogen Atom Radial Wavefunctions",
+   "ch": "TMP Chem",
+   "len": "9:28"
+  }
+ ],
+ "CHE2313|Molecular Properties and Spectroscopy": [
+  {
+   "id": "jZ0fnAxcpgU",
+   "t": "Rovibrational Spectroscopy",
+   "ch": "Physical Chemistry",
+   "len": "7:10"
+  },
+  {
+   "id": "a6knJv1dohA",
+   "t": "Vibrational plus Rotational Energy of Molecules",
+   "ch": "Andrey K",
+   "len": "6:31"
+  },
+  {
+   "id": "z2yb3MHcytQ",
+   "t": "Chapter 13: Rovibrational Spectroscopy, Part 1 | CHM 309 | 131",
+   "ch": "Jacob Stewart",
+   "len": "5:50"
+  }
+ ],
+ "CHE2313|Electrochemistry": [
+  {
+   "id": "ExoR98GwjSs",
+   "t": "Kohlrausch's law of independent migration | Electrochemistry | Chemistry | Khan Academy",
+   "ch": "Khan Academy India - English",
+   "len": "9:37"
+  },
+  {
+   "id": "jvcZoKyKVFw",
+   "t": "Kohlrausch's Law - Electrochemistry - Chemistry Class 12",
+   "ch": "Ekeeda",
+   "len": "10:31"
+  },
+  {
+   "id": "2ZuL7pWJLeo",
+   "t": "ELECTROCHEMISTRY NERNST EQUATION APPLICATION MOLAR CONDUCTIVITY KOHLRAUSCH LAW",
+   "ch": "Alchemy",
+   "len": "18:01"
+  }
+ ],
+ "CHE2332|Chemical Calculations": [
+  {
+   "id": "FIbpibkywmk",
+   "t": "Linear Approximation, Differentials, Tangent Line, Linearization, f(x), dy, dx - Calculus",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "54:42"
+  },
+  {
+   "id": "4VfJ0LJ79co",
+   "t": "What is the Arrhenius Equation?",
+   "ch": "Chemistry Student",
+   "len": "3:47"
+  },
+  {
+   "id": "9mf-b_fGrlE",
+   "t": "L28A Arrhenius plots",
+   "ch": "Emily Tsui",
+   "len": "9:03"
+  }
+ ],
+ "CHE2381|Laboratory Manual": [
+  {
+   "id": "JbEo46uV6d4",
+   "t": "Percent Error Made Easy!",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "6:26"
+  },
+  {
+   "id": "UUt7e_qpG-w",
+   "t": "Chapter 3: Propagation of Uncertainty | CHM 214 | 016",
+   "ch": "Jacob Stewart",
+   "len": "5:23"
+  },
+  {
+   "id": "o07Revm0DBc",
+   "t": "Error Propagation (basic)",
+   "ch": "Physical Chemistry (PChem)",
+   "len": "8:12"
+  }
+ ],
+ "CHE3112|Course Overview": [],
+ "CHE3112|Structural Chemistry": [
+  {
+   "id": "CZoYx_u4EOM",
+   "t": "Wade's Rules-Boranes-Carboranes-metal clusters-Closo-Nido-Arachno-Hypho-Klado-MSc Chemistry easy",
+   "ch": "AdiChemistry Aditya Vardhan",
+   "len": "15:23"
+  },
+  {
+   "id": "mLuyVwDdvy0",
+   "t": "Structure of metal Clusters|Wade nomenclature|Structure of boranes and carboranes|Organometallics",
+   "ch": "J Chemistry",
+   "len": "39:25"
+  },
+  {
+   "id": "XVYkHGQnr4I",
+   "t": "What is Wades Rules ? 🧪😊👍 | Boranes Carboranes Zintl Ions | Closo Nido Arachno Hypo",
+   "ch": "One Chemistry",
+   "len": "13:54"
+  }
+ ],
+ "CHE3112|Symmetry and Group Theory": [
+  {
+   "id": "swtTrTey1oU",
+   "t": "Quantum Chemistry 12.10 - Irreducible Representations",
+   "ch": "TMP Chem",
+   "len": "4:32"
+  },
+  {
+   "id": "Tl9m7smNpFE",
+   "t": "L4A Irreducible Representations",
+   "ch": "Emily Tsui",
+   "len": "8:39"
+  },
+  {
+   "id": "6UxtKxxOws8",
+   "t": "Solving a CHARACTER TABLE | Irreducible Representation | IR and RAMAN Active Modes",
+   "ch": "All 'Bout Chemistry",
+   "len": "30:01"
+  }
+ ],
+ "CHE3112|Diffraction Methods": [
+  {
+   "id": "QHMzFUo0NL8",
+   "t": "What is X-ray Diffraction?",
+   "ch": "Bruker",
+   "len": "4:08"
+  },
+  {
+   "id": "Tj3Hpf_HMk4",
+   "t": "Student Video: Real and Reciprocal Space in 2D and 3D",
+   "ch": "MIT OpenCourseWare",
+   "len": "7:18"
+  },
+  {
+   "id": "KeefgQdjVqs",
+   "t": "Intro to X-ray Diffraction - Chapter 2 - Part 5 - Building Reciprocal Space",
+   "ch": "IAMM Diffraction Facility",
+   "len": "31:28"
+  }
+ ],
+ "CHE3122|Advanced Coordination Chemistry": [
+  {
+   "id": "dhARbw8cdDE",
+   "t": "Quantum Chemistry 9.14 - Atomic Term Symbols",
+   "ch": "TMP Chem",
+   "len": "5:08"
+  },
+  {
+   "id": "gvgdBUYb0YQ",
+   "t": "Tanabe Sugano Diagram",
+   "ch": "nptelhrd",
+   "len": "56:38"
+  },
+  {
+   "id": "9tOg5oX37Ns",
+   "t": "8.12. Using Tanabe Sugano Diagrams",
+   "ch": "Christopher Barile",
+   "len": "8:36"
+  }
+ ],
+ "CHE3122|Resonance Spectroscopic Methods": [
+  {
+   "id": "b-x1KG0WbOg",
+   "t": "What is Electron Paramagnetic Resonance (EPR) and What It Can Do for You?",
+   "ch": "Bruker",
+   "len": "3:52"
+  },
+  {
+   "id": "FKNywR_ELMI",
+   "t": "EPR/ESR Spectroscopy Inorganic chemistry (Part-2)|Electron spin resonance Spectroscopy for CSIR-NET",
+   "ch": "J Chemistry",
+   "len": "31:49"
+  },
+  {
+   "id": "9zimhww51WI",
+   "t": "All About Mossbauer Spectroscopy || everything expained in a single video",
+   "ch": "All 'Bout Chemistry",
+   "len": "40:32"
+  }
+ ],
+ "CHE3192|Experiments": [
+  {
+   "id": "QHMzFUo0NL8",
+   "t": "What is X-ray Diffraction?",
+   "ch": "Bruker",
+   "len": "4:08"
+  },
+  {
+   "id": "dASaENblC_4",
+   "t": "HighScore Plus Tutorial - Phase Identification X-ray Diffraction - Long Version - JIAM Diffraction",
+   "ch": "IAMM Diffraction Facility",
+   "len": "15:18"
+  },
+  {
+   "id": "6IzrOWIw3zQ",
+   "t": "XRD X-ray diffraction worked example problem",
+   "ch": "Taylor Sparks",
+   "len": "9:00"
+  }
+ ],
+ "CHE3212|Organic Reaction Mechanisms II": [
+  {
+   "id": "u3jbkE4lWAE",
+   "t": "Electrocyclic Reactions | 16.7 Organic Chemistry",
+   "ch": "Chad's Prep",
+   "len": "22:33"
+  },
+  {
+   "id": "kZ1km9xLfaU",
+   "t": "Pericyclic Reactions Part 1: Revisiting the Diels-Alder Reaction",
+   "ch": "Professor Dave Explains",
+   "len": "10:14"
+  },
+  {
+   "id": "wO8remduYTU",
+   "t": "Electrocyclic Reactions | Organic Chemistry Lessons",
+   "ch": "Total Organic Chemistry",
+   "len": "13:53"
+  }
+ ],
+ "CHE3212|Organic Synthesis II": [
+  {
+   "id": "uqF5JoU-YRQ",
+   "t": "Retrosynthetic Analysis",
+   "ch": "Professor Dave Explains",
+   "len": "8:36"
+  },
+  {
+   "id": "cKTwIwVGbzY",
+   "t": "Retrosynthetic Analysis: Basic concepts",
+   "ch": "ChemWis",
+   "len": "22:02"
+  },
+  {
+   "id": "2I5vmNkYTOk",
+   "t": "Retrosynthesis Organic Chemistry MSc Chemistry |Disconnection Approach |Reductive Amination|Umpolung",
+   "ch": "J Chemistry Team",
+   "len": "1:31:51"
+  }
+ ],
+ "CHE3222|Conformational Analysis": [
+  {
+   "id": "RXU_32X1oFI",
+   "t": "Chair Conformation and Ring Flips",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "24:40"
+  },
+  {
+   "id": "A1rl3c8lVsk",
+   "t": "How to Draw Cyclohexane Chair Conformations and Ring Flips",
+   "ch": "Leah4sci",
+   "len": "13:53"
+  },
+  {
+   "id": "Q1juDisOImE",
+   "t": "Chair Conformations Examples",
+   "ch": "Andrey K",
+   "len": "5:55"
+  }
+ ],
+ "CHE3222|Spectroscopy II": [
+  {
+   "id": "q-EF8iMtIXc",
+   "t": "12.04 Two-dimensional NMR Spectroscopy",
+   "ch": "Michael Evans",
+   "len": "7:32"
+  },
+  {
+   "id": "RtBviEyWWFo",
+   "t": "2D NMR Analysis - H-H COSY NMR",
+   "ch": "Tony St John",
+   "len": "9:07"
+  },
+  {
+   "id": "pH_B5KLDAx4",
+   "t": "2D NMR Spectroscopy: COSY, HSQC (HMQC) and HMBC",
+   "ch": "Danny Allwood",
+   "len": "22:44"
+  }
+ ],
+ "CHE3232|Biomolecules": [
+  {
+   "id": "CyvpoSRMp_c",
+   "t": "Mutarotation of Carbohydrates",
+   "ch": "Andrey K",
+   "len": "9:11"
+  },
+  {
+   "id": "FTK_X7ZmteQ",
+   "t": "16.05 Anomers, Mutarotation, and the Anomeric Effect",
+   "ch": "Michael Evans",
+   "len": "9:22"
+  },
+  {
+   "id": "-CB3Sxogptk",
+   "t": "Anomeric effect",
+   "ch": "ChemWis",
+   "len": "4:27"
+  }
+ ],
+ "CHE3232|Heterocycles": [
+  {
+   "id": "6b2gZA70xxg",
+   "t": "Heterocycles Part 1: Furan, Thiophene, and Pyrrole",
+   "ch": "Professor Dave Explains",
+   "len": "7:30"
+  },
+  {
+   "id": "_KCABUyyz6g",
+   "t": "Aromatic Compounds & Heterocycles - Nucleophilic & Electrophilic Aromatic Substitution Reactions",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "31:28"
+  },
+  {
+   "id": "dsQttwQXYD8",
+   "t": "Aromaticity of Charged and Heterocyclic Compounds",
+   "ch": "Leah4sci",
+   "len": "14:05"
+  }
+ ],
+ "CHE3292|Advanced Organic Laboratory": [
+  {
+   "id": "IGC5J_7gkKg",
+   "t": "Synthesis and Column Chromatography: Crash Course Organic Chemistry #25",
+   "ch": "CrashCourse",
+   "len": "11:37"
+  },
+  {
+   "id": "UmWMlKJAdSk",
+   "t": "Column chromatography | Chemistry",
+   "ch": "Royal Society of Chemistry",
+   "len": "6:05"
+  },
+  {
+   "id": "yig3QCfBTzc",
+   "t": "Column Chromatography",
+   "ch": "Professor Dave Explains",
+   "len": "11:48"
+  }
+ ],
+ "CHE3303|Quantum Mechanics": [
+  {
+   "id": "FhlgBzbuIxk",
+   "t": "Computational Chemistry 4.14 - Hartree-Fock Approximation",
+   "ch": "TMP Chem",
+   "len": "6:00"
+  },
+  {
+   "id": "UVkTuOwfOh0",
+   "t": "Mod-01 Lec-20 Hartree-Fock Self-Consistent Field formalism - 1",
+   "ch": "nptelhrd",
+   "len": "53:42"
+  },
+  {
+   "id": "tynrbLftRN8",
+   "t": "Week 7 : Lecture 46 : Hartree-Fock perturbation theory (contd.)",
+   "ch": "NPTEL IIT Bombay",
+   "len": "38:31"
+  }
+ ],
+ "CHE3303|Advanced Molecular Spectroscopy": [
+  {
+   "id": "jZ0fnAxcpgU",
+   "t": "Rovibrational Spectroscopy",
+   "ch": "Physical Chemistry",
+   "len": "7:10"
+  },
+  {
+   "id": "z2yb3MHcytQ",
+   "t": "Chapter 13: Rovibrational Spectroscopy, Part 1 | CHM 309 | 131",
+   "ch": "Jacob Stewart",
+   "len": "5:50"
+  },
+  {
+   "id": "MqjNSub1erA",
+   "t": "Franck Condon Principle || ELECTRONIC SPECTROSCOPY || VIBRATIONAL SPECTROSCOPY",
+   "ch": "Chemistry Untold",
+   "len": "28:45"
+  }
+ ],
+ "CHE3303|Statistical Thermodynamics": [
+  {
+   "id": "ws3RZCvWCD8",
+   "t": "Chemical Thermodynamics 2.3 - Partition Function",
+   "ch": "TMP Chem",
+   "len": "5:03"
+  },
+  {
+   "id": "3UzScU3Jguw",
+   "t": "Partition Function",
+   "ch": "Physical Chemistry",
+   "len": "14:15"
+  },
+  {
+   "id": "IaQdiZ4nt3s",
+   "t": "Partition function statistical mechanics| Partition function statistical thermodynamics| J Chemistry",
+   "ch": "J Chemistry",
+   "len": "31:43"
+  }
+ ],
+ "CHE3313|Advanced Thermodynamics": [
+  {
+   "id": "f3W7gVGVOi8",
+   "t": "Chemical Thermodynamics 6.4 - Maxwell Relations 1: Concept",
+   "ch": "TMP Chem",
+   "len": "5:11"
+  },
+  {
+   "id": "sgeER2QsX_o",
+   "t": "Maxwell Relations",
+   "ch": "Physical Chemistry",
+   "len": "6:52"
+  },
+  {
+   "id": "jg0WCr6y9gI",
+   "t": "Maxwell Relations",
+   "ch": "LearnChemE",
+   "len": "4:56"
+  }
+ ],
+ "CHE3313|Phase Equilibria": [
+  {
+   "id": "QrHlwgmMTq4",
+   "t": "Phase Diagrams of Water & CO2 Explained -  Chemistry - Melting, Boiling & Critical Point",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "10:28"
+  },
+  {
+   "id": "aesNbQv_cNA",
+   "t": "Using the lever rule in a phase diagram to determine phase fraction",
+   "ch": "Taylor Sparks",
+   "len": "5:12"
+  },
+  {
+   "id": "dBoF_9ParfA",
+   "t": "Binary Phase Diagram (Txy and xy)",
+   "ch": "LearnChemE",
+   "len": "10:07"
+  }
+ ],
+ "CHE3313|Surface and Colloid Chemistry": [
+  {
+   "id": "sPtsmeUKDa0",
+   "t": "Langmuir Isotherm Introduction",
+   "ch": "LearnChemE",
+   "len": "4:40"
+  },
+  {
+   "id": "q8Eu5Gntsuc",
+   "t": "Adsorption",
+   "ch": "Physical Chemistry",
+   "len": "12:17"
+  },
+  {
+   "id": "Dj0jGX7ytB8",
+   "t": "Surface Chemistry | Single Shot Videos | Adsorption & Isotherms | CSIR NET | GATE | IIT-JAM",
+   "ch": "All 'Bout Chemistry",
+   "len": "20:47"
+  }
+ ],
+ "CHE3313|Kinetics": [
+  {
+   "id": "4eLjRcHnMCk",
+   "t": "Biochemistry | Michaelis-Menten Equation",
+   "ch": "Ninja Nerd",
+   "len": "22:54"
+  },
+  {
+   "id": "iy6sqn3ELHg",
+   "t": "Chemical Kinetics 3.4 - Steady-State Approximation",
+   "ch": "TMP Chem",
+   "len": "6:11"
+  },
+  {
+   "id": "RBH2RVDrJYI",
+   "t": "R2. Pre-Steady State and Steady-State Kinetic Methods Applied to Translation",
+   "ch": "MIT OpenCourseWare",
+   "len": "53:57"
+  }
+ ],
+ "CHE3313|Polymer Chemistry": [
+  {
+   "id": "vhw61pmRhio",
+   "t": "Step-growth and Chain-growth Polymerizations",
+   "ch": "Michael Evans",
+   "len": "10:53"
+  },
+  {
+   "id": "tsOIpfD_3ws",
+   "t": "Step-Growth Polymerization",
+   "ch": "LearnChemE",
+   "len": "3:13"
+  },
+  {
+   "id": "J_3WeFi9oxs",
+   "t": "Step Growth Polymerization - The Basics",
+   "ch": "Michael Kelly",
+   "len": "4:27"
+  }
+ ],
+ "CHE3392|Laboratory Manual": [
+  {
+   "id": "q6qISqX8Ljk",
+   "t": "Kinetics Study on the Reaction between Sodium Thiosulphate and Hydrochloric Acid - MeitY OLabs",
+   "ch": "amritacreate",
+   "len": "5:44"
+  },
+  {
+   "id": "RXQkvlv3yXs",
+   "t": "Determination of reaction rate, order and molecularity of ethylacetate hydrolysis",
+   "ch": "EC LAB Videos",
+   "len": "14:54"
+  },
+  {
+   "id": "6mKiiObTsXU",
+   "t": "Spectrophotometric Determination of a Reaction Rate",
+   "ch": "acr92651",
+   "len": "5:02"
+  }
+ ],
+ "CHE3413|Analytical Calculations": [
+  {
+   "id": "zJ8e_wAWUzE",
+   "t": "Hypothesis Testing Problems - Z Test & T Statistics - One & Two Tailed Tests   2",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "13:34"
+  },
+  {
+   "id": "BlS11D2VL_U",
+   "t": "t-test in Microsoft Excel",
+   "ch": "Jim Grange",
+   "len": "5:19"
+  },
+  {
+   "id": "q0ckcKsSPXU",
+   "t": "How To Perform T-Tests In Microsoft Excel",
+   "ch": "Steven Bradburn",
+   "len": "3:42"
+  }
+ ],
+ "CHE3413|Analytical Spectrophotometry": [
+  {
+   "id": "tdkH1F9ny3Q",
+   "t": "Quickly Understand Atomic Absorption Spectroscopy (AAS)",
+   "ch": "Lucas Learns",
+   "len": "3:05"
+  },
+  {
+   "id": "nGNGuWtt90A",
+   "t": "How Atomic Absorption Spectroscopy (AAS) Works? (Animation Explain) @PhysicsMaterialsScienceandNano",
+   "ch": "Physics, Materials Science and Nano Lecture Series",
+   "len": "3:57"
+  },
+  {
+   "id": "L3OFSJ8ZHog",
+   "t": "How the AAS works",
+   "ch": "VSSEC",
+   "len": "4:20"
+  }
+ ],
+ "CHE3413|Separation Methods": [
+  {
+   "id": "2kL2BoPZ6eA",
+   "t": "Van deemter equation",
+   "ch": "Shomu's Biology",
+   "len": "8:23"
+  },
+  {
+   "id": "FOjEH4VoTxE",
+   "t": "Plate theory, Rate theory, van Deemter equation, HETP, Theories of Chromatography.",
+   "ch": "Pallavi's Pharma Tuition",
+   "len": "23:43"
+  },
+  {
+   "id": "4LfEh54hXe4",
+   "t": "Separations: The Van Deemter Equation",
+   "ch": "David Tompkins",
+   "len": "44:36"
+  }
+ ],
+ "CHE3413|Electroanalytical Chemistry": [
+  {
+   "id": "8CudRJjsrhU",
+   "t": "L23C Cyclic Voltammetry",
+   "ch": "Emily Tsui",
+   "len": "11:24"
+  },
+  {
+   "id": "WaJo1Hb3ujY",
+   "t": "4. How to Interpret Cyclic Voltammograms",
+   "ch": "Christopher Barile",
+   "len": "12:14"
+  },
+  {
+   "id": "cz67DnyS9-w",
+   "t": "Introduction to Cyclic Voltammetry",
+   "ch": "Pine Research Instrumentation, Inc.",
+   "len": "13:35"
+  }
+ ],
+ "CHE3512|Enzymology": [
+  {
+   "id": "4eLjRcHnMCk",
+   "t": "Biochemistry | Michaelis-Menten Equation",
+   "ch": "Ninja Nerd",
+   "len": "22:54"
+  },
+  {
+   "id": "6EDBlowVST0",
+   "t": "Enzyme Examples, Cofactors/Coenzymes, Inhibitors, and Feedback Inhibition",
+   "ch": "Amoeba Sisters",
+   "len": "8:16"
+  },
+  {
+   "id": "CotD9m8Wm78",
+   "t": "Michaelis-Menten Equation & Enzyme Kinetics - Biochemistry Series",
+   "ch": "Medicosis Perfectionalis",
+   "len": "18:30"
+  }
+ ],
+ "CHE3512|Metabolic Pathways and Control": [
+  {
+   "id": "eJ9Zjc-jdys",
+   "t": "Cellular Respiration (UPDATED)",
+   "ch": "Amoeba Sisters",
+   "len": "8:47"
+  },
+  {
+   "id": "gggC9vctvBQ",
+   "t": "Metabolism | Glycolysis",
+   "ch": "Ninja Nerd",
+   "len": "34:33"
+  },
+  {
+   "id": "Ge_uJ3iRDCE",
+   "t": "Introduction to Citric Acid Cycle",
+   "ch": "Andrey K",
+   "len": "15:49"
+  }
+ ],
+ "CHE3712|Industrial Inorganic Chemistry": [
+  {
+   "id": "x7OWWw39eEY",
+   "t": "Week 2-Lecture 5 : Ellingham Diagram",
+   "ch": "NPTEL IIT Bombay",
+   "len": "31:50"
+  },
+  {
+   "id": "7p9v27ICp-I",
+   "t": "Ellingham Diagram || HSC || Metallurgy ||",
+   "ch": "Chemistry Untold",
+   "len": "22:47"
+  },
+  {
+   "id": "LL3RXm8Y17g",
+   "t": "Trick for Ellingham Diagram | Metallurgy | Class 12 Chemistry",
+   "ch": "Komali Mam",
+   "len": "15:49"
+  }
+ ],
+ "CHE3712|Industrial Organic Chemistry": [
+  {
+   "id": "MVFzSDxE0aI",
+   "t": "How Does Crude Oil Refining Work? Unveiling the History and Oil Refinement Processes",
+   "ch": "History of Simple Things",
+   "len": "9:02"
+  },
+  {
+   "id": "GYRwWyG3Qqw",
+   "t": "An Overview of the Refining Process",
+   "ch": "The American Petroleum Institute",
+   "len": "4:26"
+  },
+  {
+   "id": "JCJ04-kKL0U",
+   "t": "How is Gasoline Made from Crude Oil? The Petroleum Refining Process Simplified!",
+   "ch": "Kimray Inc",
+   "len": "3:45"
+  }
+ ],
+ "CHE3712|Industrial Physical Chemistry": [
+  {
+   "id": "N_HQGiC9OJE",
+   "t": "Electrolysis of Brine | Reactions | Chemistry | FuseSchool",
+   "ch": "FuseSchool - Global Education",
+   "len": "4:58"
+  },
+  {
+   "id": "262KtcqcbPI",
+   "t": "Electrochemistry Gr 12 :The Chlor Alkai Industry",
+   "ch": "Kevinmathscience",
+   "len": "7:10"
+  },
+  {
+   "id": "ueeHNwL5lSE",
+   "t": "The Chloralkali Industry: Applications of Electrolysis",
+   "ch": "Mindset",
+   "len": "14:35"
+  }
+ ],
+ "CHE3812|Digital Electronics and Interfacing": [
+  {
+   "id": "gI-qXk7XojA",
+   "t": "Boolean Logic & Logic Gates: Crash Course Computer Science #3",
+   "ch": "CrashCourse",
+   "len": "10:07"
+  },
+  {
+   "id": "JQBRzsPhw2w",
+   "t": "Logic Gates, Truth Tables, Boolean Algebra   AND, OR, NOT, NAND & NOR",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "54:07"
+  },
+  {
+   "id": "EW_2MhFu7tE",
+   "t": "Logic Gates | Boolean Algebra | Types of Logic Gates | AND, OR, NOT, NOR, NAND",
+   "ch": "Najam Academy",
+   "len": "21:38"
+  }
+ ],
+ "CHE3812|Computational Chemistry": [
+  {
+   "id": "Zn-0jNJ9ZuY",
+   "t": "Computational Chemistry 2.2 - Molecular Mechanics",
+   "ch": "TMP Chem",
+   "len": "6:12"
+  },
+  {
+   "id": "eDGzAEwGBvY",
+   "t": "Molecular Mechanics Modelling in Computational Chemistry",
+   "ch": "Mohsin Cyanide",
+   "len": "5:37"
+  },
+  {
+   "id": "lLFEqKl3sm4",
+   "t": "An Introduction to Molecular Dynamics",
+   "ch": "science4all",
+   "len": "4:12"
+  }
+ ],
+ "CHE3491|Laboratory Notes": [
+  {
+   "id": "td7rovVi168",
+   "t": "Introduction to HPLC - Lecture 1: HPLC Basics",
+   "ch": "ChemComplete",
+   "len": "30:12"
+  },
+  {
+   "id": "ZN7euA1fS4Y",
+   "t": "HPLC | High performance liquid chromatography",
+   "ch": "Quick Biochemistry Basics",
+   "len": "6:54"
+  },
+  {
+   "id": "fDD_rD032Lc",
+   "t": "HPLC chromatography",
+   "ch": "Shomu's Biology",
+   "len": "16:29"
+  }
+ ],
+ "CHE4112|Diffraction Methods": [
+  {
+   "id": "-psMzD-Z1ws",
+   "t": "Theory of Structure Factor",
+   "ch": "NPTEL-NOC IITM",
+   "len": "29:46"
+  },
+  {
+   "id": "JiE61eGGLEo",
+   "t": "Grouping matter by symmetry: Point Groups, Space Groups, and Crystal Systems",
+   "ch": "Taylor Sparks",
+   "len": "22:46"
+  },
+  {
+   "id": "Zys6-ZilUtI",
+   "t": "Diffraction Lecture 7: Space Group Symmetry Part 1",
+   "ch": "Pat's Perovskites",
+   "len": "27:33"
+  }
+ ],
+ "CHE4112|Advanced Radiochemistry": [
+  {
+   "id": "7zyi6mVgwBE",
+   "t": "Week 7: Lecture 33",
+   "ch": "NPTEL IIT Bombay",
+   "len": "33:09"
+  },
+  {
+   "id": "RKyIm-o30GE",
+   "t": "Amateur nuclear physics: neutron activation of gold",
+   "ch": "Carl Willis",
+   "len": "10:45"
+  },
+  {
+   "id": "KiOzQ-K0gEQ",
+   "t": "Methods series - Neutron Activation Analysis",
+   "ch": "Neutron MuonEu",
+   "len": "4:19"
+  }
+ ],
+ "CHE4122|Advanced Organometallic Chemistry": [
+  {
+   "id": "04XP1WlGcuE",
+   "t": "Wilkinson's catalyst-hydrogenation-applications-structure-reactions-AdiChemistry",
+   "ch": "AdiChemistry Aditya Vardhan",
+   "len": "4:19"
+  },
+  {
+   "id": "ILh2oUjRKaI",
+   "t": "22 29 Hydroformylation",
+   "ch": "Physical Chemistry (PChem)",
+   "len": "6:54"
+  },
+  {
+   "id": "aIkx5OtXZl4",
+   "t": "Week 12-Lecture 56",
+   "ch": "NPTEL IIT Bombay",
+   "len": "29:30"
+  }
+ ],
+ "CHE4122|Reaction Mechanisms in Inorganic Chemistry": [
+  {
+   "id": "h_o3O01gVyA",
+   "t": "5.6 Marcus Theory I",
+   "ch": "Michael Evans",
+   "len": "8:32"
+  },
+  {
+   "id": "r7qHWnoB-lg",
+   "t": "6.24. Outer Sphere Electron Transfer",
+   "ch": "Christopher Barile",
+   "len": "5:49"
+  },
+  {
+   "id": "kDJA92cNuuM",
+   "t": "21 12 Outer-Sphere Mechanism Marcus Theory",
+   "ch": "Physical Chemistry (PChem)",
+   "len": "23:47"
+  }
+ ],
+ "CHE4132|Advanced Materials": [
+  {
+   "id": "LMSTMBX_2F4",
+   "t": "32. Polymers I (Intro to Solid-State Chemistry)",
+   "ch": "MIT OpenCourseWare",
+   "len": "47:30"
+  },
+  {
+   "id": "0W1AaUaCZIU",
+   "t": "Lecture 16 Intrinsic Defects",
+   "ch": "Pat's Perovskites",
+   "len": "12:49"
+  },
+  {
+   "id": "QaC-phLCXQw",
+   "t": "Defects in Solids [Complete] in 25 minutes | Solid State",
+   "ch": "PLAY Chemistry",
+   "len": "25:28"
+  }
+ ],
+ "CHE4213|Physical Organic Chemistry": [
+  {
+   "id": "VlT4qkQ64hQ",
+   "t": "Isotope Effect",
+   "ch": "Physical Chemistry",
+   "len": "13:06"
+  },
+  {
+   "id": "2XFGLS52deA",
+   "t": "Hammett Equation",
+   "ch": "ChemWis",
+   "len": "27:55"
+  },
+  {
+   "id": "Lk66AsSJ-pA",
+   "t": "Kinetic Isotope Effect - Reaction Mechanism •MSc 1sem ORGANIC• #Notes @itschemistrytime",
+   "ch": "It's chemistry time",
+   "len": "29:45"
+  }
+ ],
+ "CHE4213|Advanced Stereochemistry": [
+  {
+   "id": "dcXKS9KqwWk",
+   "t": "Evans Aldol reaction|Asymmetric synthesis|Chiral auxiliaries in asymmetric synthesis|Carruthers",
+   "ch": "J Chemistry",
+   "len": "40:07"
+  },
+  {
+   "id": "fLXyKLVd6Hc",
+   "t": "Asymmetric Synthesis Chapter 41",
+   "ch": "Chemistry unplugged",
+   "len": "35:07"
+  },
+  {
+   "id": "-RudTMdOzoU",
+   "t": "Felkin-Anh & Cram Chelate",
+   "ch": "Josh Osbourn",
+   "len": "18:55"
+  }
+ ],
+ "CHE4213|Problem Solving": [
+  {
+   "id": "I85LgmfkJ0o",
+   "t": "Organic Chemistry Synthesis Reactions - Examples and Practice Problems - Retrosynthesis",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "51:14"
+  },
+  {
+   "id": "09LLJFXQaYM",
+   "t": "Organic Synthesis with Alcohols | 12.9 Organic Chemistry",
+   "ch": "Chad's Prep",
+   "len": "17:04"
+  },
+  {
+   "id": "AVGp7u4-y1Q",
+   "t": "Synthesis & Multi-Step Reactions Finals Practice [LIVE Recording] Organic Chemistry Review",
+   "ch": "Leah4sci",
+   "len": "1:08:42"
+  }
+ ],
+ "CHE4312|Advanced Electrochemistry": [
+  {
+   "id": "8LJDs-0QJFU",
+   "t": "Lec 37: Butler-Volmer and Taffel Equation-III",
+   "ch": "IIT Roorkee July 2018",
+   "len": "34:14"
+  },
+  {
+   "id": "zcMTU8SgSc4",
+   "t": "Further Physical Chemistry: Electrochemistry session 8",
+   "ch": "Andrew McKinley",
+   "len": "15:41"
+  },
+  {
+   "id": "xCnYzAgYou0",
+   "t": "KINETICS OF ELECTRODE REACTION |BUTLER VOLMER & TAFEL EQUATIONS",
+   "ch": "Advanced Chemistry",
+   "len": "23:48"
+  }
+ ],
+ "CHE4312|Advanced Chemical Kinetics and Reaction Dynamics": [
+  {
+   "id": "16fFjAcxJSc",
+   "t": "Arrhenius Equation Activation Energy and Rate Constant K Explained",
+   "ch": "The Organic Chemistry Tutor",
+   "len": "17:21"
+  },
+  {
+   "id": "zZ7yN4mvvsc",
+   "t": "Thermodynamic Interpretation of Transition State Theory: The Eyring Equation",
+   "ch": "LearnChemE",
+   "len": "10:09"
+  },
+  {
+   "id": "MMNtCAYJ8sI",
+   "t": "L28B Eyring plots",
+   "ch": "Emily Tsui",
+   "len": "7:49"
+  }
+ ],
+ "CHE4322|Surface and Colloid Chemistry": [
+  {
+   "id": "sPtsmeUKDa0",
+   "t": "Langmuir Isotherm Introduction",
+   "ch": "LearnChemE",
+   "len": "4:40"
+  },
+  {
+   "id": "evBiIO6fuHI",
+   "t": "Principles of Heterogeneous Catalysis",
+   "ch": "Professor Dave Explains",
+   "len": "8:48"
+  },
+  {
+   "id": "Jo3KHD1k5c0",
+   "t": "Langmuir Isotherm - Kinetics",
+   "ch": "Physical Chemistry",
+   "len": "7:35"
+  }
+ ],
+ "CHE4322|Polymer Chemistry": [
+  {
+   "id": "swo-szTlcr4",
+   "t": "RAFT Polymerization Overview",
+   "ch": "Michael Kelly",
+   "len": "9:16"
+  },
+  {
+   "id": "mahaRl-XsfA",
+   "t": "Atom transfer radical polymerization (ATRP)",
+   "ch": "Stefan Nielsen",
+   "len": "6:50"
+  },
+  {
+   "id": "KPKpRPTTRgc",
+   "t": "Living Radical Polymerization by the RAFT Process",
+   "ch": "CSIRO",
+   "len": "3:26"
+  }
+ ],
+ "CHE4332|Molecular Modeling": [
+  {
+   "id": "SXvhDLCycxc",
+   "t": "Fundamentals and applications of density functional theory",
+   "ch": "Virtual Simulation Lab",
+   "len": "49:43"
+  },
+  {
+   "id": "Ez_Fm4iTUeo",
+   "t": "Introduction to Density Functional Theory [Part One] Background",
+   "ch": "Matt Timm, PhD",
+   "len": "18:22"
+  },
+  {
+   "id": "wtB50-si1hI",
+   "t": "What is Density Functional Theory (DFT)",
+   "ch": "Microsoft Research",
+   "len": "4:41"
+  }
+ ],
+ "CHE4352|Nanomaterials and Nanosynthesis": [
+  {
+   "id": "yR06ml2EJNg",
+   "t": "Lecture 04: Synthesis Of Carbon Dots",
+   "ch": "IIT Roorkee July 2018",
+   "len": "30:59"
+  },
+  {
+   "id": "YhuUFLzJSsg",
+   "t": "Synthesis of Nanomaterials  - Top - down Vs Bottom - Up Approaches",
+   "ch": "Nano SPEAKs",
+   "len": "7:38"
+  },
+  {
+   "id": "4dC_DDIrqmk",
+   "t": "Quantum Dots: Everything You Need to Know About the Future of Tech!",
+   "ch": "RojasLab",
+   "len": "4:40"
+  }
+ ],
+ "CHE4413|Spectroscopic Instrumentation and Spectrochemical Analysis": [
+  {
+   "id": "wLZ6Yr4Fc9o",
+   "t": "Chapter 21: Inductively Coupled Plasma Atomization | CHM 214 | 181",
+   "ch": "Jacob Stewart",
+   "len": "5:10"
+  },
+  {
+   "id": "a38quIqromM",
+   "t": "ICP-AES: Part C: What is Inductively Coupled Plasma (ICP)?",
+   "ch": "Francis Chong",
+   "len": "4:12"
+  },
+  {
+   "id": "qrFub0xTlZo",
+   "t": "Inductively coupled plasma emission spectroscopy",
+   "ch": "Quick Biochemistry Basics",
+   "len": "4:48"
+  }
+ ],
+ "CHE4413|Surface Analytical Techniques": [
+  {
+   "id": "rR7GwTqxFOE",
+   "t": "Mod-01 Lec-40 X-Ray Photoelectron Spectroscopy(XPS)",
+   "ch": "nptelhrd",
+   "len": "55:37"
+  },
+  {
+   "id": "rpd2eC0K7sg",
+   "t": "XPS - X rays Photoelectron Spectroscopy",
+   "ch": "Nano SPEAKs",
+   "len": "9:18"
+  },
+  {
+   "id": "9GAOD24bNNc",
+   "t": "How X-Ray Photoelectron Spectroscopy (XPS) Works – Easy Animation! #xps #xrayscience",
+   "ch": "Physics, Materials Science and Nano Lecture Series",
+   "len": "4:08"
+  }
+ ],
+ "CHE4413|Advanced Electroanalytical Techniques": [
+  {
+   "id": "l1NPvtCu8vY",
+   "t": "Differential Stripping Voltammetry",
+   "ch": "Bob Burk",
+   "len": "9:20"
+  },
+  {
+   "id": "iPIfgvOKqcI",
+   "t": "Introduction to Square Wave, Differential Pulse and Normal Pulse Voltammetry Waveforms",
+   "ch": "ZimmerPeacock",
+   "len": "17:19"
+  },
+  {
+   "id": "EEi744LpO5c",
+   "t": "Fundamentals of Differential Pulse Voltammetry DPV #DPV #Voltagram #Electrochemistry #POS",
+   "ch": "Pioneer of Success",
+   "len": "14:37"
+  }
+ ],
+ "CHE4413|Advanced Separation Techniques": [
+  {
+   "id": "3X-ZSdF9hWg",
+   "t": "Capillary Electrophoresis (Part 2): Instrumentation & Electroosmotic Flow",
+   "ch": "Francis Chong",
+   "len": "8:22"
+  },
+  {
+   "id": "qIW_VjVf3ZY",
+   "t": "Electrophoresis",
+   "ch": "Quick Biochemistry Basics",
+   "len": "9:17"
+  },
+  {
+   "id": "mNcrKPqa5rA",
+   "t": "Capillary electrophoresis",
+   "ch": "Shomu's Biology",
+   "len": "16:45"
+  }
+ ],
+ "CHE4512|Bioanalytical Chemistry": [
+  {
+   "id": "lDWL_EEhReo",
+   "t": "Protein Isolation (Electrophoresis, Isoelectric Focusing, Chromatography) & Protein Analysis 🧐 🧪",
+   "ch": "Medicosis Perfectionalis",
+   "len": "21:39"
+  },
+  {
+   "id": "fTZb_v5BdWw",
+   "t": "Size exclusion chromatography",
+   "ch": "Shomu's Biology",
+   "len": "5:33"
+  },
+  {
+   "id": "mCiC_8PLYD8",
+   "t": "GEL FILTRATION CHROMATOGRAPHY (Size Exclusion Chromatography OR Gel permeation chromatography)",
+   "ch": "Lucas Learns",
+   "len": "3:34"
+  }
+ ],
+ "CHE4512|Toxicology": [
+  {
+   "id": "IxRvsiZkZQ0",
+   "t": "Dose Response Relationship",
+   "ch": "IIT Roorkee July 2018",
+   "len": "34:59"
+  },
+  {
+   "id": "BukK1R3lCnU",
+   "t": "M3I MoDRN Toxicology Dose Response",
+   "ch": "YaleCourses",
+   "len": "17:32"
+  },
+  {
+   "id": "VzrvklX5Wmw",
+   "t": "Pharmacodynamics - Part 2: Dose-response Relationship",
+   "ch": "AMBOSS: Medical Knowledge Distilled",
+   "len": "5:58"
+  }
+ ],
+ "CHE4512|Reactive Oxygen Species": [
+  {
+   "id": "tAeyaVdJvA4",
+   "t": "Free radicals (Reactive oxygen species)",
+   "ch": "Biochemistry by Dr Rajesh Jambhulkar",
+   "len": "20:08"
+  },
+  {
+   "id": "IhvyFBecgAY",
+   "t": "Reactive Oxygen Species and oxidative stress",
+   "ch": "Animated biology With arpan",
+   "len": "11:12"
+  },
+  {
+   "id": "rm5IfvG5C6c",
+   "t": "The Biology of Free Radicals & Reactive Oxygen Species & How to Boost our Cells Antioxidant Systems",
+   "ch": "Science Simplified",
+   "len": "24:03"
+  }
+ ],
+ "CHE4512|Bioinorganic Chemistry": [
+  {
+   "id": "L6vhDsi8O_g",
+   "t": "Heme Group of Hemoglobin and Myoglobin",
+   "ch": "Andrey K",
+   "len": "13:05"
+  },
+  {
+   "id": "lW8YhR4o3cg",
+   "t": "Hemoglobin and myoglobin",
+   "ch": "Shomu's Biology",
+   "len": "8:08"
+  },
+  {
+   "id": "1xdo84xDkeM",
+   "t": "BIO-INORGANIC CHEMISTRY || PHYSIOLOGY OF HAEMOGLOBIN AND MYOGLOBIN || HILL'S CONSTANT || BSc || MSc",
+   "ch": "Chemistry Untold",
+   "len": "12:02"
+  }
+ ],
+ "CHE4512|Food Chemistry": [
+  {
+   "id": "9dhjmfdBQh8",
+   "t": "FOOD CHEMISTRY : PRESERVATIVES & ADDITIVES (BEGINNERS GUIDE)",
+   "ch": "Element Sciences",
+   "len": "6:02"
+  },
+  {
+   "id": "a0hxrGp1IJI",
+   "t": "How Does Canned Food Last So Long? | Earth Science",
+   "ch": "BBC Earth Science",
+   "len": "3:57"
+  },
+  {
+   "id": "IltDWHRIgkY",
+   "t": "Methods of Food Preservation | Food Poisoning | Microorganisms | Biology | Home Revise",
+   "ch": "Home Revise",
+   "len": "5:05"
+  }
+ ],
+ "CHE4921|Review and Recent Developments": [
+  {
+   "id": "c5fC1Xz2hDo",
+   "t": "Nobel Prize 2025: The Chemistry of MOFs Explained!",
+   "ch": "RojasLab",
+   "len": "8:20"
+  },
+  {
+   "id": "7sOBN4ptgAU",
+   "t": "Nobel Prize 2025: What are MOFs | The Science Behind 2025 Chemistry Nobel Prize",
+   "ch": "All 'Bout Chemistry",
+   "len": "8:40"
+  },
+  {
+   "id": "jb4CMnT2-ao",
+   "t": "6 Chemical Reactions That Changed History",
+   "ch": "Be Smart",
+   "len": "7:56"
+  }
+ ]
+}

@@ -1,0 +1,443 @@
+[
+ {
+  "key": "ATK11",
+  "short": "Atkins",
+  "cite": "Atkins, P., de Paula, J. & Keeler, J. Atkins' Physical Chemistry, 11th ed. Oxford University Press, 2018.",
+  "isbn": "9780198769866",
+  "url": "https://books.google.com/books?vid=ISBN9780198769866",
+  "free": false,
+  "used": 23
+ },
+ {
+  "key": "OSORG",
+  "short": "McMurry (OpenStax)",
+  "cite": "McMurry, J. Organic Chemistry: A Tenth Edition. OpenStax, 2023 (free).",
+  "isbn": "",
+  "url": "https://openstax.org/details/books/organic-chemistry",
+  "free": true,
+  "used": 22
+ },
+ {
+  "key": "SA5",
+  "short": "Shriver & Atkins",
+  "cite": "Atkins, P. et al. Shriver & Atkins' Inorganic Chemistry, 5th ed. Oxford University Press / W. H. Freeman, 2010.",
+  "isbn": "9781429218207",
+  "url": "https://books.google.com/books?vid=ISBN9781429218207",
+  "free": false,
+  "used": 14
+ },
+ {
+  "key": "CHR7",
+  "short": "Christian",
+  "cite": "Christian, G. D., Dasgupta, P. K. & Schug, K. A. Analytical Chemistry, 7th ed. Wiley, 2014.",
+  "isbn": "9780470887578",
+  "url": "https://books.google.com/books?vid=ISBN9780470887578",
+  "free": false,
+  "used": 12
+ },
+ {
+  "key": "MFT5",
+  "short": "Miessler, Fischer & Tarr",
+  "cite": "Miessler, G. L., Fischer, P. J. & Tarr, D. A. Inorganic Chemistry, 5th ed. Pearson, 2014.",
+  "isbn": "9780321811059",
+  "url": "https://books.google.com/books?vid=ISBN9780321811059",
+  "free": false,
+  "used": 11
+ },
+ {
+  "key": "OSCHEM",
+  "short": "OpenStax Chemistry 2e",
+  "cite": "Flowers, P. et al. Chemistry 2e. OpenStax, 2019 (free).",
+  "isbn": "",
+  "url": "https://openstax.org/books/chemistry-2e/pages/1-introduction",
+  "free": true,
+  "used": 10
+ },
+ {
+  "key": "HAR8",
+  "short": "Harris",
+  "cite": "Harris, D. C. Quantitative Chemical Analysis, 8th ed. W. H. Freeman, 2010.",
+  "isbn": "9781429218153",
+  "url": "https://books.google.com/books?vid=ISBN9781429218153",
+  "free": false,
+  "used": 9
+ },
+ {
+  "key": "SKOOG7",
+  "short": "Skoog, Holler & Crouch",
+  "cite": "Skoog, D. A., Holler, F. J. & Crouch, S. R. Principles of Instrumental Analysis, 7th ed. Cengage, 2017.",
+  "isbn": "9781305577213",
+  "url": "https://books.google.com/books?vid=ISBN9781305577213",
+  "free": false,
+  "used": 9
+ },
+ {
+  "key": "EBB11",
+  "short": "Ebbing & Gammon",
+  "cite": "Ebbing, D. D. & Gammon, S. D. General Chemistry, 11th ed. Cengage, 2017.",
+  "isbn": "9781305580343",
+  "url": "https://books.google.com/books?vid=ISBN9781305580343",
+  "free": false,
+  "used": 7
+ },
+ {
+  "key": "MCQ",
+  "short": "McQuarrie",
+  "cite": "McQuarrie, D. A. Quantum Chemistry, 2nd ed. University Science Books, 2008.",
+  "isbn": "9781891389504",
+  "url": "https://books.google.com/books?vid=ISBN9781891389504",
+  "free": false,
+  "used": 7
+ },
+ {
+  "key": "MB6",
+  "short": "Morrison & Boyd",
+  "cite": "Morrison, R. T. & Boyd, R. N. Organic Chemistry, 6th ed. Prentice Hall, 1992.",
+  "isbn": "9780136436690",
+  "url": "https://books.google.com/books?vid=ISBN9780136436690",
+  "free": false,
+  "used": 6
+ },
+ {
+  "key": "SMITH4",
+  "short": "Smith",
+  "cite": "Smith, M. B. Organic Synthesis, 4th ed. Academic Press, 2017.",
+  "isbn": "9780128007204",
+  "url": "https://books.google.com/books?vid=ISBN9780128007204",
+  "free": false,
+  "used": 5
+ },
+ {
+  "key": "CSB",
+  "short": "Carey & Sundberg B",
+  "cite": "Carey, F. A. & Sundberg, R. J. Advanced Organic Chemistry, Part B: Reactions and Synthesis, 5th ed. Springer, 2007.",
+  "isbn": "9780387683546",
+  "url": "https://books.google.com/books?vid=ISBN9780387683546",
+  "free": false,
+  "used": 5
+ },
+ {
+  "key": "HARVEY",
+  "short": "Harvey (open)",
+  "cite": "Harvey, D. Analytical Chemistry 2.1. LibreTexts (free, CC BY-NC-SA).",
+  "isbn": "",
+  "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+  "free": true,
+  "used": 5
+ },
+ {
+  "key": "SHOE",
+  "short": "Garland, Nibler & Shoemaker",
+  "cite": "Garland, C. W., Nibler, J. W. & Shoemaker, D. P. Experiments in Physical Chemistry, 8th ed. McGraw-Hill, 2009.",
+  "isbn": "9780072828429",
+  "url": "https://books.google.com/books?vid=ISBN9780072828429",
+  "free": false,
+  "used": 5
+ },
+ {
+  "key": "STRY5",
+  "short": "Berg, Tymoczko & Stryer",
+  "cite": "Berg, J. M., Tymoczko, J. L. & Stryer, L. Biochemistry, 5th ed. W. H. Freeman, 2002.",
+  "isbn": "9780716746843",
+  "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+  "free": true,
+  "used": 5
+ },
+ {
+  "key": "W7",
+  "short": "Weller et al.",
+  "cite": "Weller, M., Overton, T., Rourke, J. & Armstrong, F. Inorganic Chemistry, 7th ed. Oxford University Press, 2018.",
+  "isbn": "9780198768128",
+  "url": "https://books.google.com/books?vid=ISBN9780198768128",
+  "free": false,
+  "used": 4
+ },
+ {
+  "key": "SIL7",
+  "short": "Silverstein",
+  "cite": "Silverstein, R. M., Webster, F. X. & Kiemle, D. J. Spectrometric Identification of Organic Compounds, 7th ed. Wiley, 2005.",
+  "isbn": "9780471393627",
+  "url": "https://books.google.com/books?vid=ISBN9780471393627",
+  "free": false,
+  "used": 4
+ },
+ {
+  "key": "CAR4",
+  "short": "Carraher",
+  "cite": "Carraher, C. E. Introduction to Polymer Chemistry, 4th ed. CRC Press, 2017.",
+  "isbn": "9781498737616",
+  "url": "https://books.google.com/books?vid=ISBN9781498737616",
+  "free": false,
+  "used": 4
+ },
+ {
+  "key": "CHANG13",
+  "short": "Chang & Overby",
+  "cite": "Chang, R. & Overby, J. Chemistry, 13th ed. McGraw-Hill, 2019.",
+  "isbn": "9781259911156",
+  "url": "https://books.google.com/books?vid=ISBN9781259911156",
+  "free": false,
+  "used": 3
+ },
+ {
+  "key": "HAM3",
+  "short": "Hammond",
+  "cite": "Hammond, C. The Basics of Crystallography and Diffraction, 3rd ed. Oxford University Press (IUCr Texts), 2009.",
+  "isbn": "9780199546459",
+  "url": "https://books.google.com/books?vid=ISBN9780199546459",
+  "free": false,
+  "used": 3
+ },
+ {
+  "key": "BARD",
+  "short": "Bard & Faulkner",
+  "cite": "Bard, A. J. & Faulkner, L. R. Electrochemical Methods: Fundamentals and Applications, 2nd ed. Wiley, 2001.",
+  "isbn": "9780471043720",
+  "url": "https://books.google.com/books?vid=ISBN9780471043720",
+  "free": false,
+  "used": 3
+ },
+ {
+  "key": "VOGQUAL",
+  "short": "Vogel (qualitative)",
+  "cite": "Svehla, G. Vogel's Textbook of Macro and Semimicro Qualitative Inorganic Analysis, 5th ed. Longman, 1979.",
+  "isbn": "9780582443679",
+  "url": "https://search.worldcat.org/search?q=bn:9780582443679",
+  "free": false,
+  "used": 3
+ },
+ {
+  "key": "VOGORG",
+  "short": "Vogel (practical organic)",
+  "cite": "Vogel, A. I. A Text-book of Practical Organic Chemistry, 3rd ed. Longman, 1956.",
+  "isbn": "",
+  "url": "",
+  "free": false,
+  "used": 3
+ },
+ {
+  "key": "LEE",
+  "short": "Lee",
+  "cite": "Lee, J. D. Concise Inorganic Chemistry, 5th ed. Blackwell Science, 1996.",
+  "isbn": "9780632052936",
+  "url": "https://books.google.com/books?vid=ISBN9780632052936",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "KET3",
+  "short": "Kettle",
+  "cite": "Kettle, S. F. A. Symmetry and Structure: Readable Group Theory for Chemists, 3rd ed. Wiley, 2007.",
+  "isbn": "9780470060407",
+  "url": "https://books.google.com/books?vid=ISBN9780470060407",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "CRAB6",
+  "short": "Crabtree",
+  "cite": "Crabtree, R. H. The Organometallic Chemistry of the Transition Metals, 6th ed. Wiley, 2014.",
+  "isbn": "9781118138076",
+  "url": "https://books.google.com/books?vid=ISBN9781118138076",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "ELIEL",
+  "short": "Eliel & Wilen",
+  "cite": "Eliel, E. L. & Wilen, S. H. Stereochemistry of Organic Compounds. Wiley, 1994.",
+  "isbn": "9780471016700",
+  "url": "https://books.google.com/books?vid=ISBN9780471016700",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "VOGQUANT",
+  "short": "Vogel (quantitative)",
+  "cite": "Mendham, J. et al. Vogel's Textbook of Quantitative Chemical Analysis, 6th ed. Prentice Hall, 2000.",
+  "isbn": "9780582226289",
+  "url": "https://books.google.com/books?vid=ISBN9780582226289",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "CRAMER",
+  "short": "Cramer",
+  "cite": "Cramer, C. J. Essentials of Computational Chemistry: Theories and Models, 2nd ed. Wiley, 2004.",
+  "isbn": "9780470091821",
+  "url": "https://books.google.com/books?vid=ISBN9780470091821",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "CHOPPIN",
+  "short": "Choppin et al.",
+  "cite": "Choppin, G., Liljenzin, J.-O., Rydberg, J. & Ekberg, C. Radiochemistry and Nuclear Chemistry, 4th ed. Academic Press, 2013.",
+  "isbn": "9780124058972",
+  "url": "https://books.google.com/books?vid=ISBN9780124058972",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "LAIDLER",
+  "short": "Laidler",
+  "cite": "Laidler, K. J. Chemical Kinetics, 3rd ed. Harper & Row, 1987.",
+  "isbn": "9780060438623",
+  "url": "https://books.google.com/books?vid=ISBN9780060438623",
+  "free": false,
+  "used": 2
+ },
+ {
+  "key": "PARISH",
+  "short": "Parish",
+  "cite": "Parish, R. V. NMR, NQR, EPR and Mössbauer Spectroscopy in Inorganic Chemistry. Ellis Horwood, 1990.",
+  "isbn": "9780136255185",
+  "url": "https://search.worldcat.org/search?q=bn:9780136255185",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "POWELL",
+  "short": "Powell",
+  "cite": "Powell, P. Principles of Organometallic Chemistry, 2nd ed. Chapman & Hall (Springer), 1988.",
+  "isbn": "9789401070324",
+  "url": "https://books.google.com/books?vid=ISBN9789401070324",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "JOULE5",
+  "short": "Joule & Mills",
+  "cite": "Joule, J. A. & Mills, K. Heterocyclic Chemistry, 5th ed. Wiley-Blackwell, 2010.",
+  "isbn": "9781405133005",
+  "url": "https://books.google.com/books?vid=ISBN9781405133005",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "ANTHO",
+  "short": "Brooks & Celli",
+  "cite": "Brooks, M. S.-L. & Celli, G. B. (eds). Anthocyanins from Natural Sources. Royal Society of Chemistry, 2019.",
+  "isbn": "9781788012614",
+  "url": "https://doi.org/10.1039/9781788012614",
+  "free": true,
+  "used": 1
+ },
+ {
+  "key": "CLAYDEN",
+  "short": "Clayden et al.",
+  "cite": "Clayden, J., Greeves, N. & Warren, S. Organic Chemistry, 2nd ed. Oxford University Press, 2012.",
+  "isbn": "9780199270293",
+  "url": "https://books.google.com/books?vid=ISBN9780199270293",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "ANSLYN",
+  "short": "Anslyn & Dougherty",
+  "cite": "Anslyn, E. V. & Dougherty, D. A. Modern Physical Organic Chemistry. University Science Books, 2006.",
+  "isbn": "9781891389313",
+  "url": "https://books.google.com/books?vid=ISBN9781891389313",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "LEACH",
+  "short": "Leach",
+  "cite": "Leach, A. R. Molecular Modelling: Principles and Applications, 2nd ed. Prentice Hall, 2001.",
+  "isbn": "9780582382107",
+  "url": "https://books.google.com/books?vid=ISBN9780582382107",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "AOE3",
+  "short": "Horowitz & Hill",
+  "cite": "Horowitz, P. & Hill, W. The Art of Electronics, 3rd ed. Cambridge University Press, 2015.",
+  "isbn": "9780521809269",
+  "url": "https://books.google.com/books?vid=ISBN9780521809269",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "FOGLER",
+  "short": "Fogler",
+  "cite": "Fogler, H. S. Elements of Chemical Reaction Engineering, 5th ed. Pearson, 2016.",
+  "isbn": "9780133887518",
+  "url": "https://books.google.com/books?vid=ISBN9780133887518",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "RHODES",
+  "short": "Rhodes",
+  "cite": "Rhodes, G. Crystallography Made Crystal Clear, 3rd ed. Academic Press, 2006.",
+  "isbn": "9780125870733",
+  "url": "https://search.worldcat.org/search?q=bn:9780125870733",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "HALLIWELL",
+  "short": "Halliwell & Gutteridge",
+  "cite": "Halliwell, B. & Gutteridge, J. M. C. Free Radicals in Biology and Medicine, 5th ed. Oxford University Press, 2015.",
+  "isbn": "9780198717485",
+  "url": "https://books.google.com/books?vid=ISBN9780198717485",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "LIPPARD",
+  "short": "Lippard & Berg",
+  "cite": "Lippard, S. J. & Berg, J. M. Principles of Bioinorganic Chemistry. University Science Books, 1994.",
+  "isbn": "9780935702729",
+  "url": "https://books.google.com/books?vid=ISBN9780935702729",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "YOUNG",
+  "short": "Young & Lovell",
+  "cite": "Young, R. J. & Lovell, P. A. Introduction to Polymers, 3rd ed. CRC Press, 2011.",
+  "isbn": "9780849339295",
+  "url": "https://books.google.com/books?vid=ISBN9780849339295",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "HORNYAK",
+  "short": "Hornyak et al.",
+  "cite": "Hornyak, G. L., Tibbals, H. F., Dutta, J. & Moore, J. J. Introduction to Nanoscience and Nanotechnology. CRC Press, 2008.",
+  "isbn": "9781420047790",
+  "url": "https://books.google.com/books?vid=ISBN9781420047790",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "LEHN7",
+  "short": "Lehninger",
+  "cite": "Nelson, D. L. & Cox, M. M. Lehninger Principles of Biochemistry, 7th ed. W. H. Freeman, 2017.",
+  "isbn": "9781464126116",
+  "url": "https://books.google.com/books?vid=ISBN9781464126116",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "CORECHENG",
+  "short": "Corey & Cheng",
+  "cite": "Corey, E. J. & Cheng, X.-M. The Logic of Chemical Synthesis. Wiley, 1989.",
+  "isbn": "9780471115946",
+  "url": "https://books.google.com/books?vid=ISBN9780471115946",
+  "free": false,
+  "used": 1
+ },
+ {
+  "key": "WARREN",
+  "short": "Warren & Wyatt",
+  "cite": "Warren, S. & Wyatt, P. Organic Synthesis: The Disconnection Approach, 2nd ed. Wiley, 2008.",
+  "isbn": "9780470712368",
+  "url": "https://books.google.com/books?vid=ISBN9780470712368",
+  "free": false,
+  "used": 1
+ }
+]

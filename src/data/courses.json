@@ -1,0 +1,4409 @@
+[
+ {
+  "code": "CHE1013",
+  "title": "Principles of Chemistry I",
+  "level": 1000,
+  "sem": "",
+  "credits": 3,
+  "pre": [],
+  "stream": "gen",
+  "type": "Compulsory",
+  "tagline": "Atoms, bonds, organic reactivity and the laws of energy — the foundation every later course builds on.",
+  "about": "The first-year core course. It rebuilds atomic structure from the hydrogen spectrum to the quantum-mechanical atom and the periodic table, then explains why atoms bond the way they do. The organic part introduces functional groups, acidity, reaction intermediates and the first substitution, addition and elimination mechanisms. The course closes with the laws of thermodynamics, free energy and chemical equilibrium.",
+  "texts": [
+   "Ebbing & Gammon, General Chemistry",
+   "Lee, Concise Inorganic Chemistry",
+   "McMurry, Organic Chemistry",
+   "Atkins & de Paula, Physical Chemistry"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "os_chem",
+   "mit5111",
+   "uci1a",
+   "khan"
+  ],
+  "sections": [
+   {
+    "name": "General Chemistry I",
+    "slug": "general-chemistry-i",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "How the modern picture of the atom developed, and how electron configurations explain the periodic table and chemical bonding.",
+    "topics": [
+     "Hydrogen spectrum and the Bohr model",
+     "Wave–particle duality and de Broglie",
+     "Uncertainty principle and quantum numbers",
+     "Pauli principle, Hund's rule, Aufbau",
+     "Ionic, covalent, dative and metallic bonds",
+     "Lewis theory and Sidgwick–Powell",
+     "Electronegativity, polarity, dipole moments",
+     "Lattice energy and solubility"
+    ],
+    "refs": [
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 7 Quantum Theory of the Atom; Ch. 8 Electron Configurations and Periodicity; Ch. 9 Ionic and Covalent Bonding",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 6 Electronic Structure and Periodic Properties of Elements",
+      "url": "https://openstax.org/books/chemistry-2e/pages/6-introduction",
+      "free": true
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 7 Chemical Bonding and Molecular Geometry",
+      "url": "https://openstax.org/books/chemistry-2e/pages/7-introduction",
+      "free": true
+     },
+     {
+      "book": "Lee",
+      "label": "Ch. 1 Atomic structure and the periodic table; Ch. 2 Introduction to bonding; Ch. 3 The ionic bond",
+      "url": "https://books.google.com/books?vid=ISBN9780632052936",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Structure and Reactivity",
+    "slug": "structure-and-reactivity",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Why organic molecules react where they do: electron availability, acidity and basicity, intermediates and the first reaction mechanisms.",
+    "topics": [
+     "Intermolecular interactions",
+     "Electron availability in bonds",
+     "Acidity and basicity",
+     "Functional groups and IUPAC names",
+     "Bond cleavage, reagents, intermediates",
+     "Energy diagrams",
+     "Substitution, addition, elimination",
+     "Aromaticity and Hückel's rule"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 2 Polar Covalent Bonds; Acids and Bases",
+      "url": "https://openstax.org/books/organic-chemistry/pages/2-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 6 An Overview of Organic Reactions",
+      "url": "https://openstax.org/books/organic-chemistry/pages/6-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 15 Benzene and Aromaticity",
+      "url": "https://openstax.org/books/organic-chemistry/pages/15-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Morrison & Boyd",
+      "label": "Ch. 1 Structure and Properties; Ch. 2 Methane: Energy of Activation, Transition State",
+      "url": "https://books.google.com/books?vid=ISBN9780136436690",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Chemical Thermodynamics",
+    "slug": "chemical-thermodynamics",
+    "order": 3,
+    "hours": "15 L",
+    "summary": "The zeroth, first and second laws applied to chemical systems, ending with free energy and the position of equilibrium.",
+    "topics": [
+     "Systems and processes",
+     "Work, heat and internal energy",
+     "Enthalpy and extent of reaction",
+     "Entropy and the second law",
+     "Gibbs and Helmholtz energies",
+     "Reaction quotient and K",
+     "Shifting equilibrium: c, p, V, T"
+    ],
+    "refs": [
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 6 Thermochemistry; Ch. 18 Thermodynamics and Equilibrium",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 5 Thermochemistry",
+      "url": "https://openstax.org/books/chemistry-2e/pages/5-introduction",
+      "free": true
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 16 Thermodynamics",
+      "url": "https://openstax.org/books/chemistry-2e/pages/16-introduction",
+      "free": true
+     },
+     {
+      "book": "Atkins",
+      "label": "Focus 2 The First Law; Focus 3 The Second and Third Laws; Topic 6A The equilibrium constant",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE1023",
+  "title": "Principles of Chemistry II",
+  "level": 1000,
+  "sem": "",
+  "credits": 3,
+  "pre": [
+   "CHE1013"
+  ],
+  "stream": "gen",
+  "type": "Compulsory",
+  "tagline": "Molecular shape and orbitals, gases and reaction rates, and the 3D world of stereochemistry.",
+  "about": "Continues CHE1013. Molecular structure is treated through VSEPR, hybridisation and molecular orbital theory, alongside electrode potentials and the equilibria behind titrations and buffers. The physical part develops the kinetic molecular theory of gases and the core of chemical kinetics — rate laws, half-lives and the Arrhenius equation. Stereochemistry introduces chirality, E/Z and R/S nomenclature, conformations and the stereochemical course of SN1, SN2, E1 and E2 reactions.",
+  "texts": [
+   "Ebbing & Gammon, General Chemistry",
+   "Chang, Chemistry",
+   "McMurry, Organic Chemistry",
+   "Atkins & de Paula, Physical Chemistry"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "os_chem",
+   "mit5111",
+   "yale125",
+   "os_org"
+  ],
+  "sections": [
+   {
+    "name": "General Chemistry II",
+    "slug": "general-chemistry-ii",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Molecular shape and bonding theories, plus electrochemistry and the equilibria used in chemical analysis.",
+    "topics": [
+     "VSEPR and three-centre bonds",
+     "Resonance and hybridisation",
+     "MO theory of diatomics",
+     "Magnetic properties",
+     "Electrode potentials and Nernst equation",
+     "Titrations, buffers, indicators",
+     "Solubility equilibria"
+    ],
+    "refs": [
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 10 Molecular Geometry and Chemical Bonding Theory; Ch. 19 Electrochemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 8 Advanced Theories of Covalent Bonding",
+      "url": "https://openstax.org/books/chemistry-2e/pages/8-introduction",
+      "free": true
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 14 Acid-Base Equilibria",
+      "url": "https://openstax.org/books/chemistry-2e/pages/14-introduction",
+      "free": true
+     },
+     {
+      "book": "Christian",
+      "label": "Ch. 7 Acid-Base Equilibria; Ch. 8 Acid-Base Titrations",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Kinetic Molecular Theory and Chemical Kinetics",
+    "slug": "kinetic-molecular-theory-and-chemical-kinetics",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Gas behaviour from a molecular model, then how fast reactions go and why.",
+    "topics": [
+     "Gas laws and the perfect gas",
+     "Kinetic model of gases",
+     "Real gases",
+     "Molecular collisions",
+     "Rate laws and reaction order",
+     "Molecularity and elementary steps",
+     "Integrated rate laws and half-life",
+     "Arrhenius equation"
+    ],
+    "refs": [
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 5 The Gaseous State; Ch. 13 Rates of Reaction",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 9 Gases",
+      "url": "https://openstax.org/books/chemistry-2e/pages/9-introduction",
+      "free": true
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 12 Kinetics",
+      "url": "https://openstax.org/books/chemistry-2e/pages/12-introduction",
+      "free": true
+     },
+     {
+      "book": "Atkins",
+      "label": "Topic 1B The kinetic model; Topics 17A–17D",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Stereochemistry",
+    "slug": "stereochemistry",
+    "order": 3,
+    "hours": "15 L",
+    "summary": "Describing molecules in three dimensions and following stereochemistry through reactions.",
+    "topics": [
+     "Configurational isomers",
+     "E/Z and R/S nomenclature",
+     "Chirality, meso compounds, diastereomers",
+     "Conformations of chains and rings",
+     "Isomerism in cyclic compounds",
+     "Biphenyls and allenes",
+     "Stereochemistry of SN1, SN2, E1, E2",
+     "Solvent effects on substitution"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 5 Stereochemistry at Tetrahedral Centers",
+      "url": "https://openstax.org/books/organic-chemistry/pages/5-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 4 Organic Compounds: Cycloalkanes and Their Stereochemistry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/4-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 11 Reactions of Alkyl Halides: Nucleophilic Substitutions and Eliminations",
+      "url": "https://openstax.org/books/organic-chemistry/pages/11-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Morrison & Boyd",
+      "label": "Ch. 4 Stereochemistry I; Ch. 7 Stereochemistry II",
+      "url": "https://books.google.com/books?vid=ISBN9780136436690",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE1081",
+  "title": "Elementary Chemistry Laboratory I",
+  "level": 1000,
+  "sem": "",
+  "credits": 1,
+  "pre": [],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Lab safety, measurement and error, and the classic tests that identify organic functional groups.",
+  "about": "The first practical course. It covers laboratory safety, glassware and equipment, safety data sheets, waste disposal, significant figures and error analysis, then moves to qualitative organic analysis: elemental tests, solubility classes and tests for unsaturation, acids, esters, amides, amines, nitro compounds and alcohols.",
+  "texts": [
+   "Vogel, Qualitative Organic Analysis"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "dltm"
+  ],
+  "sections": [
+   {
+    "name": "Laboratory Orientation",
+    "slug": "laboratory-orientation",
+    "order": 1,
+    "hours": "3 L + 2 P",
+    "summary": "Working safely and recording measurements properly.",
+    "topics": [
+     "Laboratory safety",
+     "Glassware and equipment",
+     "Safety data sheets",
+     "Waste disposal",
+     "Significant figures",
+     "Errors and uncertainty"
+    ],
+    "refs": [
+     {
+      "book": "Garland, Nibler & Shoemaker",
+      "label": "Part II Treatment of Experimental Data",
+      "url": "https://books.google.com/books?vid=ISBN9780072828429",
+      "free": false
+     },
+     {
+      "book": "Vogel (quantitative)",
+      "label": "Ch. 3 Common Apparatus and Basic Techniques",
+      "url": "https://books.google.com/books?vid=ISBN9780582226289",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Qualitative Organic Analysis",
+    "slug": "qualitative-organic-analysis",
+    "order": 2,
+    "hours": "10 P",
+    "summary": "Identifying organic compounds from simple chemical tests.",
+    "topics": [
+     "Heating, filtering, gas tests",
+     "Elemental analysis",
+     "Solubility tests",
+     "Tests for unsaturation",
+     "Acids, esters and amides",
+     "Amines, nitro compounds, alcohols"
+    ],
+    "refs": [
+     {
+      "book": "Vogel (practical organic)",
+      "label": "Ch. I Theory of General Technique; qualitative organic analysis chapters",
+      "url": null,
+      "free": false
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 2 Polar Covalent Bonds; Acids and Bases (functional-group acidity)",
+      "url": "https://openstax.org/books/organic-chemistry/pages/2-why-this-chapter",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE1091",
+  "title": "Elementary Chemistry Laboratory II",
+  "level": 1000,
+  "sem": "",
+  "credits": 1,
+  "pre": [],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Volumetric titrations and semi-micro qualitative analysis of inorganic salts.",
+  "about": "The second first-year practical. Students perform acid–base, redox and precipitation titrations, then identify the cations and anions in inorganic salts by semi-micro qualitative analysis.",
+  "texts": [
+   "Vogel, Qualitative Inorganic Analysis"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "harvey",
+   "dltm"
+  ],
+  "sections": [
+   {
+    "name": "Quantitative Analysis",
+    "slug": "quantitative-analysis",
+    "order": 1,
+    "hours": "5 P",
+    "summary": "Accurate volumetric analysis.",
+    "topics": [
+     "Acid–base titrations",
+     "Redox titrations",
+     "Precipitation titrations",
+     "Standard solutions and indicators"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 8 Acid-Base Titrations; Ch. 11 Precipitation Reactions and Titrations; Ch. 14 Redox and Potentiometric Titrations",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     },
+     {
+      "book": "Harvey (open)",
+      "label": "Ch. 9 Titrimetric Methods",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "free": true
+     },
+     {
+      "book": "Vogel (quantitative)",
+      "label": "Ch. 2 Fundamental Theoretical Principles of Reactions in Solution",
+      "url": "https://books.google.com/books?vid=ISBN9780582226289",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Qualitative Inorganic Analysis",
+    "slug": "qualitative-inorganic-analysis",
+    "order": 2,
+    "hours": "10 P",
+    "summary": "Systematic identification of ions in inorganic salts.",
+    "topics": [
+     "Semi-micro technique",
+     "Cation group separation",
+     "Anion tests",
+     "Analysis of unknown salts"
+    ],
+    "refs": [
+     {
+      "book": "Vogel (qualitative)",
+      "label": "Ch. III Reactions of the cations; Ch. IV Reactions of the anions; Ch. VI Semimicro qualitative inorganic analysis",
+      "url": "https://search.worldcat.org/search?q=bn:9780582443679",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2112",
+  "title": "Inorganic Chemistry I",
+  "level": 2000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE1023"
+  ],
+  "stream": "inorg",
+  "type": "Compulsory",
+  "tagline": "Periodic trends, coordination complexes, crystal structures and molecular symmetry.",
+  "about": "Builds descriptive and structural inorganic chemistry. It explains trends across the periodic table — oxidation states, the inert pair effect, and the hydrides, halides and oxides — then introduces coordination complexes through valence bond and crystal field theory, with their magnetism and spectra. The solid-state part covers unit cells, Bravais lattices, Miller indices, X-ray diffraction and lattice energies, and the course closes with point symmetry and how molecules are classified by it.",
+  "texts": [
+   "Lee, Concise Inorganic Chemistry",
+   "Hammond, The Basics of Crystallography and Diffraction",
+   "Kettle, Coordination Chemistry",
+   "Greenwood & Earnshaw, Chemistry of the Elements",
+   "Shriver & Atkins, Inorganic Chemistry"
+  ],
+  "papers": 15,
+  "years": "2008–2022",
+  "ext": [
+   "symotter",
+   "mit3091",
+   "chemtube",
+   "nptel_sym"
+  ],
+  "sections": [
+   {
+    "name": "Trends in the Periodic Table",
+    "slug": "trends-in-the-periodic-table",
+    "order": 1,
+    "hours": "8 L",
+    "summary": "How electronic structure drives the chemistry of the main-group elements across groups and periods.",
+    "topics": [
+     "Oxidation states",
+     "Reduction-potential trends",
+     "Inert pair effect",
+     "Catenation",
+     "Hydrides, halides and oxides",
+     "Multiple bonding",
+     "Hydrolysis and oxidising power",
+     "Group 18 compounds",
+     "Group 1 and 2 salts"
+    ],
+    "refs": [
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 9 Periodic trends; Chs. 11–18 The Group 1–18 elements",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 8 Chemistry of the Main Group Elements",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Lee",
+      "label": "s- and p-block chapters (Groups 1–2, 13–18)",
+      "url": "https://books.google.com/books?vid=ISBN9780632052936",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 14,
+     "tut": 0,
+     "ans": 0,
+     "pages": 273
+    }
+   },
+   {
+    "name": "Coordination Chemistry",
+    "slug": "coordination-chemistry",
+    "order": 2,
+    "hours": "10 L",
+    "summary": "Structure, naming, stability and bonding of metal complexes, with first models of their colour and magnetism.",
+    "topics": [
+     "Structures and coordination numbers",
+     "Nomenclature",
+     "Stability constants",
+     "Reaction mechanisms (intro)",
+     "Valence bond theory",
+     "Crystal field theory",
+     "Magnetochemistry",
+     "Electronic spectra"
+    ],
+    "refs": [
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 9 Coordination Chemistry I: Structures and Isomers; Ch. 10 Coordination Chemistry II: Bonding; Ch. 12 Reactions and Mechanisms",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 7 An introduction to coordination compounds; Ch. 20 d-Metal complexes: electronic structure and properties",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 19 Transition Metals and Coordination Chemistry",
+      "url": "https://openstax.org/books/chemistry-2e/pages/19-introduction",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 0,
+     "ans": 0,
+     "pages": 214
+    }
+   },
+   {
+    "name": "Solid State Chemistry",
+    "slug": "solid-state-chemistry",
+    "order": 3,
+    "hours": "12 L",
+    "summary": "Describing crystals and solving their structures with X-rays.",
+    "topics": [
+     "Unit cells and crystal systems",
+     "Bravais lattices",
+     "Miller indices",
+     "Binary ionic structures",
+     "Bragg's law",
+     "Powder XRD",
+     "Crystallographic databases",
+     "Radius ratio and lattice energy"
+    ],
+    "refs": [
+     {
+      "book": "Hammond",
+      "label": "Ch. 1 Crystals and crystal structures; Ch. 3 Bravais lattices and crystal systems; Ch. 5 Lattice planes and directions (Miller indices); Ch. 10 X-ray diffraction of polycrystalline materials",
+      "url": "https://books.google.com/books?vid=ISBN9780199546459",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 3 The structures of simple solids",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 7 The Crystalline Solid State",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 2,
+     "ans": 2,
+     "pages": 11
+    }
+   },
+   {
+    "name": "Molecular Symmetry",
+    "slug": "molecular-symmetry",
+    "order": 4,
+    "hours": "",
+    "summary": "Symmetry elements and operations, and sorting molecules and ions by their symmetry.",
+    "topics": [
+     "Symmetry elements",
+     "Symmetry operations",
+     "Classifying molecules by symmetry"
+    ],
+    "refs": [
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 4 Symmetry and Group Theory",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 6 Molecular symmetry",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Topic 10A Shape and symmetry",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 38
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2122",
+  "title": "Inorganic Chemistry II",
+  "level": 2000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2112"
+  ],
+  "stream": "inorg",
+  "type": "Compulsory",
+  "tagline": "Organometallics and the 18-electron rule, nuclear chemistry, and the d- and f-block elements.",
+  "about": "Three areas of inorganic chemistry. Organometallic chemistry explains metal–ligand bonding with π-acceptor ligands — synergic donation and back-donation, the 18-electron rule, metal carbonyls, nitrosyls and olefin complexes — with IR and NMR evidence. Basic radiochemistry treats nuclear structure, decay kinetics, transmutation, detection and the uses of radioisotopes. The transition-metal part surveys the d-block, lanthanides and actinides, contraction effects, colour, magnetism and extraction.",
+  "texts": [
+   "Cotton & Wilkinson, Advanced Inorganic Chemistry",
+   "Huheey, Inorganic Chemistry",
+   "Choppin, Radiochemistry and Nuclear Chemistry",
+   "Atkins et al., Inorganic Chemistry",
+   "Greenwood & Earnshaw, Chemistry of the Elements"
+  ],
+  "papers": 13,
+  "years": "2008–2012",
+  "ext": [
+   "nptel_om",
+   "uci107",
+   "iaea",
+   "mit2201"
+  ],
+  "sections": [
+   {
+    "name": "Organometallic Chemistry",
+    "slug": "organometallic-chemistry",
+    "order": 1,
+    "hours": "8 L",
+    "summary": "Bonding, stability and spectroscopy of complexes with metal–carbon and π-acceptor ligands.",
+    "topics": [
+     "18-electron and EAN rules",
+     "σ-donation and π-back-donation",
+     "Metal carbonyls",
+     "N₂, NO and olefin complexes",
+     "Metal–metal bonding",
+     "IR and NMR evidence",
+     "Isolobal analogy",
+     "Enemark–Feltham notation"
+    ],
+    "refs": [
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 13 Organometallic Chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Crabtree",
+      "label": "Ch. 2 Making Sense of Organometallic Complexes; Ch. 4 Carbonyls, Phosphines, and Substitution; Ch. 5 Pi-Complexes",
+      "url": "https://books.google.com/books?vid=ISBN9781118138076",
+      "free": false
+     },
+     {
+      "book": "Powell",
+      "label": "Ch. 5 Transition metal chemistry relevant to organometallic chemistry (18-electron rule, carbonyls)",
+      "url": "https://books.google.com/books?vid=ISBN9789401070324",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 2,
+     "ans": 2,
+     "pages": 212
+    }
+   },
+   {
+    "name": "Basic Radiochemistry",
+    "slug": "basic-radiochemistry",
+    "order": 2,
+    "hours": "7 L",
+    "summary": "The nucleus, radioactive decay, and how radiation is detected and used.",
+    "topics": [
+     "Nuclear structure",
+     "Decay kinetics",
+     "Nuclear transmutation",
+     "Artificial radioactivity",
+     "Radiation detection",
+     "Reactors and fusion",
+     "Isotopes as tracers",
+     "Effects of radiation"
+    ],
+    "refs": [
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 20 Nuclear Chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     },
+     {
+      "book": "OpenStax Chemistry 2e",
+      "label": "Ch. 21 Nuclear Chemistry",
+      "url": "https://openstax.org/books/chemistry-2e/pages/21-introduction",
+      "free": true
+     },
+     {
+      "book": "Choppin et al.",
+      "label": "Radioactive decay, detection and uses of radionuclides (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9780124058972",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 62
+    }
+   },
+   {
+    "name": "Chemistry of Transition Metals",
+    "slug": "chemistry-of-transition-metals",
+    "order": 3,
+    "hours": "15 L",
+    "summary": "Systematic chemistry of the d-block, lanthanides and actinides.",
+    "topics": [
+     "Transition-element chemistry",
+     "Lanthanides and actinides",
+     "Transuranium compounds",
+     "d-block contraction",
+     "Colour and magnetism",
+     "Lanthanide contraction",
+     "Extraction and separation"
+    ],
+    "refs": [
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 19 The d-block elements; Ch. 23 The f-block elements",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 10 Coordination Chemistry II: Bonding; Ch. 11 Coordination Chemistry III: Electronic Spectra",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 22 The Transition Elements and Coordination Compounds",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 18,
+     "tut": 1,
+     "ans": 2,
+     "pages": 247
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2181",
+  "title": "Inorganic Chemistry Laboratory I",
+  "level": 2000,
+  "sem": "1",
+  "credits": 1,
+  "pre": [
+   "CHE1091"
+  ],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Gravimetric, redox and EDTA titrations, simple complex syntheses and qualitative inorganic analysis.",
+  "about": "Practical inorganic analysis: determining anions and cations by gravimetry, redox titrations (bromate, dichromate, permanganate and iodometry) and complexometric EDTA titrations; synthesising simple inorganic complexes; and semi-micro qualitative analysis of inorganic mixtures, including phosphate separation.",
+  "texts": [
+   "Vogel, Qualitative Inorganic Analysis"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "dltm"
+  ],
+  "sections": [
+   {
+    "name": "Laboratory Manual",
+    "slug": "laboratory-manual",
+    "order": 50,
+    "hours": "",
+    "summary": "The practical schedule and procedures.",
+    "topics": [
+     "Gravimetric analysis",
+     "Redox titrations",
+     "Iodometry",
+     "EDTA titrations",
+     "Synthesis of complexes",
+     "Semi-micro analysis",
+     "Phosphate separation"
+    ],
+    "refs": [
+     {
+      "book": "Vogel (qualitative)",
+      "label": "Ch. III Reactions of the cations; Ch. VI Semimicro qualitative inorganic analysis",
+      "url": "https://search.worldcat.org/search?q=bn:9780582443679",
+      "free": false
+     },
+     {
+      "book": "Christian",
+      "label": "Ch. 9 Complexometric Reactions and Titrations; Ch. 10 Gravimetric Analysis; Ch. 14 Redox and Potentiometric Titrations",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 9
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2212",
+  "title": "Organic Chemistry",
+  "level": 2000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE1023"
+  ],
+  "stream": "org",
+  "type": "Compulsory",
+  "tagline": "How organic reactions happen and how to use them: mechanisms, carbonyl chemistry and classic synthesis.",
+  "about": "The core second-year organic course. Organic Reaction Mechanisms I covers the energetics of organic reactions, additions to C=C and C=O, carboxylic acid derivatives, enols and enolates, and rearrangements. Introduction to Organic Synthesis turns those reactions into tools: oxidations and reductions, enolate alkylation, the aldol, Claisen, Dieckmann and Knoevenagel condensations, Robinson annulation, Wittig olefination, the Diels–Alder reaction and [3,3]-sigmatropic rearrangements.",
+  "texts": [
+   "Morrison & Boyd, Organic Chemistry",
+   "Fessenden & Fessenden, Organic Chemistry",
+   "Solomons & Fryhle, Organic Chemistry",
+   "Wannigama, Organic Reaction Mechanisms"
+  ],
+  "papers": 10,
+  "years": "2014–2022",
+  "ext": [
+   "moc",
+   "ocp",
+   "chemtube",
+   "yale125"
+  ],
+  "sections": [
+   {
+    "name": "Organic Reaction Mechanisms I",
+    "slug": "organic-reaction-mechanisms-i",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Energetics and mechanisms of the main polar reactions of organic compounds.",
+    "topics": [
+     "Thermodynamics vs kinetics",
+     "Concerted and multi-step reactions",
+     "Electrophilic and nucleophilic addition",
+     "Carboxylic acid derivatives",
+     "Carbanions, enols, enolates",
+     "Rearrangements"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 8 Alkenes: Reactions and Synthesis",
+      "url": "https://openstax.org/books/organic-chemistry/pages/8-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 21 Carboxylic Acid Derivatives: Nucleophilic Acyl Substitution",
+      "url": "https://openstax.org/books/organic-chemistry/pages/21-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 22 Carbonyl Alpha-Substitution Reactions",
+      "url": "https://openstax.org/books/organic-chemistry/pages/22-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Morrison & Boyd",
+      "label": "Ch. 14 Alkyl Halides; Ch. 28 Rearrangements and Neighboring Group Effects",
+      "url": "https://books.google.com/books?vid=ISBN9780136436690",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 35
+    }
+   },
+   {
+    "name": "Introduction to Organic Synthesis",
+    "slug": "introduction-to-organic-synthesis",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "The oxidations, reductions and C–C bond-forming reactions used to build molecules.",
+    "topics": [
+     "Oxidation of alcohols and alkenes",
+     "Sharpless epoxidation",
+     "Hydride reductions, hydrogenation",
+     "Enolates: C- vs O-alkylation",
+     "Enamines and organocuprates",
+     "Aldol, Claisen, Dieckmann, Knoevenagel",
+     "Robinson annulation",
+     "Wittig reaction",
+     "Diels–Alder, Cope, Claisen"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 23 Carbonyl Condensation Reactions",
+      "url": "https://openstax.org/books/organic-chemistry/pages/23-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Smith",
+      "label": "Ch. 6 Oxidations; Ch. 7 Reductions; Ch. 12 Stabilized carbanions and ylids (Wittig); Ch. 14 Diels–Alder",
+      "url": "https://books.google.com/books?vid=ISBN9780128007204",
+      "free": false
+     },
+     {
+      "book": "Carey & Sundberg B",
+      "label": "Ch. 1 Alkylation of Enolates; Ch. 2 Carbon Nucleophiles with Carbonyl Compounds; Ch. 8 Reactions Involving Transition Metals (metathesis)",
+      "url": "https://books.google.com/books?vid=ISBN9780387683546",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 0,
+     "ans": 0,
+     "pages": 112
+    }
+   },
+   {
+    "name": "Complete Notes",
+    "slug": "complete-notes",
+    "order": 3,
+    "hours": "",
+    "summary": "Full-course note sets and a tutorial with answers covering both parts of CHE2212.",
+    "topics": [
+     "Complete lecture sets",
+     "Tutorial with answers"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 19 Aldehydes and Ketones: Nucleophilic Addition Reactions",
+      "url": "https://openstax.org/books/organic-chemistry/pages/19-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Smith",
+      "label": "Ch. 13 Enolate anions",
+      "url": "https://books.google.com/books?vid=ISBN9780128007204",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 1,
+     "ans": 1,
+     "pages": 96
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2282",
+  "title": "Techniques in Organic Chemistry I",
+  "level": 2000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE1081"
+  ],
+  "stream": "org",
+  "type": "Compulsory",
+  "tagline": "Reading UV, IR, NMR and mass spectra, plus the bench techniques to purify and characterise compounds.",
+  "about": "Structure determination and practical organic skills. Spectroscopy I covers UV–Vis (Beer–Lambert law, Woodward–Fieser rules), IR group frequencies, ¹H and ¹³C NMR with decoupling and the first 2D methods (COSY, HETCOR), and mass-spectrometric ionisation and fragmentation. The laboratory part trains separation and purification — extraction, distillation, chromatography and recrystallisation — with simple syntheses characterised by melting point and TLC.",
+  "texts": [
+   "Silverstein, Spectrometric Identification of Organic Compounds",
+   "Fessenden, Organic Laboratory Techniques",
+   "Vogel, Textbook of Practical Organic Chemistry"
+  ],
+  "papers": 1,
+  "years": "",
+  "ext": [
+   "reich",
+   "sdbs",
+   "uci203",
+   "dltm"
+  ],
+  "sections": [
+   {
+    "name": "Spectroscopy I",
+    "slug": "spectroscopy-i",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Using UV–Vis, IR, NMR and MS to work out organic structures.",
+    "topics": [
+     "Molecular energy levels",
+     "Beer–Lambert law",
+     "Woodward–Fieser rules",
+     "IR group frequencies",
+     "¹H and ¹³C NMR",
+     "Decoupling techniques",
+     "COSY and HETCOR",
+     "MS ionisation and fragmentation"
+    ],
+    "refs": [
+     {
+      "book": "Silverstein",
+      "label": "Ch. 1 Mass Spectrometry; Ch. 2 Infrared Spectrometry; Ch. 3 Proton NMR; Ch. 4 Carbon-13 NMR",
+      "url": "https://books.google.com/books?vid=ISBN9780471393627",
+      "free": false
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 12 Structure Determination: Mass Spectrometry and Infrared Spectroscopy",
+      "url": "https://openstax.org/books/organic-chemistry/pages/12-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 13 Structure Determination: Nuclear Magnetic Resonance Spectroscopy",
+      "url": "https://openstax.org/books/organic-chemistry/pages/13-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 14 Conjugated Compounds and Ultraviolet Spectroscopy",
+      "url": "https://openstax.org/books/organic-chemistry/pages/14-why-this-chapter",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 3,
+     "tut": 0,
+     "ans": 0,
+     "pages": 82
+    }
+   },
+   {
+    "name": "Laboratory Techniques",
+    "slug": "laboratory-techniques",
+    "order": 2,
+    "hours": "45 P",
+    "summary": "Separating, purifying, making and characterising organic compounds.",
+    "topics": [
+     "Solvent extraction",
+     "Distillation and steam distillation",
+     "Chromatography",
+     "Recrystallisation",
+     "Derivative synthesis",
+     "Melting point and TLC"
+    ],
+    "refs": [
+     {
+      "book": "Vogel (practical organic)",
+      "label": "Ch. I Theory of General Technique",
+      "url": null,
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 34
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2313",
+  "title": "Physical Chemistry I",
+  "level": 2000,
+  "sem": "1-2",
+  "credits": 3,
+  "pre": [
+   "CHE1023"
+  ],
+  "stream": "phys",
+  "type": "Optional",
+  "tagline": "Quantum mechanics, atomic and molecular spectra, molecular properties and electrochemistry.",
+  "about": "The main second-year physical chemistry course. It introduces the postulates of quantum mechanics and solves the Schrödinger equation for particles in boxes and the hydrogen atom, then applies it to atomic structure and spectra. Molecular properties — dipole moments, polarisability, magnetic susceptibility — lead into rotational, vibrational and electronic spectroscopy and instrumentation. Electrochemistry covers conductance, Kohlrausch's law, cells, potentiometry and thermodynamics from emf.",
+  "texts": [
+   "Atkins & de Paula, Physical Chemistry",
+   "McQuarrie, Quantum Chemistry",
+   "Banwell, Fundamentals of Molecular Spectroscopy"
+  ],
+  "papers": 23,
+  "years": "2013–2023",
+  "ext": [
+   "mit561",
+   "uci131a",
+   "tmp",
+   "pine"
+  ],
+  "sections": [
+   {
+    "name": "Quantum Mechanics",
+    "slug": "quantum-mechanics",
+    "order": 1,
+    "hours": "10 L",
+    "summary": "The postulates of quantum mechanics and the first solutions of the Schrödinger equation.",
+    "topics": [
+     "Evidence for quantisation",
+     "Schrödinger equation",
+     "Operators and observables",
+     "Expectation values",
+     "Uncertainty principle",
+     "Particle in 1D, 2D, 3D boxes",
+     "The hydrogen atom"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 7 Quantum theory (Topics 7A–7F)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "McQuarrie",
+      "label": "Ch. 1 The Dawn of the Quantum Theory; Ch. 3 The Schrödinger Equation and a Particle in a Box; Ch. 4 The Postulates",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 5,
+     "tut": 0,
+     "ans": 0,
+     "pages": 226
+    }
+   },
+   {
+    "name": "Atomic Structure and Atomic Spectra",
+    "slug": "atomic-structure-and-atomic-spectra",
+    "order": 2,
+    "hours": "8 L",
+    "summary": "Orbitals, many-electron atoms, and the spectra of hydrogen and the alkali metals.",
+    "topics": [
+     "Atomic models",
+     "Orbital shapes",
+     "Radial distribution functions",
+     "Shielding in many-electron atoms",
+     "Building-up principle",
+     "Hydrogen spectrum, selection rules",
+     "Alkali-metal spectra"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 8 Atomic structure and spectra (Topics 8A–8C)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "McQuarrie",
+      "label": "Ch. 7 The Hydrogen Atom; Ch. 9 Many-Electron Atoms",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 134
+    }
+   },
+   {
+    "name": "Molecular Properties and Spectroscopy",
+    "slug": "molecular-properties-and-spectroscopy",
+    "order": 3,
+    "hours": "17 L",
+    "summary": "Electrical, optical and magnetic properties of molecules and the basics of molecular spectroscopy.",
+    "topics": [
+     "Dipole moment and polarisability",
+     "Refractive index",
+     "Magnetic susceptibility",
+     "Intermolecular forces",
+     "Rotational spectra",
+     "Vibrational spectra",
+     "Electronic spectra",
+     "Spectrometer components"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Topics 14A–14B; Focus 11 Molecular spectroscopy (11A–11F)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "McQuarrie",
+      "label": "Ch. 5 The Harmonic Oscillator and Vibrational Spectroscopy; Ch. 6 The Rigid Rotator and Rotational Spectroscopy",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 196
+    }
+   },
+   {
+    "name": "Electrochemistry",
+    "slug": "electrochemistry",
+    "order": 4,
+    "hours": "10 L",
+    "summary": "Ionic conduction, electrochemical cells, and what emf measurements reveal.",
+    "topics": [
+     "Molar conductivity",
+     "Strong and weak electrolytes",
+     "Kohlrausch's law",
+     "Conductometric titrations",
+     "Electrodes and cells",
+     "Potentiometry",
+     "Thermodynamics from emf"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Topics 6C Electrochemical cells; 6D Electrode potentials; 16B Motion in liquids (ionic conductivity)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 13 Fundamentals of Electrochemistry; Ch. 14 Electrodes and Potentiometry",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     },
+     {
+      "book": "Christian",
+      "label": "Ch. 12 Electrochemical Cells and Electrode Potentials; Ch. 13 Potentiometric Electrodes and Potentiometry",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 0,
+     "ans": 0,
+     "pages": 22
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2332",
+  "title": "Chemical Calculations",
+  "level": 2000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE1023"
+  ],
+  "stream": "phys",
+  "type": "Optional",
+  "tagline": "The maths toolkit for chemistry: logs, graphs, calculus and matrices applied to real problems.",
+  "about": "A problem-solving course that builds the mathematics used throughout the degree: ionic-equilibrium calculations (pH, pKa, pKb), analytical calculations, complex numbers, linearising data (Arrhenius and Clapeyron plots, isotherms, Maxwell–Boltzmann distributions), calculus in kinetics and thermodynamics, electrode equilibria, and matrices and determinants.",
+  "texts": [
+   "Monk, Maths for Chemistry"
+  ],
+  "papers": 1,
+  "years": "2021–2022",
+  "ext": [
+   "pauls"
+  ],
+  "sections": [
+   {
+    "name": "Chemical Calculations",
+    "slug": "chemical-calculations",
+    "order": 50,
+    "hours": "30 L",
+    "summary": "Worked approaches to numerical problems in every branch of chemistry.",
+    "topics": [
+     "Problem-solving strategy",
+     "pH, pKa and pKb",
+     "Analytical calculations",
+     "Complex numbers",
+     "Linearisation and graphs",
+     "Calculus in kinetics",
+     "Thermodynamics problems",
+     "Matrices and determinants"
+    ],
+    "refs": [
+     {
+      "book": "McQuarrie",
+      "label": "MathChapters on vectors, determinants and matrices",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     },
+     {
+      "book": "Christian",
+      "label": "Ch. 3 Statistics and Data Handling in Analytical Chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 7,
+     "tut": 0,
+     "ans": 0,
+     "pages": 34
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE2381",
+  "title": "Physical Chemistry Laboratory I",
+  "level": 2000,
+  "sem": "2",
+  "credits": 1,
+  "pre": [
+   "CHE1091"
+  ],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Error analysis and core experiments in equilibria, thermodynamics, colorimetry and conductometry.",
+  "about": "Quantitative physical chemistry practice: estimating and propagating errors, presenting data in tables and graphs, and experiments on equilibria, thermodynamics, colorimetry and conductometry, finishing with a mini-project.",
+  "texts": [
+   "Shoemaker, Garland & Nibler, Experiments in Physical Chemistry",
+   "Findlay, Practical Physical Chemistry"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "tmpthermo"
+  ],
+  "sections": [
+   {
+    "name": "Laboratory Manual",
+    "slug": "laboratory-manual",
+    "order": 50,
+    "hours": "",
+    "summary": "Experiment procedures and data treatment.",
+    "topics": [
+     "Error propagation",
+     "Tables and graphs",
+     "Equilibria",
+     "Thermodynamics",
+     "Colorimetry",
+     "Conductometry",
+     "Mini-project"
+    ],
+    "refs": [
+     {
+      "book": "Garland, Nibler & Shoemaker",
+      "label": "Part II Treatment of Experimental Data; Part VI Thermochemistry; Part IX Electrochemistry",
+      "url": "https://books.google.com/books?vid=ISBN9780072828429",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 55
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3112",
+  "title": "Structural Inorganic Chemistry",
+  "level": 3000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2112"
+  ],
+  "stream": "inorg",
+  "type": "Compulsory",
+  "tagline": "Boranes, silicates and clusters, plus the full machinery of point groups and character tables.",
+  "about": "Structural inorganic chemistry and the symmetry tools used to describe it. Structural Chemistry treats boranes, carboranes and metalloboranes with Wade's rules, the classification of silicates and layer clays, layered double hydroxides, intercalation compounds, clathrates and metal clusters. Symmetry develops point groups, polarity and chirality from symmetry, group multiplication tables, matrix representations and character tables. The folder also carries diffraction-methods handouts.",
+  "texts": [
+   "Shriver & Atkins, Inorganic Chemistry",
+   "Huheey, Inorganic Chemistry",
+   "Miessler & Tarr, Inorganic Chemistry",
+   "Cotton, Chemical Applications of Group Theory"
+  ],
+  "papers": 10,
+  "years": "2008–2022",
+  "ext": [
+   "symotter",
+   "chartables",
+   "nptel_sym",
+   "chemtube"
+  ],
+  "sections": [
+   {
+    "name": "Course Overview",
+    "slug": "course-overview",
+    "order": 1,
+    "hours": "",
+    "summary": "Course outline and introduction.",
+    "topics": [
+     "Course outline"
+    ],
+    "refs": [],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 2
+    }
+   },
+   {
+    "name": "Structural Chemistry",
+    "slug": "structural-chemistry",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Structures and bonding of electron-deficient clusters, silicates and layered materials.",
+    "topics": [
+     "Boranes and carboranes",
+     "Wade's rules",
+     "Borane synthesis and reactions",
+     "Silicate classification",
+     "Layer silicate clays",
+     "Layered double hydroxides",
+     "Intercalates and clathrates",
+     "Metal clusters"
+    ],
+    "refs": [
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 13 The Group 13 elements (boranes); Ch. 14 The Group 14 elements (silicates); Ch. 24 Solid-state and materials chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 15 Parallels between Main Group and Organometallic Chemistry (clusters, Wade's rules)",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Weller et al.",
+      "label": "Ch. 13 The Group 13 elements; Ch. 14 The Group 14 elements",
+      "url": "https://books.google.com/books?vid=ISBN9780198768128",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 8,
+     "tut": 0,
+     "ans": 0,
+     "pages": 188
+    }
+   },
+   {
+    "name": "Symmetry and Group Theory",
+    "slug": "symmetry-and-group-theory",
+    "order": 3,
+    "hours": "15 L",
+    "summary": "From symmetry elements to character tables.",
+    "topics": [
+     "Symmetry elements and operations",
+     "Point-group determination",
+     "Polarity and chirality from symmetry",
+     "Stereographic projections",
+     "Group multiplication tables",
+     "Matrix representations",
+     "Irreducible representations",
+     "Character tables"
+    ],
+    "refs": [
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 4 Symmetry and Group Theory",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Kettle",
+      "label": "Chs. 1–9; Appendix 3 Character tables",
+      "url": "https://books.google.com/books?vid=ISBN9780470060407",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Focus 10 Molecular symmetry (10A–10C)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 11,
+     "tut": 0,
+     "ans": 3,
+     "pages": 130
+    }
+   },
+   {
+    "name": "Diffraction Methods",
+    "slug": "diffraction-methods",
+    "order": 4,
+    "hours": "",
+    "summary": "Handouts on diffraction and the reciprocal lattice.",
+    "topics": [
+     "Diffraction handouts",
+     "Reciprocal lattices"
+    ],
+    "refs": [
+     {
+      "book": "Hammond",
+      "label": "Ch. 6 The reciprocal lattice; Ch. 8 X-ray diffraction; Ch. 9 The diffraction of X-rays",
+      "url": "https://books.google.com/books?vid=ISBN9780199546459",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 3,
+     "tut": 0,
+     "ans": 0,
+     "pages": 128
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3122",
+  "title": "Advanced Inorganic Chemistry I",
+  "level": 3000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2112"
+  ],
+  "stream": "inorg",
+  "type": "Compulsory",
+  "tagline": "Ligand field theory, term symbols and Tanabe–Sugano diagrams, plus NMR, ESR, NQR and Mössbauer for inorganic systems.",
+  "about": "A full description of transition-metal complexes. Advanced Coordination Chemistry covers ligand field theory, angular-momentum coupling, Russell–Saunders terms and microstates, correlation, Orgel and Tanabe–Sugano diagrams, the Jahn–Teller effect, the nephelauxetic effect and charge-transfer spectra. Resonance Spectroscopic Methods applies multinuclear NMR (¹⁹F, ¹⁴/¹⁵N, ³¹P), NQR, ESR and Mössbauer spectroscopy to inorganic compounds.",
+  "texts": [
+   "Cotton & Wilkinson, Advanced Inorganic Chemistry",
+   "Miessler & Tarr, Inorganic Chemistry",
+   "Drago, Physical Methods in Inorganic Chemistry",
+   "Orgel, An Introduction to Ligand Field Theory"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "uci107",
+   "chartables"
+  ],
+  "sections": [
+   {
+    "name": "Advanced Coordination Chemistry",
+    "slug": "advanced-coordination-chemistry",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Electronic structure and spectra of transition-metal complexes.",
+    "topics": [
+     "Ligand field theory",
+     "Angular-momentum coupling",
+     "Russell–Saunders terms, microstates",
+     "Orgel diagrams",
+     "Tanabe–Sugano diagrams",
+     "Jahn–Teller distortion",
+     "Nephelauxetic effect",
+     "Charge-transfer spectra"
+    ],
+    "refs": [
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 10 Coordination Chemistry II: Bonding; Ch. 11 Coordination Chemistry III: Electronic Spectra",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 20 d-Metal complexes: electronic structure and properties",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Topic 8C Atomic spectra (term symbols)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 220
+    }
+   },
+   {
+    "name": "Resonance Spectroscopic Methods",
+    "slug": "resonance-spectroscopic-methods",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Magnetic-resonance and nuclear methods applied to inorganic compounds.",
+    "topics": [
+     "¹⁹F, ¹⁵N and ³¹P NMR",
+     "Selection rules",
+     "Nuclear quadrupole resonance",
+     "Electron spin resonance",
+     "Mössbauer spectroscopy",
+     "Inorganic applications"
+    ],
+    "refs": [
+     {
+      "book": "Parish",
+      "label": "Ch. 2 NMR; Ch. 3 NQR; Ch. 4 Mössbauer spectroscopy; Ch. 5 EPR",
+      "url": "https://search.worldcat.org/search?q=bn:9780136255185",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 8 Physical techniques in inorganic chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Focus 12 Magnetic resonance (12A–12D)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 0,
+     "ans": 0,
+     "pages": 145
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3192",
+  "title": "Advanced Inorganic Chemistry Laboratory",
+  "level": 3000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2181"
+  ],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Rare earths, ligand field strength, nanoparticles, PXRD and XRF in the inorganic lab.",
+  "about": "Advanced inorganic practicals: analysis of rare-earth elements and fusion mixtures, synthesis of special inorganic compounds, determining ligand field strength, nanoparticle synthesis and characterisation, phase analysis and unit-cell calculation from powder XRD, XRF analysis of alloys, UV–visible spectra of complexes and separation of inorganic ions.",
+  "texts": [
+   "Vogel, Qualitative Inorganic Analysis"
+  ],
+  "papers": 0,
+  "years": "",
+  "ext": [
+   "dltm",
+   "cod"
+  ],
+  "sections": [
+   {
+    "name": "Experiments",
+    "slug": "experiments",
+    "order": 50,
+    "hours": "",
+    "summary": "Experiment sheets for the course.",
+    "topics": [
+     "Rare-earth analysis",
+     "Ligand field strength",
+     "Nanoparticle synthesis",
+     "Powder XRD",
+     "XRF of alloys",
+     "UV–Vis of complexes"
+    ],
+    "refs": [
+     {
+      "book": "Vogel (qualitative)",
+      "label": "Ch. VII Reactions of some less common ions",
+      "url": "https://search.worldcat.org/search?q=bn:9780582443679",
+      "free": false
+     },
+     {
+      "book": "Weller et al.",
+      "label": "Ch. 8 Physical techniques in inorganic chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9780198768128",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3212",
+  "title": "Organic Chemistry II",
+  "level": 3000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2212"
+  ],
+  "stream": "org",
+  "type": "Compulsory",
+  "tagline": "Reactive intermediates, pericyclic reactions and the logic of retrosynthesis.",
+  "about": "Extends organic mechanisms and synthesis. Organic Reaction Mechanisms II covers reactive intermediates — radicals, carbenes and nitrenes — and the orbital-symmetry-controlled pericyclic reactions: cycloadditions, electrocyclic reactions and sigmatropic rearrangements. Organic Synthesis II teaches retrosynthetic analysis: disconnections, chemo-, regio- and stereoselectivity, amine synthesis, control in carbonyl condensations and strategies for making rings.",
+  "texts": [
+   "Corey & Cheng, The Logic of Chemical Synthesis",
+   "Mackie & Smith, Guidebook to Organic Synthesis",
+   "Morrison & Boyd, Organic Chemistry"
+  ],
+  "papers": 3,
+  "years": "",
+  "ext": [
+   "chemtube",
+   "ocp",
+   "moc"
+  ],
+  "sections": [
+   {
+    "name": "Organic Reaction Mechanisms II",
+    "slug": "organic-reaction-mechanisms-ii",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Reactive intermediates and orbital-symmetry-controlled reactions.",
+    "topics": [
+     "Radical intermediates",
+     "Carbenes and nitrenes",
+     "Pericyclic reactions",
+     "Woodward–Hoffmann rules",
+     "Cycloadditions",
+     "Electrocyclic reactions",
+     "Sigmatropic rearrangements"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 30 Orbitals and Organic Chemistry: Pericyclic Reactions",
+      "url": "https://openstax.org/books/organic-chemistry/pages/30-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Carey & Sundberg B",
+      "label": "Ch. 6 Concerted Cycloadditions, Unimolecular Rearrangements; Ch. 10 Reactions Involving Carbocations, Carbenes, and Radicals",
+      "url": "https://books.google.com/books?vid=ISBN9780387683546",
+      "free": false
+     },
+     {
+      "book": "Smith",
+      "label": "Ch. 15 [m+n]-Cycloadditions and Sigmatropic Rearrangements; Ch. 17 Radicals and Carbenes",
+      "url": "https://books.google.com/books?vid=ISBN9780128007204",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 0,
+     "ans": 0,
+     "pages": 213
+    }
+   },
+   {
+    "name": "Organic Synthesis II",
+    "slug": "organic-synthesis-ii",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Planning syntheses backwards from the target.",
+    "topics": [
+     "Retrosynthetic analysis",
+     "Synthons and disconnections",
+     "Chemo- and regioselectivity",
+     "Stereoselectivity",
+     "Amine synthesis",
+     "Carbonyl condensation control",
+     "Ring synthesis"
+    ],
+    "refs": [
+     {
+      "book": "Warren & Wyatt",
+      "label": "Disconnection approach (whole book)",
+      "url": "https://books.google.com/books?vid=ISBN9780470712368",
+      "free": false
+     },
+     {
+      "book": "Smith",
+      "label": "Ch. 1 Retrosynthesis, Stereochemistry, and Conformations; Ch. 8 Synthetic Strategies",
+      "url": "https://books.google.com/books?vid=ISBN9780128007204",
+      "free": false
+     },
+     {
+      "book": "Carey & Sundberg B",
+      "label": "Ch. 13 Multistep Syntheses",
+      "url": "https://books.google.com/books?vid=ISBN9780387683546",
+      "free": false
+     },
+     {
+      "book": "Corey & Cheng",
+      "label": "Part One: General approaches to synthetic planning",
+      "url": "https://books.google.com/books?vid=ISBN9780471115946",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 13,
+     "tut": 2,
+     "ans": 2,
+     "pages": 112
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3222",
+  "title": "Organic Chemistry III",
+  "level": 3000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2212",
+   "CHE2282"
+  ],
+  "stream": "org",
+  "type": "Compulsory",
+  "tagline": "How shape controls reactivity, and solving structures with advanced 1D and 2D NMR.",
+  "about": "Conformational Analysis treats the conformations of acyclic molecules, alkenes, three- to six-membered and large rings, how conformation affects reactivity, the rules for ring closure and stereoelectronic effects. Spectroscopy II applies DEPT, HSQC, HMBC and NOE experiments — with combined spectroscopic problems — to determine organic structures.",
+  "texts": [
+   "Eliel & Wilen, Stereochemistry of Organic Compounds",
+   "Silverstein, Spectrometric Identification of Organic Compounds"
+  ],
+  "papers": 4,
+  "years": "",
+  "ext": [
+   "reich",
+   "sdbs",
+   "uci203"
+  ],
+  "sections": [
+   {
+    "name": "Conformational Analysis",
+    "slug": "conformational-analysis",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Molecular shape and its effect on reaction outcomes.",
+    "topics": [
+     "Acyclic conformations",
+     "Alkene conformations",
+     "Three- to six-membered rings",
+     "Large rings",
+     "Conformation and reactivity",
+     "Rules for ring closure",
+     "Stereoelectronic effects"
+    ],
+    "refs": [
+     {
+      "book": "Eliel & Wilen",
+      "label": "Ch. 10 Conformation of acyclic molecules; Ch. 11 Configuration and conformation of cyclic molecules",
+      "url": "https://books.google.com/books?vid=ISBN9780471016700",
+      "free": false
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 4 Organic Compounds: Cycloalkanes and Their Stereochemistry",
+      "url": "https://openstax.org/books/organic-chemistry/pages/4-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Morrison & Boyd",
+      "label": "Ch. 9 Alicyclic Hydrocarbons",
+      "url": "https://books.google.com/books?vid=ISBN9780136436690",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 0,
+     "ans": 0,
+     "pages": 151
+    }
+   },
+   {
+    "name": "Spectroscopy II",
+    "slug": "spectroscopy-ii",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Advanced NMR experiments for complete structure determination, with worked problem sets.",
+    "topics": [
+     "DEPT",
+     "HSQC",
+     "HMBC",
+     "NOE",
+     "Combined structure problems"
+    ],
+    "refs": [
+     {
+      "book": "Silverstein",
+      "label": "Ch. 5 Correlation NMR Spectrometry; 2-D NMR; Ch. 7 Solved Problems",
+      "url": "https://books.google.com/books?vid=ISBN9780471393627",
+      "free": false
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 13 Structure Determination: NMR Spectroscopy",
+      "url": "https://openstax.org/books/organic-chemistry/pages/13-why-this-chapter",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 1,
+     "ans": 9,
+     "pages": 39
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3232",
+  "title": "Biomolecules and Heterocycles",
+  "level": 3000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2212"
+  ],
+  "stream": "org",
+  "type": "Compulsory",
+  "tagline": "Sugars, lipids and amino acids, and the chemistry of aromatic heterocycles.",
+  "about": "Biomolecules covers monosaccharide reactions, di- and polysaccharides, carbohydrate conformation, the anomeric effect and mutarotation, lipids, and amino acids and protein structure. Heterocycles covers five- and six-membered and fused heteroaromatics — pyrrole, furan, thiophene and pyridine-type rings — plus pyrylium salts, anthocyanins, α-pyrones and rings with more than one heteroatom: their structure, synthesis and reactions.",
+  "texts": [
+   "Carey & Sundberg, Advanced Organic Chemistry A",
+   "Lehninger, Principles of Biochemistry",
+   "Joule & Mills, Heterocyclic Chemistry"
+  ],
+  "papers": 6,
+  "years": "2015–2017",
+  "ext": [
+   "ahern",
+   "bffa"
+  ],
+  "sections": [
+   {
+    "name": "Biomolecules",
+    "slug": "biomolecules",
+    "order": 1,
+    "hours": "20 L",
+    "summary": "Structure and reactivity of carbohydrates, lipids and amino acids.",
+    "topics": [
+     "Monosaccharide reactions",
+     "Di- and polysaccharides",
+     "Carbohydrate conformations",
+     "Anomeric effect, mutarotation",
+     "Lipid structures",
+     "Amino acids",
+     "Protein structure"
+    ],
+    "refs": [
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 25 Biomolecules: Carbohydrates",
+      "url": "https://openstax.org/books/organic-chemistry/pages/25-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 26 Biomolecules: Amino Acids, Peptides, and Proteins",
+      "url": "https://openstax.org/books/organic-chemistry/pages/26-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 27 Biomolecules: Lipids",
+      "url": "https://openstax.org/books/organic-chemistry/pages/27-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Berg, Tymoczko & Stryer",
+      "label": "Ch. 11 Carbohydrates; Ch. 12 Lipids and Cell Membranes",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 2,
+     "ans": 1,
+     "pages": 75
+    }
+   },
+   {
+    "name": "Heterocycles",
+    "slug": "heterocycles",
+    "order": 2,
+    "hours": "10 L",
+    "summary": "Aromatic rings containing nitrogen, oxygen and sulfur.",
+    "topics": [
+     "Pyrrole, furan, thiophene",
+     "Six-membered heteroaromatics",
+     "Pyrylium salts, anthocyanins",
+     "α-Pyrones",
+     "Fused heterocycles",
+     "Several heteroatoms"
+    ],
+    "refs": [
+     {
+      "book": "Joule & Mills",
+      "label": "Pyridines, pyryliums, pyrroles, furans, thiophenes, indoles (chapter per ring system)",
+      "url": "https://books.google.com/books?vid=ISBN9781405133005",
+      "free": false
+     },
+     {
+      "book": "McMurry (OpenStax)",
+      "label": "Ch. 24 Amines and Heterocycles",
+      "url": "https://openstax.org/books/organic-chemistry/pages/24-why-this-chapter",
+      "free": true
+     },
+     {
+      "book": "Morrison & Boyd",
+      "label": "Ch. 31 Heterocyclic Compounds",
+      "url": "https://books.google.com/books?vid=ISBN9780136436690",
+      "free": false
+     },
+     {
+      "book": "Brooks & Celli",
+      "label": "Ch. 2 Chemistry of Anthocyanins",
+      "url": "https://doi.org/10.1039/9781788012614",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 0,
+     "ans": 0,
+     "pages": 73
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3292",
+  "title": "Advanced Organic Chemistry Laboratory",
+  "level": 3000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2282"
+  ],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Multi-step synthesis, purification and natural-product isolation.",
+  "about": "An advanced organic practical: multi-step syntheses involving advanced reaction mechanisms; separation, purification and spectroscopic characterisation; and the extraction and identification of natural products.",
+  "texts": [
+   "Silverstein, Spectrometric Identification of Organic Compounds",
+   "Vogel, Textbook of Practical Organic Chemistry"
+  ],
+  "papers": 1,
+  "years": "",
+  "ext": [
+   "dltm",
+   "sdbs"
+  ],
+  "sections": [
+   {
+    "name": "Advanced Organic Laboratory",
+    "slug": "advanced-organic-laboratory",
+    "order": 1,
+    "hours": "",
+    "summary": "Multi-step synthesis and natural-product work. The folder holds past practical papers only, so the references point to outside sources.",
+    "topics": [
+     "Multi-step synthesis",
+     "Purification",
+     "Spectroscopic characterisation",
+     "Natural-product isolation"
+    ],
+    "refs": [
+     {
+      "book": "Vogel (practical organic)",
+      "label": "Preparative and purification chapters",
+      "url": null,
+      "free": false
+     },
+     {
+      "book": "Silverstein",
+      "label": "Ch. 7 Solved Problems",
+      "url": "https://books.google.com/books?vid=ISBN9780471393627",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3303",
+  "title": "Advanced Physical Chemistry I",
+  "level": 3000,
+  "sem": "2",
+  "credits": 3,
+  "pre": [
+   "CHE2313"
+  ],
+  "stream": "phys",
+  "type": "Compulsory",
+  "tagline": "Quantum chemistry with approximation methods, high-resolution spectroscopy and statistical thermodynamics.",
+  "about": "Physical chemistry at depth. Quantum Mechanics revisits the solvable models — box, harmonic oscillator, rigid rotor, hydrogen atom — then introduces variation and perturbation theory, spin and Slater determinants, Hartree–Fock SCF, the Born–Oppenheimer approximation and Hückel MO theory. Advanced Molecular Spectroscopy treats rotational, vibrational, rovibrational, Raman and electronic spectra with Franck–Condon analysis. Statistical Thermodynamics builds partition functions and derives thermodynamic quantities and equilibrium constants from them.",
+  "texts": [
+   "Atkins & de Paula, Physical Chemistry",
+   "McQuarrie, Quantum Chemistry",
+   "Banwell, Fundamentals of Molecular Spectroscopy"
+  ],
+  "papers": 5,
+  "years": "2014–2021",
+  "ext": [
+   "mit561",
+   "uci131a",
+   "tmp"
+  ],
+  "sections": [
+   {
+    "name": "Quantum Mechanics",
+    "slug": "quantum-mechanics",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Exact models, approximation methods and the quantum treatment of molecules.",
+    "topics": [
+     "Box, oscillator, rigid rotor",
+     "Hydrogen atom in detail",
+     "Variation theory",
+     "Perturbation theory",
+     "Spin and Slater determinants",
+     "Hartree–Fock SCF",
+     "Born–Oppenheimer",
+     "Hückel MO theory"
+    ],
+    "refs": [
+     {
+      "book": "McQuarrie",
+      "label": "Ch. 8 Approximation Methods; Ch. 9 Many-Electron Atoms; Ch. 10–11 The Chemical Bond; Ch. 12 The Hartree–Fock–Roothaan Method",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Focus 9 Molecular structure (9A–9E, incl. Hückel theory)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 11,
+     "tut": 0,
+     "ans": 0,
+     "pages": 140
+    }
+   },
+   {
+    "name": "Advanced Molecular Spectroscopy",
+    "slug": "advanced-molecular-spectroscopy",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "High-resolution spectra and what they reveal about molecular structure.",
+    "topics": [
+     "Line widths and intensities",
+     "Microwave spectroscopy",
+     "Non-rigid and symmetric tops",
+     "Anharmonicity, overtones, hot bands",
+     "Rovibrational spectra",
+     "Raman spectroscopy",
+     "Franck–Condon principle"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 11 Molecular spectroscopy (11A–11G)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "McQuarrie",
+      "label": "Ch. 5 Vibrational Spectroscopy; Ch. 6 Rotational Spectroscopy",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 21
+    }
+   },
+   {
+    "name": "Statistical Thermodynamics",
+    "slug": "statistical-thermodynamics",
+    "order": 3,
+    "hours": "15 L",
+    "summary": "Linking molecular energy levels to bulk thermodynamics.",
+    "topics": [
+     "Boltzmann distribution",
+     "Ensembles",
+     "Molecular partition functions",
+     "Sackur–Tetrode equation",
+     "Equipartition, heat capacity",
+     "Residual entropy",
+     "K from partition functions"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 13 Statistical thermodynamics (13A–13F)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 8,
+     "tut": 0,
+     "ans": 0,
+     "pages": 92
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3313",
+  "title": "Physical Chemistry II",
+  "level": 3000,
+  "sem": "1",
+  "credits": 3,
+  "pre": [
+   "CHE2313"
+  ],
+  "stream": "phys",
+  "type": "Compulsory",
+  "tagline": "Thermodynamics in depth, phase diagrams, surfaces and colloids, kinetics and polymers.",
+  "about": "A broad course in applied physical chemistry. Advanced Thermodynamics covers Maxwell relations, Gibbs–Helmholtz, chemical potential, fugacity and activities. Phase Equilibria applies the phase rule to one-, two- and three-component systems. Surface and Colloid Chemistry treats the Kelvin equation, adsorption isotherms and surfactants. Kinetics covers experimental rate laws, the steady-state approximation and enzyme kinetics. Polymer Chemistry introduces step-growth (Carothers) and chain-growth kinetics and polymer characterisation.",
+  "texts": [
+   "Atkins & de Paula, Physical Chemistry",
+   "Campbell, Catalysis at Surfaces"
+  ],
+  "papers": 6,
+  "years": "2008–2009",
+  "ext": [
+   "mit560",
+   "tmpthermo",
+   "nptel_colloid",
+   "nptel_poly"
+  ],
+  "sections": [
+   {
+    "name": "Advanced Thermodynamics",
+    "slug": "advanced-thermodynamics",
+    "order": 1,
+    "hours": "10 L",
+    "summary": "The formal structure of thermodynamics and its use for real gases and solutions.",
+    "topics": [
+     "Carnot cycle",
+     "Spontaneity criteria",
+     "Maxwell relations",
+     "Cp – Cv relations",
+     "Third-law entropies",
+     "Gibbs–Helmholtz equation",
+     "Fugacity",
+     "Activities"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 2 The First Law; Focus 3 The Second and Third Laws; Topic 5F Activities; Focus 6 Chemical equilibrium",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 175
+    }
+   },
+   {
+    "name": "Phase Equilibria",
+    "slug": "phase-equilibria",
+    "order": 2,
+    "hours": "10 L",
+    "summary": "Reading and using phase diagrams.",
+    "topics": [
+     "The phase rule",
+     "One-component diagrams",
+     "Liquid–liquid systems",
+     "Liquid–solid systems",
+     "Zone refining",
+     "Triangular diagrams",
+     "Industrial applications"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 4 Physical transformations of pure substances; Topics 5C–5E Phase diagrams of binary and ternary systems",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "Garland, Nibler & Shoemaker",
+      "label": "Part VIII Phase Behavior",
+      "url": "https://books.google.com/books?vid=ISBN9780072828429",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 0,
+     "ans": 0,
+     "pages": 155
+    }
+   },
+   {
+    "name": "Surface and Colloid Chemistry",
+    "slug": "surface-and-colloid-chemistry",
+    "order": 3,
+    "hours": "10 L",
+    "summary": "Interfaces, adsorption and colloidal dispersions.",
+    "topics": [
+     "Kelvin equation",
+     "Surface excess",
+     "Physisorption vs chemisorption",
+     "Gibbs and Langmuir isotherms",
+     "Enthalpy of adsorption",
+     "Foams and emulsions",
+     "Surfactants"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Topic 14E Self-assembly; Topics 19A–19B Solid surfaces, adsorption and desorption",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "Garland, Nibler & Shoemaker",
+      "label": "Part XI Surface Phenomena",
+      "url": "https://books.google.com/books?vid=ISBN9780072828429",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 0,
+     "ans": 0,
+     "pages": 75
+    }
+   },
+   {
+    "name": "Kinetics",
+    "slug": "kinetics",
+    "order": 4,
+    "hours": "7 L",
+    "summary": "Determining rate laws and analysing complex mechanisms.",
+    "topics": [
+     "Initial-rate method",
+     "Isolation method",
+     "Activation energy",
+     "Steady-state approximation",
+     "Pre-equilibrium",
+     "Enzyme kinetics"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Topics 17A–17F (rate laws, Arrhenius, mechanisms, steady state, enzymes)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "Laidler",
+      "label": "Complex reactions and steady-state treatment (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9780060438623",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 138
+    }
+   },
+   {
+    "name": "Polymer Chemistry",
+    "slug": "polymer-chemistry",
+    "order": 5,
+    "hours": "8 L",
+    "summary": "How polymers form and how they are characterised.",
+    "topics": [
+     "Polymer basics",
+     "Carothers equation",
+     "Step-growth kinetics",
+     "Chain-growth kinetics",
+     "Characterisation"
+    ],
+    "refs": [
+     {
+      "book": "Carraher",
+      "label": "Ch. 1 Introduction to Polymers; Ch. 3 Molecular Weight of Polymers; Ch. 5 Step-Reaction Polymerization; Ch. 7 Free Radical Chain Polymerization",
+      "url": "https://books.google.com/books?vid=ISBN9781498737616",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Topic 14D Macromolecules",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 0,
+     "ans": 0,
+     "pages": 102
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3392",
+  "title": "Advanced Physical Chemistry Laboratory",
+  "level": 3000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2381"
+  ],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Experiments in electrochemistry, colorimetry, kinetics, spectroscopy and surface chemistry.",
+  "about": "Advanced physical chemistry practicals in electrochemistry, colorimetry, kinetics, spectroscopy and surface chemistry, with full data treatment.",
+  "texts": [
+   "Shoemaker, Garland & Nibler, Experiments in Physical Chemistry",
+   "Findlay, Practical Physical Chemistry"
+  ],
+  "papers": 5,
+  "years": "2008–2023",
+  "ext": [
+   "tmpthermo",
+   "pine"
+  ],
+  "sections": [
+   {
+    "name": "Laboratory Manual",
+    "slug": "laboratory-manual",
+    "order": 50,
+    "hours": "",
+    "summary": "General guidelines, the lab manual and the materials list.",
+    "topics": [
+     "Electrochemistry",
+     "Colorimetry",
+     "Kinetics",
+     "Spectroscopy",
+     "Surface chemistry"
+    ],
+    "refs": [
+     {
+      "book": "Garland, Nibler & Shoemaker",
+      "label": "Part IX Electrochemistry; Part X Chemical Kinetics; Part XI Surface Phenomena; Part XIV Spectroscopy",
+      "url": "https://books.google.com/books?vid=ISBN9780072828429",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 3,
+     "tut": 0,
+     "ans": 0,
+     "pages": 36
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3413",
+  "title": "Analytical Chemistry",
+  "level": 3000,
+  "sem": "1",
+  "credits": 3,
+  "pre": [
+   "CHE2313"
+  ],
+  "stream": "anal",
+  "type": "Compulsory",
+  "tagline": "Statistics, spectrophotometry, chromatography and electroanalysis — the core of modern chemical analysis.",
+  "about": "The main analytical course. Analytical Calculations covers statistics (t- and F-tests), calibration, uncertainty, method performance and equilibrium calculations for titrations. Spectrophotometry covers atomic absorption and emission and UV–Vis methods. Separation Methods covers solvent extraction and chromatography — GC, ion exchange, TLC and LC, with the van Deemter equation. Electroanalytical Chemistry covers activity, potentiometry, polarography and voltammetry, amperometry, electrolysis and sensors. A short unit treats non-aqueous solvents.",
+  "texts": [
+   "Skoog, West & Holler, Fundamentals of Analytical Chemistry",
+   "Harris, Quantitative Chemical Analysis",
+   "Bard & Faulkner, Electrochemical Methods"
+  ],
+  "papers": 11,
+  "years": "2008–2022",
+  "ext": [
+   "harvey",
+   "pine",
+   "cvguide"
+  ],
+  "sections": [
+   {
+    "name": "Analytical Calculations",
+    "slug": "analytical-calculations",
+    "order": 1,
+    "hours": "12 L",
+    "summary": "The statistics and equilibrium calculations behind reliable analysis.",
+    "topics": [
+     "t-test and F-test",
+     "Calibration statistics",
+     "Uncertainty",
+     "Method performance",
+     "Interlaboratory testing",
+     "Titration errors",
+     "Complex and solubility equilibria"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 3 Statistics and Data Handling; Ch. 9 Complexometric Reactions and Titrations",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 3 Experimental Error; Ch. 4 Statistics; Ch. 11 EDTA Titrations",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     },
+     {
+      "book": "Harvey (open)",
+      "label": "Ch. 4 Evaluating Analytical Data; Ch. 6 Equilibrium Chemistry",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 3,
+     "tut": 0,
+     "ans": 0,
+     "pages": 58
+    }
+   },
+   {
+    "name": "Analytical Spectrophotometry",
+    "slug": "analytical-spectrophotometry",
+    "order": 2,
+    "hours": "9 L",
+    "summary": "Atomic and molecular absorption and emission methods for quantitative analysis.",
+    "topics": [
+     "Atomic absorption",
+     "Atomic emission",
+     "UV–Vis absorption",
+     "Detection limits",
+     "Interferences",
+     "Instrumentation"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 16 Spectrochemical Methods; Ch. 17 Atomic Spectrometric Methods",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 17 Fundamentals of Spectrophotometry; Ch. 20 Atomic Spectroscopy",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     },
+     {
+      "book": "Harvey (open)",
+      "label": "Ch. 10 Spectroscopic Methods",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 51
+    }
+   },
+   {
+    "name": "Separation Methods",
+    "slug": "separation-methods",
+    "order": 3,
+    "hours": "12 L",
+    "summary": "Extraction and chromatography, from theory to troubleshooting.",
+    "topics": [
+     "Distribution ratio",
+     "Multiple extractions",
+     "Chromatography basics",
+     "Gas chromatography",
+     "Van Deemter equation",
+     "Ion exchange",
+     "TLC and paper",
+     "Liquid chromatography"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 18 Solvent and Solid-Phase Extraction; Ch. 19 Chromatography: Principles; Ch. 20 Gas Chromatography; Ch. 21 Liquid Chromatography",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 22 Introduction to Analytical Separations; Ch. 23 Gas Chromatography",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     },
+     {
+      "book": "Harvey (open)",
+      "label": "Ch. 12 Chromatographic and Electrophoretic Methods",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 94
+    }
+   },
+   {
+    "name": "Electroanalytical Chemistry",
+    "slug": "electroanalytical-chemistry",
+    "order": 4,
+    "hours": "10 L",
+    "summary": "Measuring chemistry with potentials and currents.",
+    "topics": [
+     "Activity and ionic strength",
+     "Potentiometry",
+     "Polarography, pulse methods",
+     "Cyclic voltammetry",
+     "Amperometry, flow injection",
+     "Bulk electrolysis",
+     "Microelectrodes",
+     "Electrochemical sensors"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 13 Potentiometric Electrodes; Ch. 15 Voltammetry and Electrochemical Sensors",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 16 Electroanalytical Techniques",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     },
+     {
+      "book": "Bard & Faulkner",
+      "label": "Ch. 6 Potential Sweep Methods; Ch. 7 Polarography and Pulse Voltammetry; Ch. 11 Bulk Electrolysis Methods",
+      "url": "https://books.google.com/books?vid=ISBN9780471043720",
+      "free": false
+     },
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 23 Potentiometry; Ch. 24 Coulometry; Ch. 25 Voltammetry",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     },
+     {
+      "book": "Harvey (open)",
+      "label": "Ch. 11 Electrochemical Methods",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 13,
+     "tut": 0,
+     "ans": 0,
+     "pages": 232
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3512",
+  "title": "Biological Chemistry I",
+  "level": 3000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2212"
+  ],
+  "stream": "bio",
+  "type": "Compulsory",
+  "tagline": "Enzymes and metabolism: how cells catalyse, control and power their chemistry.",
+  "about": "Enzymology covers enzyme structure, classification, mechanisms of action, kinetics and regulation, with applications in industry and health and an introduction to enzyme engineering. Metabolic Pathways and Control covers glycolysis, the pentose phosphate pathway, gluconeogenesis, glycogen metabolism, β-oxidation and fatty acid synthesis, the citric acid cycle, the respiratory chain and nitrogen metabolism.",
+  "texts": [
+   "Lehninger, Principles of Biochemistry",
+   "Berg, Tymoczko & Stryer, Biochemistry"
+  ],
+  "papers": 8,
+  "years": "2008–2019",
+  "ext": [
+   "ahern",
+   "bffa"
+  ],
+  "sections": [
+   {
+    "name": "Enzymology",
+    "slug": "enzymology",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Enzymes as biological catalysts. The folder holds past papers only, so the references point to open sources.",
+    "topics": [
+     "Structure and classification",
+     "Mechanisms of action",
+     "Enzyme kinetics",
+     "Regulatory enzymes",
+     "Industrial enzymes",
+     "Enzymes and health",
+     "Enzyme engineering"
+    ],
+    "refs": [
+     {
+      "book": "Berg, Tymoczko & Stryer",
+      "label": "Ch. 8 Enzymes: Basic Concepts and Kinetics; Ch. 16 Glycolysis and Gluconeogenesis; Ch. 17 The Citric Acid Cycle; Ch. 22 Fatty Acid Metabolism",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true
+     },
+     {
+      "book": "Lehninger",
+      "label": "Enzymes, glycolysis, citric acid cycle, fatty acid and amino acid metabolism (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9781464126116",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   },
+   {
+    "name": "Metabolic Pathways and Control",
+    "slug": "metabolic-pathways-and-control",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "The main energy-yielding and biosynthetic pathways and how they are regulated.",
+    "topics": [
+     "Glycolysis",
+     "Pentose phosphate pathway",
+     "Gluconeogenesis",
+     "Glycogen metabolism",
+     "β-Oxidation",
+     "Fatty acid synthesis",
+     "Citric acid cycle",
+     "Respiratory chain",
+     "Nitrogen metabolism"
+    ],
+    "refs": [
+     {
+      "book": "Berg, Tymoczko & Stryer",
+      "label": "Ch. 8 Enzymes: Basic Concepts and Kinetics; Ch. 16 Glycolysis and Gluconeogenesis; Ch. 17 The Citric Acid Cycle; Ch. 22 Fatty Acid Metabolism",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true
+     },
+     {
+      "book": "Lehninger",
+      "label": "Enzymes, glycolysis, citric acid cycle, fatty acid and amino acid metabolism (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9781464126116",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3712",
+  "title": "Industrial Chemistry",
+  "level": 3000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2212",
+   "CHE2313"
+  ],
+  "stream": "ind",
+  "type": "Optional",
+  "tagline": "Metallurgy and minerals, petroleum to pharmaceuticals, and the chemical engineering behind industry.",
+  "about": "Industrial Inorganic Chemistry covers metallurgy, Ellingham diagrams, the iron–carbon phase diagram, steels and cast iron, and mineral-based industries with Sri Lankan examples. Industrial Organic Chemistry covers coal, petroleum, essential oils, polymers, dyes and pharmaceuticals. Industrial Physical Chemistry introduces chemical engineering — mass and heat transfer, reactors, materials preparation, the chlor-alkali and urea processes, and vapour deposition.",
+  "texts": [
+   "Cooray, Geology of Sri Lanka",
+   "Karunaratne, Industrial Organic Chemistry"
+  ],
+  "papers": 5,
+  "years": "2008–2017",
+  "ext": [
+   "eci",
+   "cjs"
+  ],
+  "sections": [
+   {
+    "name": "Industrial Inorganic Chemistry",
+    "slug": "industrial-inorganic-chemistry",
+    "order": 1,
+    "hours": "10 L",
+    "summary": "Extracting and processing metals and minerals.",
+    "topics": [
+     "Metallurgy",
+     "Ellingham diagrams",
+     "Iron–carbon diagram",
+     "Steel and cast iron",
+     "Feldspar and mica",
+     "Minerals of Sri Lanka"
+    ],
+    "refs": [
+     {
+      "book": "Chang & Overby",
+      "label": "Ch. 21 Metallurgy and the Chemistry of Metals",
+      "url": "https://books.google.com/books?vid=ISBN9781259911156",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 24 Solid-state and materials chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 0,
+     "ans": 0,
+     "pages": 96
+    }
+   },
+   {
+    "name": "Industrial Organic Chemistry",
+    "slug": "industrial-organic-chemistry",
+    "order": 2,
+    "hours": "10 L",
+    "summary": "Organic raw materials and the products made from them.",
+    "topics": [
+     "Coal",
+     "Petroleum",
+     "Essential oils",
+     "Polymers",
+     "Dyes and textiles",
+     "Pharmaceuticals"
+    ],
+    "refs": [
+     {
+      "book": "Carraher",
+      "label": "Ch. 16 Polymer Technology",
+      "url": "https://books.google.com/books?vid=ISBN9781498737616",
+      "free": false
+     },
+     {
+      "book": "Chang & Overby",
+      "label": "Ch. 25 Synthetic and Natural Organic Polymers",
+      "url": "https://books.google.com/books?vid=ISBN9781259911156",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 5,
+     "tut": 0,
+     "ans": 0,
+     "pages": 258
+    }
+   },
+   {
+    "name": "Industrial Physical Chemistry",
+    "slug": "industrial-physical-chemistry",
+    "order": 3,
+    "hours": "10 L",
+    "summary": "Unit operations and process chemistry.",
+    "topics": [
+     "Chemical engineering basics",
+     "Mass transfer",
+     "Heat transfer",
+     "Reactors",
+     "Chlor-alkali process",
+     "Urea production",
+     "Vapour deposition"
+    ],
+    "refs": [
+     {
+      "book": "Fogler",
+      "label": "Ch. 1 Mole Balances; Ch. 2 Conversion and Reactor Sizing",
+      "url": "https://books.google.com/books?vid=ISBN9780133887518",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 12,
+     "tut": 0,
+     "ans": 0,
+     "pages": 279
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3812",
+  "title": "Computer Applications in Chemistry",
+  "level": 3000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2313"
+  ],
+  "stream": "comp",
+  "type": "Optional",
+  "tagline": "Logic gates to microcontrollers, and the first steps into computational chemistry.",
+  "about": "Digital Electronics and Interfacing covers number systems, logic gates and Boolean algebra, combinational and sequential circuits, memory, analog-to-digital conversion, data acquisition, instrument control and microcontrollers. Computational Chemistry covers data analysis and visualisation, 2D and 3D structure representation, in-silico experiments, the Hartree–Fock SCF method, molecular mechanics and molecular dynamics.",
+  "texts": [
+   "Horowitz & Hill, The Art of Electronics",
+   "Cramer, Essentials of Computational Chemistry"
+  ],
+  "papers": 9,
+  "years": "2009–2019",
+  "ext": [
+   "namd",
+   "avogadro",
+   "tmp"
+  ],
+  "sections": [
+   {
+    "name": "Digital Electronics and Interfacing",
+    "slug": "digital-electronics-and-interfacing",
+    "order": 1,
+    "hours": "16 L + 12 P",
+    "summary": "The electronics behind modern instruments.",
+    "topics": [
+     "Number systems",
+     "Logic gates, Boolean algebra",
+     "De Morgan's theorems",
+     "Combinational circuits",
+     "Flip-flops and counters",
+     "ADC and data acquisition",
+     "Microcontrollers"
+    ],
+    "refs": [
+     {
+      "book": "Horowitz & Hill",
+      "label": "Ch. 10 Digital Logic; Ch. 13 Digital Meets Analog; Ch. 15 Microcontrollers",
+      "url": "https://books.google.com/books?vid=ISBN9780521809269",
+      "free": false
+     },
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 2 Electrical Components and Circuits; Ch. 3 Operational Amplifiers; Ch. 4 Digital Electronics and Computers",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 7,
+     "tut": 0,
+     "ans": 0,
+     "pages": 53
+    }
+   },
+   {
+    "name": "Computational Chemistry",
+    "slug": "computational-chemistry",
+    "order": 2,
+    "hours": "14 L + 8 P",
+    "summary": "Using computers to model molecules.",
+    "topics": [
+     "Data visualisation",
+     "2D and 3D structures",
+     "In-silico experiments",
+     "Hartree–Fock SCF",
+     "Molecular mechanics",
+     "Molecular dynamics"
+    ],
+    "refs": [
+     {
+      "book": "Cramer",
+      "label": "Ch. 2 Molecular Mechanics; Ch. 3 Simulations of Molecular Ensembles; Ch. 4 Foundations of Molecular Orbital Theory",
+      "url": "https://books.google.com/books?vid=ISBN9780470091821",
+      "free": false
+     },
+     {
+      "book": "Leach",
+      "label": "Force fields, energy minimisation and molecular dynamics chapters",
+      "url": "https://books.google.com/books?vid=ISBN9780582382107",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 61
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE3491",
+  "title": "Analytical and Instrumental Chemistry Laboratory",
+  "level": 4000,
+  "sem": "1",
+  "credits": 1,
+  "pre": [
+   "CHE3413"
+  ],
+  "stream": "lab",
+  "type": "Compulsory",
+  "tagline": "Hands-on instrumental analysis: spectrometry, voltammetry, GC, HPLC, NMR and FT-IR.",
+  "about": "Advanced analytical practicals: error analysis for instrumental methods, elementary electronics, atomic and molecular spectrometry, cyclic voltammetry and amperometry, gas and high-performance liquid chromatography, NMR, FT-IR and particle-size analysis.",
+  "texts": [
+   "Skoog, Holler & Crouch, Principles of Instrumental Analysis"
+  ],
+  "papers": 4,
+  "years": "2020–2024",
+  "ext": [
+   "nistweb",
+   "sdbs"
+  ],
+  "sections": [
+   {
+    "name": "Laboratory Notes",
+    "slug": "laboratory-notes",
+    "order": 50,
+    "hours": "",
+    "summary": "Notes for the instrumental experiments.",
+    "topics": [
+     "Error analysis",
+     "Significant figures",
+     "Standard addition",
+     "FT-IR",
+     "Voltammetry",
+     "GC and HPLC"
+    ],
+    "refs": [
+     {
+      "book": "Harris",
+      "label": "Ch. 5 Quality Assurance and Calibration Methods (standard addition)",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     },
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 4 Digital Electronics and Computers; Ch. 16–17 Infrared Spectrometry; Ch. 19 NMR Spectroscopy; Ch. 34 Particle Size Determination",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 111
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4112",
+  "title": "Advanced Inorganic Chemistry II",
+  "level": 4000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE2122",
+   "CHE3122"
+  ],
+  "stream": "inorg",
+  "type": "Compulsory",
+  "tagline": "Single-crystal structure determination and advanced radiochemistry.",
+  "about": "Diffraction Methods covers reciprocal lattices, space groups, systematic absences, scattering and structure factors, Fourier and Patterson maps, single-crystal structure solution and refinement, neutron diffraction and an introduction to protein crystallography. Advanced Radiochemistry covers radiation detectors, particle accelerators, nuclear models, the stability of isobars and radioanalytical techniques such as isotope dilution and neutron activation analysis.",
+  "texts": [
+   "Hammond, The Basics of Crystallography and Diffraction",
+   "Stout & Jensen, X-ray Structure Determination",
+   "International Tables for Crystallography, Vol. A"
+  ],
+  "papers": 1,
+  "years": "2007–2008",
+  "ext": [
+   "mit3091x",
+   "cod",
+   "bilbao",
+   "iaea"
+  ],
+  "sections": [
+   {
+    "name": "Diffraction Methods",
+    "slug": "diffraction-methods",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Solving crystal structures from diffraction data.",
+    "topics": [
+     "Reciprocal lattice",
+     "Space groups",
+     "Systematic absences",
+     "Scattering factors",
+     "Structure factors",
+     "Fourier and Patterson maps",
+     "Refinement",
+     "Neutron and protein crystallography"
+    ],
+    "refs": [
+     {
+      "book": "Hammond",
+      "label": "Ch. 4 Crystal symmetry: point groups, space groups; Ch. 6 The reciprocal lattice; Ch. 9 The diffraction of X-rays; Ch. 13 Fourier analysis",
+      "url": "https://books.google.com/books?vid=ISBN9780199546459",
+      "free": false
+     },
+     {
+      "book": "Kettle",
+      "label": "Ch. 13 Space Groups",
+      "url": "https://books.google.com/books?vid=ISBN9780470060407",
+      "free": false
+     },
+     {
+      "book": "Rhodes",
+      "label": "Protein crystallography (whole book)",
+      "url": "https://search.worldcat.org/search?q=bn:9780125870733",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 8,
+     "tut": 1,
+     "ans": 1,
+     "pages": 261
+    }
+   },
+   {
+    "name": "Advanced Radiochemistry",
+    "slug": "advanced-radiochemistry",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Nuclear models, accelerators and radioanalytical methods.",
+    "topics": [
+     "Radiation detectors",
+     "Linacs and cyclotrons",
+     "Shell and liquid-drop models",
+     "Isobar stability",
+     "Isotope dilution",
+     "Neutron activation analysis",
+     "Tracer methods"
+    ],
+    "refs": [
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 32 Radiochemical Methods (isotope dilution, neutron activation analysis)",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     },
+     {
+      "book": "Choppin et al.",
+      "label": "Detectors, accelerators, nuclear models and radioanalytical methods (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9780124058972",
+      "free": false
+     },
+     {
+      "book": "Ebbing & Gammon",
+      "label": "Ch. 20 Nuclear Chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781305580343",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 5,
+     "tut": 0,
+     "ans": 0,
+     "pages": 93
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4122",
+  "title": "Advanced Inorganic Chemistry III",
+  "level": 4000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE3112",
+   "CHE3122"
+  ],
+  "stream": "inorg",
+  "type": "Compulsory",
+  "tagline": "Organometallic complexes in catalysis, and how inorganic reactions happen.",
+  "about": "Advanced Organometallic Chemistry covers IUPAC naming, complexes of olefins, carbonyls, nitrosyls and arenes, spectroscopic characterisation and applications in catalysis — hydroformylation, acetic acid synthesis, Wilkinson's catalyst and olefin polymerisation. Reaction Mechanisms in Inorganic Chemistry covers substitution in octahedral and square-planar complexes, the trans effect, acid and base hydrolysis, inner- and outer-sphere electron transfer, Marcus theory and the Robin–Day classification.",
+  "texts": [
+   "Spessard & Miessler, Organometallic Chemistry",
+   "Basolo & Pearson, Inorganic Reaction Mechanisms"
+  ],
+  "papers": 8,
+  "years": "2015–2024",
+  "ext": [
+   "nptel_om",
+   "uci107",
+   "ocp"
+  ],
+  "sections": [
+   {
+    "name": "Advanced Organometallic Chemistry",
+    "slug": "advanced-organometallic-chemistry",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Structure, characterisation and catalytic uses of organometallic complexes.",
+    "topics": [
+     "IUPAC naming",
+     "Olefin and carbonyl complexes",
+     "Nitrosyl and arene complexes",
+     "Spectroscopic characterisation",
+     "Hydroformylation",
+     "Acetic acid process",
+     "Wilkinson's catalyst",
+     "Olefin polymerisation"
+    ],
+    "refs": [
+     {
+      "book": "Crabtree",
+      "label": "Ch. 6 Oxidative Addition and Reductive Elimination; Ch. 7 Insertion and Elimination; Ch. 9 Homogeneous Catalysis; Ch. 12 Applications",
+      "url": "https://books.google.com/books?vid=ISBN9781118138076",
+      "free": false
+     },
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 14 Organometallic Reactions and Catalysis",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 26 Catalysis",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 0,
+     "ans": 0,
+     "pages": 216
+    }
+   },
+   {
+    "name": "Reaction Mechanisms in Inorganic Chemistry",
+    "slug": "reaction-mechanisms-in-inorganic-chemistry",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Kinetics and mechanisms of substitution and electron transfer.",
+    "topics": [
+     "Octahedral substitution",
+     "Square-planar substitution",
+     "Trans effect",
+     "Acid and base hydrolysis",
+     "Inner- and outer-sphere ET",
+     "Marcus theory",
+     "Robin–Day classification"
+    ],
+    "refs": [
+     {
+      "book": "Miessler, Fischer & Tarr",
+      "label": "Ch. 12 Coordination Chemistry IV: Reactions and Mechanisms",
+      "url": "https://books.google.com/books?vid=ISBN9780321811059",
+      "free": false
+     },
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 21 Coordination chemistry: reactions of complexes",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Topic 18E Electron transfer in homogeneous systems (Marcus theory)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 12,
+     "tut": 0,
+     "ans": 0,
+     "pages": 264
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4132",
+  "title": "Solid State Chemistry",
+  "level": 4000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2112",
+   "CHE4112"
+  ],
+  "stream": "inorg",
+  "type": "Optional",
+  "tagline": "Advanced materials: ceramics, conducting polymers, batteries, photocatalysts and solar cells.",
+  "about": "A materials-focused course covering advanced ceramics, inorganic and conducting polymers, solid-state batteries and electrolytes, semiconductor photocatalysts, photoelectrochemical and photovoltaic solar cells, liquid crystals, ionic solids, crystal defects, solid solutions, Chevrel phases, sol–gel technology, inorganic synthesis and thermal analysis.",
+  "texts": [
+   "West, Solid State Chemistry and its Applications",
+   "Smart & Moore, Solid State Chemistry"
+  ],
+  "papers": 10,
+  "years": "2008–2023",
+  "ext": [
+   "mit3091",
+   "nanohub"
+  ],
+  "sections": [
+   {
+    "name": "Advanced Materials",
+    "slug": "advanced-materials",
+    "order": 1,
+    "hours": "30 L",
+    "summary": "Structure–property relations in functional solids. The folder holds past papers only, so the references point to outside sources.",
+    "topics": [
+     "Advanced ceramics",
+     "Conducting polymers",
+     "Solid-state batteries",
+     "Photocatalysis",
+     "Solar cells",
+     "Liquid crystals",
+     "Crystal defects",
+     "Sol–gel technology"
+    ],
+    "refs": [
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 24 Solid-state and materials chemistry; Ch. 25 Nanomaterials",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Focus 15 Solids (15C–15G)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "Carraher",
+      "label": "Ch. 10 Inorganic Polymers",
+      "url": "https://books.google.com/books?vid=ISBN9781498737616",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4213",
+  "title": "Advanced Organic Chemistry II",
+  "level": 4000,
+  "sem": "2",
+  "credits": 3,
+  "pre": [
+   "CHE2212",
+   "CHE3212"
+  ],
+  "stream": "org",
+  "type": "Compulsory",
+  "tagline": "Proving mechanisms, controlling stereochemistry and solving organic problems.",
+  "about": "Physical Organic Chemistry analyses what controls reaction rates and mechanisms: kinetic and thermodynamic data, the Hammond postulate, the Curtin–Hammett principle, kinetic isotope effects, the Hammett, Yukawa–Tsuno and Taft relationships, and labelling, crossover and trapping experiments. Advanced Stereochemistry covers stereocontrol in cyclic and acyclic systems and chiral catalysis. Problem Solving combines stereochemistry, mechanisms, synthesis and spectroscopy in worked tutorials.",
+  "texts": [
+   "Isaacs, Physical Organic Chemistry",
+   "Anslyn & Dougherty, Modern Physical Organic Chemistry",
+   "Eliel & Wilen, Stereochemistry of Organic Compounds"
+  ],
+  "papers": 9,
+  "years": "2008–2024",
+  "ext": [
+   "ocp",
+   "moc",
+   "chemtube",
+   "reich"
+  ],
+  "sections": [
+   {
+    "name": "Physical Organic Chemistry",
+    "slug": "physical-organic-chemistry",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Experimental and quantitative tools for working out mechanisms.",
+    "topics": [
+     "Kinetic and thermodynamic data",
+     "Hammond postulate",
+     "Curtin–Hammett principle",
+     "Kinetic isotope effects",
+     "Hammett equation",
+     "Yukawa–Tsuno and Taft",
+     "Labelling and crossover",
+     "Trapping intermediates"
+    ],
+    "refs": [
+     {
+      "book": "Anslyn & Dougherty",
+      "label": "Energy surfaces and kinetic analyses; experiments related to thermodynamics and kinetics (isotope effects, Hammett)",
+      "url": "https://books.google.com/books?vid=ISBN9781891389313",
+      "free": false
+     },
+     {
+      "book": "Morrison & Boyd",
+      "label": "Ch. 28 Rearrangements and Neighboring Group Effects",
+      "url": "https://books.google.com/books?vid=ISBN9780136436690",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 0,
+     "ans": 0,
+     "pages": 467
+    }
+   },
+   {
+    "name": "Advanced Stereochemistry",
+    "slug": "advanced-stereochemistry",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Controlling the three-dimensional outcome of reactions.",
+    "topics": [
+     "Cyclic stereocontrol",
+     "Acyclic stereocontrol",
+     "Chiral catalysis",
+     "MO theory for selectivity"
+    ],
+    "refs": [
+     {
+      "book": "Clayden et al.",
+      "label": "Ch. 33 Diastereoselectivity; Ch. 41 Asymmetric synthesis",
+      "url": "https://books.google.com/books?vid=ISBN9780199270293",
+      "free": false
+     },
+     {
+      "book": "Eliel & Wilen",
+      "label": "Ch. 12 Stereoselective synthesis",
+      "url": "https://books.google.com/books?vid=ISBN9780471016700",
+      "free": false
+     },
+     {
+      "book": "Carey & Sundberg B",
+      "label": "Ch. 2 Reactions of Carbon Nucleophiles with Carbonyl Compounds (aldol stereoselectivity)",
+      "url": "https://books.google.com/books?vid=ISBN9780387683546",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 3,
+     "tut": 0,
+     "ans": 0,
+     "pages": 53
+    }
+   },
+   {
+    "name": "Problem Solving",
+    "slug": "problem-solving",
+    "order": 3,
+    "hours": "15 L",
+    "summary": "Integrated problems with worked tutorials.",
+    "topics": [
+     "Stereochemistry problems",
+     "Mechanism problems",
+     "Synthesis problems",
+     "Spectroscopy problems"
+    ],
+    "refs": [
+     {
+      "book": "Silverstein",
+      "label": "Ch. 7 Solved Problems",
+      "url": "https://books.google.com/books?vid=ISBN9780471393627",
+      "free": false
+     },
+     {
+      "book": "Smith",
+      "label": "Ch. 8 Synthetic Strategies",
+      "url": "https://books.google.com/books?vid=ISBN9780128007204",
+      "free": false
+     },
+     {
+      "book": "Carey & Sundberg B",
+      "label": "Ch. 13 Multistep Syntheses",
+      "url": "https://books.google.com/books?vid=ISBN9780387683546",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 2,
+     "ans": 6,
+     "pages": 104
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4312",
+  "title": "Advanced Physical Chemistry II",
+  "level": 4000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE3313"
+  ],
+  "stream": "phys",
+  "type": "Compulsory",
+  "tagline": "Electrolyte solutions and electrode interfaces, and the dynamics of fast reactions.",
+  "about": "Advanced Electrochemistry covers ion–solvent and ion–ion interactions, Debye–Hückel theory, polarised electrodes and electrocapillarity, models of the electrode–solution interface, AC methods, electrode kinetics, Tafel plots and mass-transfer control. Advanced Chemical Kinetics and Reaction Dynamics covers fast-reaction and relaxation methods, collision theory, activated-complex theory and the Eyring equation, potential energy surfaces, and applications in surface science and catalysis.",
+  "texts": [
+   "Atkins & de Paula, Physical Chemistry",
+   "Laidler, Chemical Kinetics",
+   "Bard & Faulkner, Electrochemical Methods"
+  ],
+  "papers": 12,
+  "years": "2007–2020",
+  "ext": [
+   "pine",
+   "cvguide",
+   "mit560"
+  ],
+  "sections": [
+   {
+    "name": "Advanced Electrochemistry",
+    "slug": "advanced-electrochemistry",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Solutions, interfaces and electrode kinetics.",
+    "topics": [
+     "Ion–solvent interactions",
+     "Debye–Hückel theory",
+     "Electrocapillary curves",
+     "Double-layer models",
+     "AC methods",
+     "Electrode kinetics",
+     "Tafel plots",
+     "Lithium-ion batteries"
+    ],
+    "refs": [
+     {
+      "book": "Bard & Faulkner",
+      "label": "Ch. 1 Introduction and Overview of Electrode Processes; Ch. 3 Kinetics of Electrode Reactions; Ch. 13 Double-Layer Structure and Adsorption",
+      "url": "https://books.google.com/books?vid=ISBN9780471043720",
+      "free": false
+     },
+     {
+      "book": "Atkins",
+      "label": "Topic 5F Activities (Debye–Hückel); Topic 19D Processes at electrodes",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 11,
+     "tut": 0,
+     "ans": 0,
+     "pages": 1
+    }
+   },
+   {
+    "name": "Advanced Chemical Kinetics and Reaction Dynamics",
+    "slug": "advanced-chemical-kinetics-and-reaction-dynamics",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Theories of reaction rates and how fast reactions are measured.",
+    "topics": [
+     "Fast-reaction methods",
+     "Relaxation methods",
+     "Collision theory",
+     "Activated-complex theory",
+     "Eyring equation",
+     "Potential energy surfaces"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 18 Reaction dynamics (18A Collision theory, 18C Transition-state theory, 18D Dynamics of molecular collisions)",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     },
+     {
+      "book": "Laidler",
+      "label": "Fast reactions, collision and transition-state theory (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9780060438623",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 1,
+     "tut": 0,
+     "ans": 0,
+     "pages": 38
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4322",
+  "title": "Advanced Physical Chemistry III",
+  "level": 4000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE3313"
+  ],
+  "stream": "phys",
+  "type": "Compulsory",
+  "tagline": "Catalysis at surfaces, colloid stability and the physical chemistry of polymers.",
+  "about": "Surface and Colloid Chemistry covers solid-surface structure and defects, the BET, Temkin and Freundlich isotherms, surface mobility, heterogeneous catalysis (Langmuir–Hinshelwood and Eley–Rideal), colloid stability, zeta potential and AFM. Polymer Chemistry covers polymer properties, the gel point, polymerisation equilibria, living and controlled radical polymerisation (ATRP, SFRP, RAFT), ionic and stereoregular polymerisation, and Flory–Huggins solution thermodynamics.",
+  "texts": [
+   "Thomas & Thomas, Principles and Practice of Heterogeneous Catalysis",
+   "Young & Lovell, Introduction to Polymers"
+  ],
+  "papers": 7,
+  "years": "2007–2024",
+  "ext": [
+   "nptel_colloid",
+   "nptel_poly"
+  ],
+  "sections": [
+   {
+    "name": "Surface and Colloid Chemistry",
+    "slug": "surface-and-colloid-chemistry",
+    "order": 1,
+    "hours": "15 L",
+    "summary": "Surfaces, catalysis and colloids.",
+    "topics": [
+     "Surface structure, defects",
+     "BET, Temkin, Freundlich",
+     "Heterogeneous catalysis",
+     "Langmuir–Hinshelwood",
+     "Zeta potential",
+     "AFM",
+     "Adsorption kinetics"
+    ],
+    "refs": [
+     {
+      "book": "Atkins",
+      "label": "Focus 19 Processes at solid surfaces (19A–19C); Topic 14E Self-assembly",
+      "url": "https://books.google.com/books?vid=ISBN9780198769866",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 1,
+     "ans": 1,
+     "pages": 240
+    }
+   },
+   {
+    "name": "Polymer Chemistry",
+    "slug": "polymer-chemistry",
+    "order": 2,
+    "hours": "15 L",
+    "summary": "Mechanisms and thermodynamics of polymers.",
+    "topics": [
+     "Polymer properties",
+     "Gel point",
+     "Polymerisation equilibria",
+     "ATRP, SFRP, RAFT",
+     "Living ionic polymerisation",
+     "Stereoregular polymers",
+     "Flory–Huggins theory"
+    ],
+    "refs": [
+     {
+      "book": "Carraher",
+      "label": "Ch. 3 Molecular Weight; Ch. 5 Step-Reaction Polymerization; Ch. 6 Ionic Chain and Coordination Polymerization; Ch. 7 Free Radical Chain Polymerization; Ch. 8 Copolymerization; Ch. 12 Characterization",
+      "url": "https://books.google.com/books?vid=ISBN9781498737616",
+      "free": false
+     },
+     {
+      "book": "Young & Lovell",
+      "label": "Polymer synthesis, solutions (Flory–Huggins) and characterization (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9780849339295",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 27,
+     "tut": 0,
+     "ans": 0,
+     "pages": 788
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4332",
+  "title": "Molecular Modeling",
+  "level": 4000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE3812"
+  ],
+  "stream": "comp",
+  "type": "Optional",
+  "tagline": "Hartree–Fock, DFT and force fields: computing structures, energies and spectra.",
+  "about": "Molecular Quantum Mechanics covers Hartree–Fock SCF-MO theory, basis sets, semiempirical methods and density functional theory. Electronic Structure Calculations covers single-point energies, geometry optimisation and predicting properties and spectra. Classical Modelling covers molecular mechanics, force fields, conformational searching, molecular dynamics and Monte Carlo methods.",
+  "texts": [
+   "Leach, Molecular Modelling",
+   "Frenkel & Smit, Understanding Molecular Simulation",
+   "Cramer, Essentials of Computational Chemistry"
+  ],
+  "papers": 11,
+  "years": "2012–2023",
+  "ext": [
+   "namd",
+   "avogadro",
+   "tmp"
+  ],
+  "sections": [
+   {
+    "name": "Molecular Modeling",
+    "slug": "molecular-modeling",
+    "order": 50,
+    "hours": "20 L + 9 P",
+    "summary": "Quantum and classical modelling of molecules.",
+    "topics": [
+     "Hartree–Fock SCF-MO",
+     "Basis sets",
+     "Semiempirical methods",
+     "Density functional theory",
+     "Geometry optimisation",
+     "Force fields",
+     "Molecular dynamics",
+     "Monte Carlo"
+    ],
+    "refs": [
+     {
+      "book": "Cramer",
+      "label": "Ch. 2 Molecular Mechanics; Ch. 3 Simulations of Molecular Ensembles; Ch. 4 Foundations of Molecular Orbital Theory; Ch. 8 Density Functional Theory",
+      "url": "https://books.google.com/books?vid=ISBN9780470091821",
+      "free": false
+     },
+     {
+      "book": "McQuarrie",
+      "label": "Ch. 12 The Hartree–Fock–Roothaan Method",
+      "url": "https://books.google.com/books?vid=ISBN9781891389504",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 25
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4352",
+  "title": "Applications of Nanoscience in Chemistry",
+  "level": 4000,
+  "sem": "1",
+  "credits": 2,
+  "pre": [
+   "CHE3723"
+  ],
+  "stream": "phys",
+  "type": "Optional",
+  "tagline": "Scaling laws, nanometrology, nanomaterials and nanotoxicity.",
+  "about": "Reviews how nanotechnology reaches industry and consumer products, how surface, thermal and electronic properties scale with size (quantum confinement and density of states), the instruments used to study nanomaterials, the synthesis and characterisation of selected nanomaterials through case studies, and nanoparticle toxicity.",
+  "texts": [
+   "Hornyak et al., Introduction to Nanoscience and Nanotechnology",
+   "Poole & Owens, Introduction to Nanotechnology",
+   "Klabunde & Richards, Nanoscale Materials in Chemistry"
+  ],
+  "papers": 1,
+  "years": "2023–2024",
+  "ext": [
+   "nanohub",
+   "swayam_nano"
+  ],
+  "sections": [
+   {
+    "name": "Nanomaterials and Nanosynthesis",
+    "slug": "nanomaterials-and-nanosynthesis",
+    "order": 50,
+    "hours": "30 L",
+    "summary": "Making, measuring and applying nanomaterials.",
+    "topics": [
+     "Nanotechnology today",
+     "Scaling laws",
+     "Quantum confinement",
+     "Nanometrology",
+     "Nanoparticle synthesis",
+     "Nanotoxicity"
+    ],
+    "refs": [
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 25 Nanomaterials, nanoscience, and nanotechnology",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Weller et al.",
+      "label": "Ch. 24 Materials chemistry and nanomaterials",
+      "url": "https://books.google.com/books?vid=ISBN9780198768128",
+      "free": false
+     },
+     {
+      "book": "Hornyak et al.",
+      "label": "Nanotools, fabrication, quantum dots and carbon nanostructures (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9781420047790",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 0,
+     "ans": 0,
+     "pages": 35
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4413",
+  "title": "Advanced Analytical Chemistry",
+  "level": 4000,
+  "sem": "1",
+  "credits": 3,
+  "pre": [
+   "CHE3413"
+  ],
+  "stream": "anal",
+  "type": "Compulsory",
+  "tagline": "Instrument design, surface analysis, advanced electroanalysis and modern separations.",
+  "about": "Spectroscopic Instrumentation covers optical components, signal-to-noise, errors and detection limits, plasma, arc and spark emission, atomic fluorescence, and IR and luminescence methods. Surface Analytical Techniques covers XPS, UPS, Auger, LEED, Rutherford backscattering and X-ray microscopy. Advanced Electroanalysis covers pulse techniques, gas and biosensors and spectroelectrochemistry. Advanced Separations covers HPLC, size-exclusion, supercritical-fluid and affinity chromatography and capillary electrophoresis.",
+  "texts": [
+   "Skoog, Holler & Crouch, Principles of Instrumental Analysis",
+   "Bard & Faulkner, Electrochemical Methods"
+  ],
+  "papers": 9,
+  "years": "2006–2024",
+  "ext": [
+   "nistxps",
+   "pine",
+   "cvguide"
+  ],
+  "sections": [
+   {
+    "name": "Spectroscopic Instrumentation and Spectrochemical Analysis",
+    "slug": "spectroscopic-instrumentation-and-spectrochemical-analysis",
+    "order": 1,
+    "hours": "10 L",
+    "summary": "How spectrometers are built and how to get reliable numbers from them.",
+    "topics": [
+     "Sources and transducers",
+     "Signal-to-noise",
+     "Detection limits",
+     "Plasma, arc, spark emission",
+     "Atomic fluorescence",
+     "IR and luminescence"
+    ],
+    "refs": [
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 5 Signals and Noise; Ch. 7 Components of Optical Instruments; Ch. 9 Atomic Absorption and Fluorescence; Ch. 10 Atomic Emission",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 19 Spectrophotometers; Ch. 20 Atomic Spectroscopy",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 5,
+     "tut": 0,
+     "ans": 0,
+     "pages": 81
+    }
+   },
+   {
+    "name": "Surface Analytical Techniques",
+    "slug": "surface-analytical-techniques",
+    "order": 2,
+    "hours": "7 L",
+    "summary": "Probing the top few nanometres of a material.",
+    "topics": [
+     "XPS",
+     "UPS",
+     "Auger spectroscopy",
+     "EELS",
+     "LEED",
+     "Rutherford backscattering"
+    ],
+    "refs": [
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 21 Surface Characterization by Spectroscopy and Microscopy",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 13,
+     "tut": 0,
+     "ans": 0,
+     "pages": 107
+    }
+   },
+   {
+    "name": "Advanced Electroanalytical Techniques",
+    "slug": "advanced-electroanalytical-techniques",
+    "order": 3,
+    "hours": "6 L",
+    "summary": "Modern electrochemical measurement and sensing.",
+    "topics": [
+     "Pulse techniques",
+     "Gas sensors",
+     "Biosensors",
+     "Spectroelectrochemistry"
+    ],
+    "refs": [
+     {
+      "book": "Bard & Faulkner",
+      "label": "Ch. 7 Polarography and Pulse Voltammetry; Ch. 17 Spectroelectrochemistry and Other Coupled Characterization Methods",
+      "url": "https://books.google.com/books?vid=ISBN9780471043720",
+      "free": false
+     },
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 25 Voltammetry",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     },
+     {
+      "book": "Christian",
+      "label": "Ch. 15 Voltammetry and Electrochemical Sensors",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 7,
+     "tut": 0,
+     "ans": 0,
+     "pages": 72
+    }
+   },
+   {
+    "name": "Advanced Separation Techniques",
+    "slug": "advanced-separation-techniques",
+    "order": 4,
+    "hours": "7 L",
+    "summary": "High-performance separations and how to troubleshoot them.",
+    "topics": [
+     "Capacity and selectivity",
+     "HPLC",
+     "Size exclusion",
+     "Supercritical fluid",
+     "Affinity chromatography",
+     "Capillary electrophoresis"
+    ],
+    "refs": [
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 26 Chromatographic Separations; Ch. 28 HPLC; Ch. 29 Supercritical Fluid Chromatography; Ch. 30 Capillary Electrophoresis",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 24 High-Performance Liquid Chromatography; Ch. 25 Chromatographic Methods and Capillary Electrophoresis",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 2,
+     "tut": 0,
+     "ans": 0,
+     "pages": 30
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4512",
+  "title": "Biological Chemistry II",
+  "level": 4000,
+  "sem": "2",
+  "credits": 2,
+  "pre": [
+   "CHE2212",
+   "CHE3512"
+  ],
+  "stream": "bio",
+  "type": "Compulsory",
+  "tagline": "Bioanalysis, toxicology, free radicals, metals in biology and food chemistry.",
+  "about": "Bioanalytical Chemistry covers centrifugation and chromatography, the physical chemistry of macromolecules, capillary electrophoresis, MEKC and biosensors. Toxicology and reactive species cover natural toxins, pollutants, drugs, xenobiotic metabolism, reactive oxygen species, lipid peroxidation and free-radical disease. Bioinorganic Chemistry covers metalloproteins — cytochromes, iron–sulfur proteins, molybdoenzymes, Zn and Cu enzymes, oxygen carriers, nitrogen fixation and iron metabolism. The notes also include a food analysis and preservation unit.",
+  "texts": [
+   "Lippard & Berg, Principles of Bioinorganic Chemistry",
+   "Lehninger, Principles of Biochemistry",
+   "Fenton, Biocoordination Chemistry"
+  ],
+  "papers": 6,
+  "years": "2006–2024",
+  "ext": [
+   "toxtutor",
+   "ahern",
+   "bffa"
+  ],
+  "sections": [
+   {
+    "name": "Bioanalytical Chemistry",
+    "slug": "bioanalytical-chemistry",
+    "order": 1,
+    "hours": "8 L",
+    "summary": "Separating and measuring biomolecules.",
+    "topics": [
+     "Centrifugation",
+     "Chromatography of biomolecules",
+     "Macromolecule conformation",
+     "Donnan equilibrium",
+     "Capillary electrophoresis",
+     "MEKC",
+     "Biosensors"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 21 Liquid Chromatography and Electrophoresis",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     },
+     {
+      "book": "Skoog, Holler & Crouch",
+      "label": "Ch. 30 Capillary Electrophoresis and Electrochromatography",
+      "url": "https://books.google.com/books?vid=ISBN9781305577213",
+      "free": false
+     },
+     {
+      "book": "Harris",
+      "label": "Ch. 25 Chromatographic Methods and Capillary Electrophoresis",
+      "url": "https://books.google.com/books?vid=ISBN9781429218153",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 4,
+     "tut": 0,
+     "ans": 0,
+     "pages": 113
+    }
+   },
+   {
+    "name": "Toxicology",
+    "slug": "toxicology",
+    "order": 2,
+    "hours": "5 L",
+    "summary": "How chemicals harm living systems.",
+    "topics": [
+     "Natural toxins",
+     "Environmental pollutants",
+     "Drug abuse",
+     "Xenobiotic metabolism",
+     "Dose and response"
+    ],
+    "refs": [
+     {
+      "book": "Berg, Tymoczko & Stryer",
+      "label": "Ch. 30 The Integration of Metabolism",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 9,
+     "tut": 0,
+     "ans": 0,
+     "pages": 188
+    }
+   },
+   {
+    "name": "Reactive Oxygen Species",
+    "slug": "reactive-oxygen-species",
+    "order": 3,
+    "hours": "5 L",
+    "summary": "Free radicals in biology and disease.",
+    "topics": [
+     "Reactive oxygen species",
+     "Lipid peroxidation",
+     "Free-radical reactions",
+     "Radical-linked disease",
+     "Antioxidants"
+    ],
+    "refs": [
+     {
+      "book": "Halliwell & Gutteridge",
+      "label": "Reactive species, antioxidants and oxidative damage (catalogue chapters)",
+      "url": "https://books.google.com/books?vid=ISBN9780198717485",
+      "free": false
+     },
+     {
+      "book": "Berg, Tymoczko & Stryer",
+      "label": "Ch. 18 Oxidative Phosphorylation",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 0,
+     "ans": 0,
+     "pages": 123
+    }
+   },
+   {
+    "name": "Bioinorganic Chemistry",
+    "slug": "bioinorganic-chemistry",
+    "order": 4,
+    "hours": "12 L",
+    "summary": "The roles of metal ions in proteins and enzymes.",
+    "topics": [
+     "Metals in biology",
+     "Cytochromes",
+     "Iron–sulfur proteins",
+     "Molybdoenzymes",
+     "Zn and Cu enzymes",
+     "Oxygen carriers, heme",
+     "Nitrogen fixation",
+     "Iron metabolism"
+    ],
+    "refs": [
+     {
+      "book": "Shriver & Atkins",
+      "label": "Ch. 27 Biological inorganic chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9781429218207",
+      "free": false
+     },
+     {
+      "book": "Weller et al.",
+      "label": "Ch. 26 Biological inorganic chemistry",
+      "url": "https://books.google.com/books?vid=ISBN9780198768128",
+      "free": false
+     },
+     {
+      "book": "Berg, Tymoczko & Stryer",
+      "label": "Ch. 10 Regulatory Strategies: Enzymes and Hemoglobin",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true
+     },
+     {
+      "book": "Lippard & Berg",
+      "label": "Metal ions in biology (whole book)",
+      "url": "https://books.google.com/books?vid=ISBN9780935702729",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 6,
+     "tut": 0,
+     "ans": 0,
+     "pages": 90
+    }
+   },
+   {
+    "name": "Food Chemistry",
+    "slug": "food-chemistry",
+    "order": 5,
+    "hours": "",
+    "summary": "Food analysis methods and the chemistry of food preservation.",
+    "topics": [
+     "Food analysis",
+     "Food preservation"
+    ],
+    "refs": [
+     {
+      "book": "Christian",
+      "label": "Ch. 18 Sample Preparation; Ch. 20–21 Gas and Liquid Chromatography",
+      "url": "https://books.google.com/books?vid=ISBN9780470887578",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 10,
+     "tut": 0,
+     "ans": 0,
+     "pages": 166
+    }
+   }
+  ]
+ },
+ {
+  "code": "CHE4921",
+  "title": "General Aspects and Recent Developments in Chemistry",
+  "level": 4000,
+  "sem": "2",
+  "credits": 1,
+  "pre": [],
+  "stream": "gen",
+  "type": "Compulsory",
+  "tagline": "A capstone review of the whole degree, with guest lectures and recent research.",
+  "about": "Reviews concepts and theories from across the degree through lectures, laboratory sessions, guest lectures, seminars, industrial exposure and research presentations. The past papers are the main resource here; the journals and magazines in Resources help with recent developments.",
+  "texts": [
+   "Textbooks used during the degree programme"
+  ],
+  "papers": 5,
+  "years": "2015–2024",
+  "ext": [
+   "chemworld",
+   "jce",
+   "cjs"
+  ],
+  "sections": [
+   {
+    "name": "Review and Recent Developments",
+    "slug": "review-and-recent-developments",
+    "order": 1,
+    "hours": "",
+    "summary": "Revision across all streams. The folder holds past papers only, so the references point to outside sources.",
+    "topics": [
+     "Revision across streams",
+     "Guest lectures",
+     "Industrial exposure",
+     "Research presentations"
+    ],
+    "refs": [
+     {
+      "book": "Chang & Overby",
+      "label": "Ch. 20 Chemistry in the Atmosphere",
+      "url": "https://books.google.com/books?vid=ISBN9781259911156",
+      "free": false
+     }
+    ],
+    "counts": {
+     "notes": 0,
+     "tut": 0,
+     "ans": 0,
+     "pages": 0
+    }
+   }
+  ]
+ }
+]
