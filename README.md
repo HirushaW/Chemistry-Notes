@@ -9,7 +9,7 @@ An unofficial study site for the B.Sc. chemistry courses of the University of Pe
 - **38 courses** and **88 syllabus sections**, each with a short description and a full summary written from the department's *Course Contents 2021–2022* handbook.
 - **509 lecture notes and tutorials** and **219 past papers**, stored in Google Drive and previewed in the page.
 - Textbook chapters for every section (free OpenStax and LibreTexts editions where they exist), **261 YouTube lectures** and a checked list of websites, tools and journals.
-- An interactive **Chemistry Map**: a 3D atom whose four shells are the four levels and whose electrons are the courses (also on the home page), plus a bubble view, showing how topics build on each other across the four years.
+- An interactive **Chemistry Map**: a 3D atom whose four coloured shells are the four levels and whose electrons are the courses (also on the home page), plus a bubble view, showing how topics build on each other across the four years. Turn the atom any way, scroll or pinch to zoom into the inner shells, and filter it by stream and level.
 - Past papers on every course page, in a **Past papers** tab on every section page, and in the atom's course panel; a YouTube search link for every course and section.
 - An interactive **periodic table** with PubChem data and property heat maps.
 
