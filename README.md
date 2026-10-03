@@ -2,7 +2,7 @@
 
 An unofficial study site for the B.Sc. chemistry courses of the University of Peradeniya, 1000 to 4000 Level.
 
-**Live site:** https://hirushaw.github.io/Chemistry-Notes/
+**Live site:** https://chemistry-notes-sigma.vercel.app (Vercel) · https://hirushaw.github.io/Chemistry-Notes/ (GitHub Pages)
 
 ## What it contains
 
@@ -28,7 +28,7 @@ Set `BASE=/` to build for a root domain instead of the GitHub Pages project path
 
 Every push to `main` builds and deploys the site through GitHub Actions (`.github/workflows/deploy.yml`).
 
-The repo also deploys on Vercel: `vercel.json` builds with `BASE=/` into `dist/`, so importing the repo in Vercel needs no extra settings.
+The same push also deploys to Vercel at https://chemistry-notes-sigma.vercel.app: `vercel.json` builds with `BASE=/` into `dist/`, so the Vercel project needs no extra settings.
 
 ## Layout
 
