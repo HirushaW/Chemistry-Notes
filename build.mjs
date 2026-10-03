@@ -166,24 +166,42 @@ const LINKED = LINKS.map(([a, b, idea]) => {
   return { a: A, b: B, idea };
 });
 
-// A small, non-interactive version of the Chemistry Map for the home page.
+// A small, non-interactive preview of the bubble map for the home page: floating course bubbles in
+// four level columns, with a demo that lights up one course's connections after another.
 function miniMap() {
-  const ORDER = ['org', 'ind', 'bio', 'anal', 'phys', 'comp', 'inorg', 'lab', 'gen'], W = { gen: 6, lab: 9, inorg: 8, org: 7.5, phys: 8, anal: 4, bio: 4, ind: 3.2, comp: 4 };
-  const RL = { 1000: 72, 2000: 112, 3000: 152, 4000: 192 }, total = ORDER.reduce((n, k) => n + W[k], 0), P = new Map();
-  let a0 = -Math.PI / 2 - W[ORDER[0]] / total * Math.PI, rings = '', spokes = '', dots = '', edges = '';
-  for (const r of Object.values(RL)) rings += `<circle r="${r}" fill="none" stroke="rgba(220,223,255,.12)" stroke-dasharray="2 5"/>`;
-  for (const k of ORDER) {
-    const w = W[k] / total * Math.PI * 2, byLv = {};
-    spokes += `<line x1="${(Math.cos(a0) * 50).toFixed(1)}" y1="${(Math.sin(a0) * 50).toFixed(1)}" x2="${(Math.cos(a0) * 205).toFixed(1)}" y2="${(Math.sin(a0) * 205).toFixed(1)}" stroke="rgba(220,223,255,.07)"/>`;
-    courses.filter(c => c.stream === k).forEach(c => (byLv[c.level] ||= []).push(c));
-    for (const [lv, list] of Object.entries(byLv)) list.forEach((c, i) => { const a = a0 + w * (i + 1) / (list.length + 1); P.set(c.code, [Math.cos(a) * RL[lv], Math.sin(a) * RL[lv], STREAMS[k].color]); });
-    a0 += w;
-  }
-  for (const c of courses) for (const p of c.pre) if (P.has(p)) { const [x1, y1] = P.get(p), [x2, y2] = P.get(c.code); edges += `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} Q${((x1 + x2) * .4).toFixed(1)} ${((y1 + y2) * .4).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}" fill="none" stroke="rgba(173,125,255,.35)" stroke-width="1"/>`; }
+  const ORDER = ['gen', 'inorg', 'org', 'phys', 'anal', 'bio', 'ind', 'comp', 'lab'], W = 440, H = 440, top = 54, colW = W / 4, P = new Map();
+  let heads = '', bubbles = '', demo = '';
+  [1000, 2000, 3000, 4000].forEach((lv, ci) => {
+    const list = courses.filter(c => c.level === lv).sort((a, b) => ORDER.indexOf(a.stream) - ORDER.indexOf(b.stream) || a.code.localeCompare(b.code));
+    const nodes = list.map(c => ({ c, r: 11 + Math.sqrt(files.filter(f => f.code === c.code).length) * 1.45 }));
+    const cx = colW * ci + colW / 2, cy = top + (H - top) / 2;
+    nodes.forEach((n, i) => { const a = i * 2.4 + .6, rr = Math.sqrt(i + .4) * 17; n.x = cx + Math.cos(a) * rr; n.y = cy + Math.sin(a) * rr; });
+    for (let it = 0; it < 220; it++) {
+      nodes.forEach(n => { n.x += (cx - n.x) * .02; n.y += (cy - n.y) * .02; });
+      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j], dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || .01, min = a.r + b.r + 5;
+        if (d < min) { const f = (min - d) / d / 2; a.x -= dx * f; a.y -= dy * f; b.x += dx * f; b.y += dy * f; }
+      }
+      nodes.forEach(n => { n.x = Math.max(colW * ci + n.r + 3, Math.min(colW * (ci + 1) - n.r - 3, n.x)); n.y = Math.max(top + n.r, Math.min(H - n.r - 4, n.y)); });
+    }
+    nodes.forEach(n => P.set(n.c.code, n));
+    heads += `<text x="${cx}" y="30" text-anchor="middle" fill="#fff" style="font:800 17px var(--f-display)">${lv}</text>${ci ? `<line x1="${colW * ci}" y1="44" x2="${colW * ci}" y2="${H - 8}" stroke="rgba(220,223,255,.1)"/>` : ''}`;
+  });
+  const defs = Object.entries(STREAMS).map(([k, s]) => `<radialGradient id="mg-${k}" cx=".32" cy=".26" r=".9"><stop offset="0" stop-color="${s.color}" stop-opacity=".95"/><stop offset=".55" stop-color="${s.color}" stop-opacity=".35"/><stop offset="1" stop-color="#0b1036" stop-opacity=".9"/></radialGradient>`).join('');
   let i = 0;
-  for (const [x, y, col] of P.values()) dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="10" fill="${col}" opacity=".15"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" fill="${col}"><animate attributeName="r" values="4;6;4" dur="${3 + (i++ % 5)}s" repeatCount="indefinite"/></circle>`;
-  return `<svg viewBox="-220 -220 440 440" style="width:100%;height:100%"><g>${rings}${spokes}${edges}${dots}<animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="240s" repeatCount="indefinite"/></g>
-    <g fill="none" stroke="rgba(203,255,46,.6)" stroke-width="1.2"><ellipse rx="30" ry="10"/><ellipse rx="30" ry="10" transform="rotate(60)"/><ellipse rx="30" ry="10" transform="rotate(120)"/></g><circle r="5" fill="#cbff2e"/></svg>`;
+  for (const n of P.values()) {
+    const fy = 2 + (i % 4), fx = (i % 3) - 1, dur = 6 + (i % 5);
+    bubbles += `<g><animateTransform attributeName="transform" type="translate" values="0 0;${fx} -${fy};${-fx} ${fy / 2};0 0" dur="${dur}s" begin="-${i % 7}s" repeatCount="indefinite"/><circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${n.r.toFixed(1)}" fill="url(#mg-${n.c.stream})" stroke="${STREAMS[n.c.stream].color}" stroke-opacity=".6"/></g>`;
+    i++;
+  }
+  // demo: three courses take turns "being hovered", lighting their links
+  const showcase = ['CHE2313', 'CHE2112', 'CHE2212'].filter(c => P.has(c)), cycle = showcase.length * 3;
+  showcase.forEach((code, k) => {
+    const n = P.get(code), ends = [...courses.filter(c => c.pre.includes(code)).map(c => c.code), ...byCode.get(code).pre].filter(c => P.has(c));
+    const paths = ends.map(e => { const m = P.get(e), mx = (n.x + m.x) / 2, my = (n.y + m.y) / 2 - Math.abs(m.x - n.x) * .18; return `<path class="mm-link" d="M${n.x.toFixed(1)} ${n.y.toFixed(1)} Q${mx.toFixed(1)} ${my.toFixed(1)} ${m.x.toFixed(1)} ${m.y.toFixed(1)}"/>`; }).join('');
+    demo += `<g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.08;.28;.33;1" dur="${cycle}s" begin="${k * 3}s" repeatCount="indefinite"/>${paths}<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${(n.r + 5).toFixed(1)}" fill="none" stroke="${STREAMS[n.c.stream].color}" stroke-width="2"/></g>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:100%"><defs>${defs}</defs>${heads}${bubbles}${demo}</svg>`;
 }
 const paperTitle = p => (p.yr && p.t.replace(/\s*[-–]\s*/g, '-') === p.yr.replace('–', '-')) ? 'Examination paper' : p.t;
 
@@ -202,7 +220,7 @@ function home() {
   <div class="container hero-grid">
     <div>
       <span class="eyebrow rise">University of Peradeniya · Department of Chemistry</span>
-      <h1 class="rise" style="--i:1">Every chemistry note, <span class="gradient-text">1000&nbsp;to&nbsp;4000&nbsp;Level.</span></h1>
+      <h1 class="rise" style="--i:1">Every chemistry note,<br><span class="gradient-text">1000 to 4000&nbsp;Level.</span></h1>
       <p class="lead rise" style="--i:2">${totals.files} lecture notes and tutorials and ${totals.papers} past papers, organised by course and syllabus section. Each section links the exact textbook chapters, hand-picked videos and the best free resources.</p>
       <div class="hero-cta rise" style="--i:3">
         <a class="btn btn-primary" href="${u('map/')}">${ic('map')}Explore the Chemistry Map${ic('arrow', 'arrow')}</a>
@@ -245,7 +263,7 @@ function home() {
         <div>
           <span class="eyebrow">Chemistry Map</span>
           <h2>See how every topic connects</h2>
-          <p class="muted">Streams are sectors, levels are rings. Click any course or section to see what it covers, what it builds on and what it leads to, then open its notes without leaving the map.</p>
+          <p class="muted">Every course floats as a bubble in its level column. Hover one to light up what it builds on and what it leads to, then click to zoom in: its sections pop out around it with their notes, papers and chapters.</p>
           <div class="chips" style="margin:18px 0 24px">${Object.entries(STREAMS).map(([k, s]) => `<a class="chip" style="--c:${s.color}" href="${u('map/')}#stream:${k}"><span class="dot"></span>${s.name}</a>`).join('')}</div>
           <a class="btn btn-primary" href="${u('map/')}">${ic('map')}Open the map${ic('arrow', 'arrow')}</a>
         </div>
@@ -424,20 +442,28 @@ function mapPage() {
     links: LINKED.map(l => [sid(l.a.c, l.a.s), sid(l.b.c, l.b.s), l.idea]),
   };
   const body = `
-<h1 class="sr-only">Chemistry Map</h1>
-<div class="map-shell">
-  <svg class="map" role="application" aria-label="Interactive map of all chemistry courses and sections"></svg>
-  <div class="map-ui">
-    <div class="map-search"><label class="input">${ic('search')}<input type="search" placeholder="Find a course or topic…" aria-label="Find on map"></label><div class="map-results" hidden></div></div>
-    <div class="map-filters" aria-label="Filter by stream">${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" style="--c:${s.color}" data-f="stream:${k}" aria-pressed="true"><span class="dot"></span>${s.name}</button>`).join('')}</div>
-    <div class="map-filters" aria-label="Filter by level">${[1000, 2000, 3000, 4000].map(l => `<button class="chip" data-f="level:${l}" aria-pressed="true">${l}</button>`).join('')}</div>
+<section class="map-head"><div class="container">
+  <div class="mh-row">
+    <div><span class="eyebrow">Chemistry Map</span><h1>How every course connects</h1><p class="muted"><span class="fine">Each bubble is a course. Hover to see what it builds on and leads to. Click to zoom in and open its sections.</span><span class="touch">Tap a bubble to see its links. Tap it again to zoom in.</span></p></div>
+    <label class="input map-find">${ic('search')}<input type="search" placeholder="Find a course or topic…" aria-label="Find a course or topic"></label>
   </div>
-  <div class="map-zoom"><button data-zoom="in" aria-label="Zoom in">${ic('plus')}</button><button data-zoom="out" aria-label="Zoom out">${ic('minus')}</button><button data-zoom="fit" aria-label="Reset view">${ic('reset')}</button></div>
-  <p class="map-hint">Scroll or pinch to zoom · drag to pan · click a node to explore. Lime dashed lines show how topics build on each other; violet arcs are course prerequisites.</p>
-  <aside class="map-panel" aria-live="polite"><button class="btn btn-sm btn-icon close" aria-label="Close panel">${ic('close')}</button><div class="p-body"></div></aside>
+  <div class="map-tools">
+    <div class="chips" aria-label="Highlight a stream">${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" style="--c:${s.color}" data-stream-chip="${k}" aria-pressed="false"><span class="dot"></span>${s.name}</button>`).join('')}</div>
+    <div class="map-key"><span><i style="--k:var(--violet-text)"></i>builds on</span><span><i style="--k:var(--volt)"></i>leads to</span></div>
+  </div>
+</div></section>
+<div class="universe" aria-label="Courses by level">
+  <svg class="u-lines" aria-hidden="true"></svg>
+  ${[1000, 2000, 3000, 4000].map(l => `<div class="u-col" data-level="${l}"><div class="u-head"><b>${l}</b><span>${LEVELS[l].sub}</span></div><div class="u-field"></div></div>`).join('')}
+  <div class="u-tip" hidden></div>
+</div>
+<div class="u-focus" hidden role="dialog" aria-label="Course details">
+  <div class="f-stage"><svg class="f-lines" aria-hidden="true"></svg><div class="f-bubbles"></div></div>
+  <button class="btn btn-sm u-back" type="button">← Back to map</button>
+  <aside class="f-panel" aria-live="polite"><div class="p-body"></div></aside>
 </div>
 <script type="application/json" id="map-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
-  write('map/index.html', layout({ title: `Chemistry Map · ${SITE}`, desc: 'Interactive map of every UoP chemistry course and syllabus section, showing how topics connect from 1000 to 4000 Level.', active: 'map', body, page: 'map', scripts: `<script src="${u('assets/js/map.js')}?v=${VER}" defer></script>`, head: '<style>.site-footer{margin-top:0}</style>' }));
+  write('map/index.html', layout({ title: `Chemistry Map · ${SITE}`, desc: 'Interactive map of every UoP chemistry course, showing how courses and topics connect from 1000 to 4000 Level.', active: 'map', body, page: 'map', scripts: `<script src="${u('assets/js/map.js')}?v=${VER}" defer></script>`, head: '<style>.site-footer{margin-top:24px}</style>' }));
 }
 
 function papersPage() {

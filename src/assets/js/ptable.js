@@ -4,10 +4,11 @@
   const data = JSON.parse(document.getElementById('elements-data').textContent);
   const card = document.querySelector('.el-card'), sel = document.querySelector('[data-prop]');
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const cells = new Map();
+  const cells = new Map(), waveItems = [];
   const frag = document.createDocumentFragment();
   for (const e of data) {
     const [row, col] = PT.pos(e.z), b = document.createElement('button');
+    waveItems.push({ el: b, col, row: row > 8 ? row - 1.6 : row });
     b.className = 'cell'; b.type = 'button'; b.style.gridRow = row; b.style.gridColumn = col;
     b.style.setProperty('--c', PT.color(e));
     b.innerHTML = `<span class="z">${e.z}</span><span class="sym">${e.s}</span><span class="nm">${e.n}</span>`;
@@ -17,6 +18,8 @@
   const sp = document.createElement('div'); sp.className = 'spacer'; sp.style.gridRow = 8; frag.appendChild(sp);
   for (const [row, t] of [[6, '57–71'], [7, '89–103']]) { const m = document.createElement('div'); m.className = 'fmark'; m.style.gridRow = row; m.style.gridColumn = 3; m.textContent = t; frag.appendChild(m); }
   host.appendChild(frag);
+  // a gentle wave rolls across the table whenever the visitor pauses
+  PT.wave(waveItems, { root: host.closest('.pt-layout') || host, idleMs: 2600, active: 0, speed: .85 });
 
   const fmt = (v, unit) => v === '' || v == null ? '—' : `${v}${unit ? ' ' + unit : ''}`;
   const show = z => {
