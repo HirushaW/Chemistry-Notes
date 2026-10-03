@@ -1,4 +1,5 @@
 // Home hero: a 3D periodic table with a smooth idle wave, pointer parallax and a link from each element to its card.
+// spider.js adds the spider that picks an element to spotlight.
 (() => {
   const wrap = document.querySelector('.pt3d-wrap'); if (!wrap) return;
   const data = JSON.parse(document.getElementById('elements-data').textContent);
@@ -39,7 +40,7 @@
 
   // the idle wave: tiles rise and zoom in a smooth diagonal swell
   const hero = wrap.closest('.hero') || wrap;
-  PT.wave(items, { root: hero, idleMs: 1400, active: .3, speed: 1, spread: 1 });
+  PT.wave(items, { root: hero, idleMs: 1400, active: .3, speed: .8, spread: 1 });
 
   // pointer parallax
   let tx = 0, ty = 0, cx = 0, cy = 0, run = true;
@@ -56,14 +57,7 @@
   new IntersectionObserver(([en]) => { const was = run; run = en.isIntersecting; if (run && !was) requestAnimationFrame(loop); }).observe(wrap);
   requestAnimationFrame(loop);
 
-  // element ticker: spotlight a tour of elements that matter in the courses
-  const tour = [6, 1, 8, 7, 26, 29, 78, 79, 46, 92, 15, 16, 11, 17, 22, 45, 44, 30, 64, 57, 14, 5];
-  let k = 0, hot = null;
-  setInterval(() => {
-    if (document.hidden || !run) return;
-    hot?.classList.remove('hot');
-    hot = cells[tour[k % tour.length] - 1]; hot.classList.add('hot');
-    if (ticker) { const e = byZ(+hot.dataset.z); ticker.innerHTML = `<b style="color:${PT.color(e)}">${e.s}</b> ${e.n} · Z ${e.z} · ${e.g}`; }
-    k++;
-  }, 2200);
+  // the spider (spider.js) picks the element to spotlight and names it on the ticker through this hook
+  const setTicker = e => { if (ticker) ticker.innerHTML = `<b style="color:${PT.color(e)}">${e.s}</b> ${e.n} · Z ${e.z} · ${e.g}`; };
+  window.PTHero = { wrap, hero, grid, cells, byZ, setTicker, onScreen: () => run };
 })();
