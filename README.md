@@ -28,6 +28,8 @@ Set `BASE=/` to build for a root domain instead of the GitHub Pages project path
 
 Every push to `main` builds and deploys the site through GitHub Actions (`.github/workflows/deploy.yml`).
 
+The repo also deploys on Vercel: `vercel.json` builds with `BASE=/` into `dist/`, so importing the repo in Vercel needs no extra settings.
+
 ## Layout
 
 | Path | Contents |
