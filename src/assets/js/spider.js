@@ -27,17 +27,16 @@
   }
 
   /* ---------- the spider, its thread and its web (one SVG over the table) ---------- */
-  // the silk filter works in page units: a filter sized to a straight line's zero-width box would hide the line
+  // the thread and the web are single crisp white lines, with no glow
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('class', 'spider'); svg.setAttribute('aria-hidden', 'true');
   svg.innerHTML = `<defs>
     <radialGradient id="sp-abd" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#f6ffd8"/><stop offset=".42" stop-color="#cbff2e"/><stop offset="1" stop-color="#3d6600"/></radialGradient>
     <radialGradient id="sp-head" cx="40%" cy="36%" r="70%"><stop offset="0" stop-color="#eaffb3"/><stop offset=".5" stop-color="#a8e81c"/><stop offset="1" stop-color="#2d4f00"/></radialGradient>
     <filter id="sp-glow" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="sp-silk" filterUnits="userSpaceOnUse" x="-4000" y="-4000" width="8000" height="8000"><feGaussianBlur stdDeviation="1.1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <line class="sp-thread" filter="url(#sp-silk)"/>
-  <path class="sp-strand" filter="url(#sp-silk)"/>
+  <line class="sp-thread"/>
+  <path class="sp-strand"/>
   <g class="sp-splat">${Array.from({ length: 8 }, (_, i) => { const a = i * PI / 4 + .2; return `<line x1="${f1(cos(a) * 3)}" y1="${f1(sin(a) * 3)}" x2="${f1(cos(a) * 11)}" y2="${f1(sin(a) * 11)}"/>`; }).join('')}<circle r="6.5"/></g>
   <g class="sp-bug" filter="url(#sp-glow)">
     <g class="sp-legs">${'<path/>'.repeat(8)}</g>
