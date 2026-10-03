@@ -137,7 +137,7 @@
   const KIND = { course: ['Courses', 'layers'], section: ['Sections', 'target'], note: ['Notes and tutorials', 'file'], paper: ['Past papers', 'papers'], element: ['Elements', 'atom'], book: ['Library', 'book'], link: ['Websites', 'ext'], page: ['Pages', 'spark'] };
   const icon = n => (doc.getElementById('i-' + n)?.innerHTML || '');
   const norm = s => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '');
-  const load = async () => { if (index) return index; const r = await fetch(BASE + 'search-index.json'); index = (await r.json()).map(x => ({ ...x, _t: norm(x.t), _s: norm(x.s || '') })); return index; };
+  const load = async () => { if (index) return index; const r = await fetch(BASE + 'search-index.json'); index = (await r.json()).map(x => ({ ...x, _t: norm(x.t), _s: norm(x.s || ''), _x: norm(x.x || '') })); return index; };
   const W = { page: 5, course: 4, section: 3.5, element: 3, book: 2, link: 2, note: 1.5, paper: 1.2 };
   const render = qv => {
     const box = $('.palette-results', pal), terms = norm(qv).split(/\s+/).filter(Boolean);
@@ -145,7 +145,7 @@
     else {
       results = index.map(x => {
         let s = 0;
-        for (const t of terms) { if (x._t.startsWith(t)) s += 4; else if (x._t.includes(' ' + t)) s += 3; else if (x._t.includes(t)) s += 2; else if (x._s.includes(t)) s += 1; else return null; }
+        for (const t of terms) { if (x._t.startsWith(t)) s += 4; else if (x._t.includes(' ' + t)) s += 3; else if (x._t.includes(t)) s += 2; else if (x._s.includes(t)) s += 1; else if (x._x.includes(t)) s += .6; else return null; }
         return [s + (W[x.k] || 1) * .5, x];
       }).filter(Boolean).sort((a, b) => b[0] - a[0]).slice(0, 40).map(a => a[1]);
     }

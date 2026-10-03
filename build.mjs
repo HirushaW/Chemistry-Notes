@@ -570,9 +570,9 @@ function searchIndex() {
     ...[1000, 2000, 3000, 4000].map(l => [`${l} Level`, LEVELS[l].sub, `levels/${l}/`]),
   ].map(([t, s, url]) => ({ t, s, u: url, k: 'page' }));
   for (const c of courses) {
-    idx.push({ t: `${c.code} ${c.title}`, s: `${c.level} Level · ${streamOf(c).name} · ${c.tagline}`, u: cUrl(c), k: 'course' });
+    idx.push({ t: `${c.code} ${c.title}`, s: `${c.level} Level · ${streamOf(c).name} · ${c.tagline}`, x: c.about, u: cUrl(c), k: 'course' });
     for (const s of c.sections) {
-      idx.push({ t: s.name, s: `${c.code} ${c.title} · ${s.topics.slice(0, 5).join(', ')}`, u: sUrl(c, s), k: 'section' });
+      idx.push({ t: s.name, s: `${c.code} ${c.title} · ${s.topics.slice(0, 5).join(', ')}`, x: `${s.summary} ${s.topics.join(' ')}`, u: sUrl(c, s), k: 'section' });
       for (const f of filesOf(c.code, s.name)) idx.push({ t: f.t, s: `${c.code} · ${s.name}${f.kind !== 'note' ? ' · ' + KIND[f.kind][0] : ''}`, u: `${sUrl(c, s)}?open=${f.id}`, k: 'note' });
     }
     for (const p of papersOf(c.code)) idx.push({ t: `${c.code} ${p.t}`, s: `Past paper · ${c.title}`, u: `${cUrl(c)}?open=${p.id}`, k: 'paper' });
