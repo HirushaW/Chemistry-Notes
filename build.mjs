@@ -49,7 +49,7 @@ const I = {
   grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
   spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',
   target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
-  plus: '<path d="M12 5v14M5 12h14"/>', minus: '<path d="M5 12h14"/>', reset: '<path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v5h5"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>', minus: '<path d="M5 12h14"/>', reset: '<path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v5h5"/>', pause: '<path d="M9 6v12M15 6v12"/>',
   check: '<path d="m5 12 4.5 4.5L19 7"/>', pencil: '<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/>', video: '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/>',
   globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
 };
@@ -172,10 +172,13 @@ const ytSearch = q => 'https://www.youtube.com/results?search_query=' + encodeUR
 const ytMore = (q, label = q) => `<a class="btn btn-ghost btn-sm yt-more" href="${esc(ytSearch(q))}" target="_blank" rel="noopener">${ic('search')}More on YouTube: ${esc(label)}${ic('ext', 'arrow')}</a>`;
 
 /* ---------- Chemistry Map data: shared by the 3D atom (home and map pages) and the bubble map ---------- */
+// one colour per energy level of the atom: its shell, its electrons and its filter chip
+const LEVEL_COLORS = { 1000: '#ff5c7a', 2000: '#ffb43d', 3000: '#4dffa6', 4000: '#3fd2ff' };
 function mapData() {
   const yt = (c, s) => videos[`${c.code}|${s.name}`] || [];
   const newest = list => list.slice().sort((a, b) => (b.yr || '').localeCompare(a.yr || '') || a.o - b.o);
   return {
+    levelColors: LEVEL_COLORS,
     streams: Object.entries(STREAMS).map(([id, s]) => ({ id, name: s.name, color: s.color, blurb: s.blurb, courses: courses.filter(c => c.stream === id).map(c => c.code) })),
     courses: courses.map(c => ({
       id: c.code, title: c.title, level: c.level, stream: c.stream, url: cUrl(c), tagline: c.tagline, about: c.about, sem: c.sem ? semLabel(c.sem).replace('Semester ', '').replace('Semesters ', '') : '', credits: c.credits,
@@ -194,19 +197,22 @@ function mapData() {
 const exploreScripts = () => ['map-data', 'explore-core', 'atom'].map(f => `<script src="${u(`assets/js/${f}.js`)}?v=${VER}" defer></script>`).join('');
 
 // The Chemistry Atom: a nucleus with four shells (the levels); every course is an electron. Driven by atom.js.
+// Filters keep only the chosen streams and levels in the atom; the shells and electrons take their level's colour.
 function atomBlock({ head = true, hash = false } = {}) {
+  const ctl = (k, icon, label, extra = '') => `<button class="atom-btn" type="button" data-atom-ctrl="${k}" aria-label="${label}" title="${label}"${extra}>${ic(icon)}</button>`;
   return `<div class="atom" data-atom${hash ? ' data-atom-hash' : ''}>
-  ${head ? `<div class="section-head"><div><span class="eyebrow">The Chemistry Atom</span><h2>Four levels, one atom</h2></div><p>The nucleus is chemistry itself, each shell is a level from 1000 to 4000, and every electron is a course. Spin it, then pick an electron to read about the course with its notes, past papers and videos.</p></div>` : ''}
+  ${head ? `<div class="section-head"><div><span class="eyebrow">The Chemistry Atom</span><h2>Four levels, one atom</h2></div><p>The nucleus is chemistry itself, each coloured shell is a level from 1000 to 4000, and every electron is a course. Drag to turn it any way, scroll or pinch to zoom into the inner shells, and pick an electron to open the course with its notes, past papers and videos.</p></div>` : ''}
   <div class="atom-filters">
-    <div class="chips" role="group" aria-label="Show one stream"><button class="chip" type="button" data-atom-stream="all" aria-pressed="true">All streams</button>${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" type="button" style="--c:${s.color}" data-atom-stream="${k}" aria-pressed="false"><span class="dot"></span>${s.name}</button>`).join('')}</div>
-    <div class="chips lv-chips" role="group" aria-label="Highlight one level">${[1000, 2000, 3000, 4000].map((l, i) => `<button class="chip" type="button" data-atom-level="${l}" aria-pressed="false"><b>${l}</b><small>n=${i + 1}</small></button>`).join('')}</div>
+    <div class="chips" role="group" aria-label="Show streams"><button class="chip" type="button" data-atom-stream="all" aria-pressed="true">All streams</button>${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" type="button" data-atom-stream="${k}" aria-pressed="false">${s.name}</button>`).join('')}</div>
+    <div class="chips lv-chips" role="group" aria-label="Show levels"><button class="chip" type="button" data-atom-level="all" aria-pressed="true">All levels</button>${[1000, 2000, 3000, 4000].map((l, i) => `<button class="chip" type="button" style="--c:${LEVEL_COLORS[l]}" data-atom-level="${l}" aria-pressed="false"><span class="dot"></span><b>${l}</b><small>n=${i + 1}</small></button>`).join('')}</div>
   </div>
   <div class="atom-wrap">
-    <div class="atom-stage">
+    <div class="atom-stage" tabindex="0" role="group" aria-label="3D atom. Drag or use the arrow keys to turn it, scroll, pinch or press plus and minus to zoom, 0 to reset.">
       <canvas aria-hidden="true"></canvas>
       <div class="atom-electrons" role="group" aria-label="Courses, as electrons on their level's shell"></div>
       <div class="u-tip atom-tip" hidden></div>
-      <p class="atom-hint" aria-hidden="true"><span class="fine">Drag to rotate · hover an electron · click to explore</span><span class="touch">Drag to rotate · tap an electron to explore</span></p>
+      <p class="atom-note" aria-live="polite"></p>
+      <div class="atom-ctrl" role="group" aria-label="View">${ctl('in', 'plus', 'Zoom in')}${ctl('out', 'minus', 'Zoom out')}${ctl('reset', 'reset', 'Reset view')}${ctl('pause', 'pause', 'Pause motion', ' aria-pressed="false"')}</div>
     </div>
     <aside class="f-panel atom-panel" hidden aria-live="polite" aria-label="Course details"><button class="btn btn-sm btn-icon close" type="button" aria-label="Close">${ic('close')}</button><div class="p-body"></div></aside>
   </div>
@@ -430,7 +436,7 @@ function mapPage() {
 <section class="map-head"><div class="container">
   <div class="mh-row">
     <div><span class="eyebrow">Chemistry Map</span><h1>How every course connects</h1>
-      <p class="muted" data-for="atom">Each shell is a level and every electron is a course. <span class="fine">Drag to spin the atom, hover an electron to see its links, click it to open it.</span><span class="touch">Drag to spin the atom and tap an electron to open it.</span></p>
+      <p class="muted" data-for="atom">Each coloured shell is a level and every electron is a course. <span class="fine">Drag to turn the atom any way, scroll to zoom, hover an electron to see its links and click it to open it.</span><span class="touch">Drag to turn the atom, pinch to zoom and tap an electron to open it.</span></p>
       <p class="muted" data-for="bubbles" hidden><span class="fine">Each bubble is a course. Hover to see what it builds on and leads to. Click to zoom in and open its sections.</span><span class="touch">Tap a bubble to see its links. Tap it again to zoom in.</span></p></div>
     <div class="view-switch" role="group" aria-label="Map view"><button type="button" data-view="atom" aria-pressed="true">${ic('atom')}3D atom</button><button type="button" data-view="bubbles" aria-pressed="false">${ic('map')}Bubbles</button></div>
   </div>
