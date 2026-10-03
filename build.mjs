@@ -172,7 +172,7 @@ const ytSearch = q => 'https://www.youtube.com/results?search_query=' + encodeUR
 const ytMore = (q, label = q) => `<a class="btn btn-ghost btn-sm yt-more" href="${esc(ytSearch(q))}" target="_blank" rel="noopener">${ic('search')}More on YouTube: ${esc(label)}${ic('ext', 'arrow')}</a>`;
 
 /* ---------- Chemistry Map data: shared by the 3D atom (home and map pages) and the bubble map ---------- */
-// one colour per energy level of the atom: its shell, its electrons and its filter chip
+// one colour per energy level of the atom: its shell and its filter chip (electrons take their stream's colour)
 const LEVEL_COLORS = { 1000: '#ff5c7a', 2000: '#ffb43d', 3000: '#4dffa6', 4000: '#3fd2ff' };
 function mapData() {
   const yt = (c, s) => videos[`${c.code}|${s.name}`] || [];
@@ -197,13 +197,13 @@ function mapData() {
 const exploreScripts = () => ['map-data', 'explore-core', 'atom'].map(f => `<script src="${u(`assets/js/${f}.js`)}?v=${VER}" defer></script>`).join('');
 
 // The Chemistry Atom: a nucleus with four shells (the levels); every course is an electron. Driven by atom.js.
-// Filters keep only the chosen streams and levels in the atom; the shells and electrons take their level's colour.
+// Filters keep only the chosen streams and levels in the atom; shells take their level's colour, electrons their stream's.
 function atomBlock({ head = true, hash = false } = {}) {
   const ctl = (k, icon, label, extra = '') => `<button class="atom-btn" type="button" data-atom-ctrl="${k}" aria-label="${label}" title="${label}"${extra}>${ic(icon)}</button>`;
   return `<div class="atom" data-atom${hash ? ' data-atom-hash' : ''}>
   ${head ? `<div class="section-head"><div><span class="eyebrow">The Chemistry Atom</span><h2>Four levels, one atom</h2></div><p>The nucleus is chemistry itself, each coloured shell is a level from 1000 to 4000, and every electron is a course. Drag to turn it any way, scroll or pinch to zoom into the inner shells, and pick an electron to open the course with its notes, past papers and videos.</p></div>` : ''}
   <div class="atom-filters">
-    <div class="chips" role="group" aria-label="Show streams"><button class="chip" type="button" data-atom-stream="all" aria-pressed="true">All streams</button>${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" type="button" data-atom-stream="${k}" aria-pressed="false">${s.name}</button>`).join('')}</div>
+    <div class="chips" role="group" aria-label="Show streams"><button class="chip" type="button" data-atom-stream="all" aria-pressed="true">All streams</button>${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" type="button" style="--c:${s.color}" data-atom-stream="${k}" aria-pressed="false"><span class="dot"></span>${s.name}</button>`).join('')}</div>
     <div class="chips lv-chips" role="group" aria-label="Show levels"><button class="chip" type="button" data-atom-level="all" aria-pressed="true">All levels</button>${[1000, 2000, 3000, 4000].map((l, i) => `<button class="chip" type="button" style="--c:${LEVEL_COLORS[l]}" data-atom-level="${l}" aria-pressed="false"><span class="dot"></span><b>${l}</b><small>n=${i + 1}</small></button>`).join('')}</div>
   </div>
   <div class="atom-wrap">
@@ -299,7 +299,7 @@ function home() {
     title: `${SITE} · UoP Chemistry Hub, 1000–4000 Level`, desc: 'Unofficial study hub for University of Peradeniya chemistry: notes, tutorials, past papers, textbook chapters and videos for every course from 1000 to 4000 Level.',
     body, page: 'home',
     scripts: `<script type="application/json" id="elements-data">${JSON.stringify(elements.map(e => ({ z: e.z, s: e.s, n: e.n, m: e.m, g: e.g })))}</script>
-<script src="${u('assets/js/pt-core.js')}?v=${VER}" defer></script><script src="${u('assets/js/hero.js')}?v=${VER}" defer></script>${exploreScripts()}`,
+<script src="${u('assets/js/pt-core.js')}?v=${VER}" defer></script><script src="${u('assets/js/hero.js')}?v=${VER}" defer></script><script src="${u('assets/js/spider.js')}?v=${VER}" defer></script>${exploreScripts()}`,
   });
 }
 

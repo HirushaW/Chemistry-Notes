@@ -6,7 +6,7 @@
   document.querySelectorAll('[data-atom]').forEach(init);
 
   function init(root) {
-    const { D, esc, streams, courses, sections, conn, coursePanel, sectionPanel, lvl } = X;
+    const { D, esc, streams, courses, sections, conn, colorOf, coursePanel, sectionPanel, lvl } = X;
     const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const FINE = matchMedia('(pointer: fine)');
     const wrap = root.querySelector('.atom-wrap'), stage = root.querySelector('.atom-stage'), cv = stage.querySelector('canvas'), ctx = cv.getContext('2d');
@@ -55,19 +55,19 @@
       sh.vis = 1; sh.visT = 1; sh.hl = 1; sh.hlT = 1;
     }
 
-    /* ---------- electrons = courses, coloured by their level ---------- */
+    /* ---------- electrons = courses, coloured by their stream (the shells keep the level colours) ---------- */
     const E = [], byId = new Map();
     for (const sh of SHELLS) {
       const list = D.courses.filter(c => c.level === sh.lv).sort((a, b) => ORDER.indexOf(a.stream) - ORDER.indexOf(b.stream) || a.id.localeCompare(b.id));
       list.forEach((c, i) => {
         const el = document.createElement('button');
         el.type = 'button'; el.className = 'e'; el.dataset.id = c.id;
-        el.style.setProperty('--c', sh.color);
+        el.style.setProperty('--c', colorOf(c));
         el.setAttribute('aria-label', `${c.id} ${c.title}, ${lvl(c.level)}`);
         el.innerHTML = `<span class="e-core">${c.id.replace(/^CHE\s*/, '')}</span>`;
         layer.appendChild(el);
         const a = sh.n * .7 + i / list.length * TAU;
-        const e = { c, el, sh, a, aT: a, show: true, vis: 1, hl: 1, hlT: 1, pop: 1, x: 0, y: 0, z: 0, zn: 1 };
+        const e = { c, el, sh, rgb: rgbOf(colorOf(c)), a, aT: a, show: true, vis: 1, hl: 1, hlT: 1, pop: 1, x: 0, y: 0, z: 0, zn: 1 };
         E.push(e); byId.set(c.id, e);
       });
     }
@@ -198,7 +198,7 @@
         let tail;
         for (let j = N; j >= 0; j--) { const a = t - span * j / N, p = project(ap(e.sh.M, [cos(a) * r, 0, sin(a) * r])); if (j === N) { tail = p; path.moveTo(p[0], p[1]); } else path.lineTo(p[0], p[1]); }
         const g = ctx.createLinearGradient(tail[0], tail[1], e.x, e.y);
-        g.addColorStop(0, `rgba(${e.sh.rgb},0)`); g.addColorStop(1, `rgba(${e.sh.rgb},${((.15 + .55 * e.zn) * al).toFixed(3)})`);
+        g.addColorStop(0, `rgba(${e.rgb},0)`); g.addColorStop(1, `rgba(${e.rgb},${((.15 + .55 * e.zn) * al).toFixed(3)})`);
         ctx.strokeStyle = g; ctx.lineWidth = 3 * (.6 + .5 * e.zn) * zs; ctx.stroke(path);
       }
       ctx.restore();
@@ -264,8 +264,8 @@
       if (hovered === id) return;
       hovered = id; setLinked();
       if (!id) { tip.hidden = true; return render(); }
-      const c = courses.get(id), s = streams.get(c.stream), { from, to } = conn.get(id), col = byId.get(id).sh.color;
-      tip.innerHTML = `<b style="color:${col}">${c.id} · ${lvl(c.level)} · ${esc(s.name)}</b><strong>${esc(c.title)}</strong><small>${c.counts.notes} files · ${c.counts.papers} papers · builds on ${from.size} · leads to ${to.size}</small><em>${FINE.matches ? 'Click' : 'Tap'} to explore →</em>`;
+      const c = courses.get(id), s = streams.get(c.stream), { from, to } = conn.get(id);
+      tip.innerHTML = `<b style="color:${s.color}">${c.id} · ${lvl(c.level)} · ${esc(s.name)}</b><strong>${esc(c.title)}</strong><small>${c.counts.notes} files · ${c.counts.papers} papers · builds on ${from.size} · leads to ${to.size}</small><em>${FINE.matches ? 'Click' : 'Tap'} to explore →</em>`;
       tip.hidden = false; render();
     }
     function placeTip() {

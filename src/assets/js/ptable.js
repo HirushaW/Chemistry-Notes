@@ -19,7 +19,7 @@
   for (const [row, t] of [[6, '57–71'], [7, '89–103']]) { const m = document.createElement('div'); m.className = 'fmark'; m.style.gridRow = row; m.style.gridColumn = 3; m.textContent = t; frag.appendChild(m); }
   host.appendChild(frag);
   // a gentle wave rolls across the table whenever the visitor pauses
-  PT.wave(waveItems, { root: host.closest('.pt-layout') || host, idleMs: 2600, active: 0, speed: .85 });
+  PT.wave(waveItems, { root: host.closest('.pt-layout') || host, idleMs: 2600, active: 0, speed: .7 });
 
   const fmt = (v, unit) => v === '' || v == null ? '—' : `${v}${unit ? ' ' + unit : ''}`;
   const show = z => {
