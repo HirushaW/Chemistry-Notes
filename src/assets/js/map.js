@@ -1,39 +1,17 @@
-// Chemistry Map: every course floats as a bubble in its level column.
-// Hover a bubble to draw its connections; click it to zoom in and see its sections orbit around it.
+// Chemistry Map page: the 3D atom (atom.js) is the main view; this file adds the bubble view and the switch between them.
+// Bubbles: every course floats in its level column. Hover a bubble to draw its connections; click it to zoom in.
 (() => {
-  const uni = document.querySelector('.universe'); if (!uni) return;
-  const D = JSON.parse(document.getElementById('map-data').textContent);
+  const uni = document.querySelector('.universe'), X = window.Explore; if (!uni || !X) return;
+  const { D, esc, streams, courses, sections, conn, colorOf, short, coursePanel, sectionPanel } = X;
   const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const BASE = document.documentElement.dataset.base || '/';
-  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const icon = n => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${document.getElementById('i-' + n)?.innerHTML || ''}</svg>`;
-  const streams = new Map(D.streams.map(s => [s.id, s]));
-  const courses = new Map(D.courses.map(c => [c.id, c]));
-  const sections = new Map(D.sections.map(s => [s.id, s]));
   const ORDER = ['gen', 'inorg', 'org', 'phys', 'anal', 'bio', 'ind', 'comp', 'lab'];
   const LEVELS = [1000, 2000, 3000, 4000];
-  const colorOf = c => streams.get(c.stream).color;
+  const atom = document.querySelector('[data-atom]');
   const svgLines = uni.querySelector('.u-lines'), tip = uni.querySelector('.u-tip');
-  const focus = document.querySelector('.u-focus'), stage = focus.querySelector('.f-stage'), fBubbles = focus.querySelector('.f-bubbles'), fLines = focus.querySelector('.f-lines'), pbody = focus.querySelector('.p-body');
-
-  /* ---------- course-level connections (prerequisites + topic links) ---------- */
-  const conn = new Map(D.courses.map(c => [c.id, { from: new Map(), to: new Map() }]));
-  const link = (a, b, idea) => {
-    if (a === b || !conn.has(a) || !conn.has(b)) return;
-    const t = conn.get(a).to, f = conn.get(b).from;
-    (t.get(b) || t.set(b, new Set()).get(b)).add(idea); (f.get(a) || f.set(a, new Set()).get(a)).add(idea);
-  };
-  for (const c of D.courses) for (const p of c.pre) link(p, c.id, 'prerequisite');
-  for (const [s, t, idea] of D.links) link(s.split('/')[0], t.split('/')[0], idea);
+  const focus = document.querySelector('.u-focus'), stage = focus.querySelector('.f-stage'), fBubbles = focus.querySelector('.f-bubbles'), fLines = focus.querySelector('.f-lines');
+  const fPanel = focus.querySelector('.f-panel'), pbody = focus.querySelector('.p-body');
 
   /* ---------- bubbles ---------- */
-  // Bubble labels: shorten long titles so they fit; tooltips and panels keep the full title.
-  const short = t => {
-    let s = t.replace(/^General Aspects and Recent Developments in Chemistry$/, 'Recent Developments').replace(/^Applications of Nanoscience in Chemistry$/, 'Nanoscience Applications')
-      .replace(/^Techniques in Organic Chemistry/, 'Organic Techniques').replace(/ in Chemistry$/, '').replace(/Chemistry Laboratory/, 'Chem Lab').replace(/Laboratory/, 'Lab').replace(/^Principles of Chemistry/, 'Principles of Chem');
-    if (s.length > 22) s = s.replace(/^Advanced /, 'Adv. ').replace(/ Chemistry\b/, ' Chem');
-    return s;
-  };
   const hash = (str, k) => { let h = 2166136261 ^ k; for (const ch of str) h = Math.imul(h ^ ch.charCodeAt(0), 16777619); return ((h >>> 0) % 1000) / 1000; };
   const B = new Map();
   let order = 0;
@@ -70,11 +48,13 @@
   }
   const isMobile = () => innerWidth < 760;
   function layout() {
+    if (uni.hidden) return;
     const mobile = isMobile();
     for (const lv of LEVELS) {
       const field = uni.querySelector(`.u-col[data-level="${lv}"] .u-field`), nodes = [...B.values()].filter(b => b.lv === lv);
       field.style.height = '';
       const W = field.clientWidth, H = mobile ? 0 : field.clientHeight;
+      if (!W) continue;
       let s = mobile ? Math.min(.84, W / 430) : 1, ok = false, guard = 0;
       while (!ok && guard++ < 10) { nodes.forEach(n => { n.r = n.base * s / 2; }); ok = pack(nodes, W, H); s *= .93; }
       if (mobile) {
@@ -84,9 +64,8 @@
       for (const n of nodes) { n.el.style.setProperty('--d', (n.r * 2).toFixed(1) + 'px'); n.el.style.left = (n.x - n.r).toFixed(1) + 'px'; n.el.style.top = (n.y - n.r).toFixed(1) + 'px'; }
     }
   }
-  layout();
   let rt = 0;
-  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { layout(); if (!focus.hidden && current) openFocus(current, currentSec, false); }, 180); });
+  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (uni.hidden) return; layout(); if (!focus.hidden && current) openFocus(current, currentSec, false); }, 180); });
   document.fonts?.ready.then(layout);
 
   /* ---------- hover: draw connections ---------- */
@@ -207,11 +186,13 @@
     }).join('');
     if (animate && !RM && !wasOpen) {
       const from = b.inner.getBoundingClientRect(), sr = stage.getBoundingClientRect();
-      const fx = from.left + from.width / 2 - (sr.left + cx), fy = from.top + from.height / 2 - (sr.top + cy);
-      fBubbles.querySelector('.f-center').animate([{ transform: `translate(${fx}px, ${fy}px) scale(${from.width / Dc})`, opacity: .7 }, { transform: 'none', opacity: 1 }], { duration: 700, easing: 'cubic-bezier(.34,1.32,.64,1)' });
+      if (from.width) {
+        const fx = from.left + from.width / 2 - (sr.left + cx), fy = from.top + from.height / 2 - (sr.top + cy);
+        fBubbles.querySelector('.f-center').animate([{ transform: `translate(${fx}px, ${fy}px) scale(${from.width / Dc})`, opacity: .7 }, { transform: 'none', opacity: 1 }], { duration: 700, easing: 'cubic-bezier(.34,1.32,.64,1)' });
+      }
     }
-    if (animate && !RM && wasOpen) focus.querySelector('.f-panel').animate([{ opacity: .4, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 300, easing: 'ease-out' });
-    coursePanel(c);
+    if (animate && !RM && wasOpen) fPanel.animate([{ opacity: .4, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 300, easing: 'ease-out' });
+    showCourse(c);
     if (secId && sections.has(secId)) selectSection(secId);
     else history.replaceState(null, '', '#' + id);
     focus.querySelector('.u-back').focus({ preventScroll: true });
@@ -221,59 +202,49 @@
     focus.hidden = true; document.body.classList.remove('focus-open');
     const id = current; current = currentSec = null;
     history.replaceState(null, '', location.pathname + location.search);
-    if (id) B.get(id)?.el.focus({ preventScroll: true });
+    if (id && !uni.hidden) B.get(id)?.el.focus({ preventScroll: true });
   }
+  const showCourse = c => { pbody.innerHTML = coursePanel(c); fPanel.scrollTop = 0; };
   function selectSection(sid) {
     currentSec = sid;
     fBubbles.querySelectorAll('.f-sec').forEach(x => x.classList.toggle('sel', x.dataset.sid === sid));
-    sectionPanel(sections.get(sid));
+    pbody.innerHTML = sectionPanel(sections.get(sid)); fPanel.scrollTop = 0;
     history.replaceState(null, '', '#' + sid);
   }
   focus.querySelector('.u-back').addEventListener('click', closeFocus);
-  stage.addEventListener('click', e => { const sec = e.target.closest('.f-sec'); if (sec) return selectSection(sec.dataset.sid); if (e.target.closest('.f-center')) return coursePanel(courses.get(current)); if (e.target === stage || e.target === fBubbles) closeFocus(); });
+  stage.addEventListener('click', e => { const sec = e.target.closest('.f-sec'); if (sec) return selectSection(sec.dataset.sid); if (e.target.closest('.f-center')) return showCourse(courses.get(current)); if (e.target === stage || e.target === fBubbles) closeFocus(); });
   focus.addEventListener('click', e => {
     const g = e.target.closest('[data-course]'); if (g) { e.preventDefault(); const [cid, sid] = g.dataset.course.split('|'); return openFocus(cid, sid || null); }
     const sb = e.target.closest('[data-sec]'); if (sb) { e.preventDefault(); return selectSection(sb.dataset.sec); }
-    if (e.target.closest('[data-back]')) { e.preventDefault(); currentSec = null; fBubbles.querySelectorAll('.f-sec').forEach(x => x.classList.remove('sel')); coursePanel(courses.get(current)); history.replaceState(null, '', '#' + current); }
+    if (e.target.closest('[data-back]')) { e.preventDefault(); currentSec = null; fBubbles.querySelectorAll('.f-sec').forEach(x => x.classList.remove('sel')); showCourse(courses.get(current)); history.replaceState(null, '', '#' + current); }
   });
   addEventListener('keydown', e => { if (e.key === 'Escape' && !focus.hidden && !document.querySelector('dialog[open]')) closeFocus(); });
 
-  /* ---------- panel content ---------- */
-  const lvl = n => `${n} Level`;
-  const courseBtn = (cid, sub, sid) => { const c = courses.get(cid); if (!c) return ''; return `<button data-course="${cid}${sid ? '|' + sid : ''}" style="--c:${colorOf(c)}"><span class="dot"></span><span>${sid ? esc(sections.get(sid).name) : `${cid} · ${esc(c.title)}`}</span>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; };
-  function coursePanel(c) {
-    const s = streams.get(c.stream), { from, to } = conn.get(c.id);
-    pbody.innerHTML = `<span class="eyebrow" style="color:${s.color}">${lvl(c.level)} · ${esc(s.name)}</span><h2>${esc(c.title)}</h2>
-      <div class="chips" style="margin-bottom:14px"><span class="badge badge-volt">${c.id}</span>${c.credits ? `<span class="badge">${c.credits} credits</span>` : ''}${c.sem ? `<span class="badge">Semester ${esc(c.sem)}</span>` : ''}</div>
-      <p style="color:var(--white);font-weight:600">${esc(c.tagline)}</p><p class="muted">${esc(c.about)}</p>
-      <div class="counter-row"><div class="counter"><b>${c.counts.notes}</b><span>files</span></div><div class="counter"><b>${c.counts.papers}</b><span>papers</span></div><div class="counter"><b>${c.sections.length}</b><span>sections</span></div></div>
-      <div class="p-sec"><h4>Sections</h4><div class="mini">${c.sections.map(sid => { const x = sections.get(sid), n = x.counts.notes + x.counts.tut + x.counts.ans; return `<button data-sec="${sid}" style="--c:${s.color}"><span class="dot"></span><span>${esc(x.name)}</span><small>${n ? n + ' files' : 'chapters'}</small></button>`; }).join('')}</div></div>
-      ${from.size ? `<div class="p-sec"><h4>Builds on</h4><div class="mini">${[...from].map(([k, ideas]) => courseBtn(k, [...ideas].join(', '))).join('')}</div></div>` : ''}
-      ${to.size ? `<div class="p-sec"><h4>Leads to</h4><div class="mini">${[...to].map(([k, ideas]) => courseBtn(k, [...ideas].join(', '))).join('')}</div></div>` : ''}
-      <div class="p-sec" style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary btn-sm" href="${BASE}${c.url}">Open course ${icon('arrow')}</a>${c.counts.papers ? `<a class="btn btn-ghost btn-sm" href="${BASE}${c.url}#papers">${icon('papers')} Past papers</a>` : ''}</div>`;
-    pbody.scrollTop = 0;
+  /* ---------- view switch: 3D atom or bubbles (remembered per browser) ---------- */
+  let view = 'atom';
+  function setView(v, save = true) {
+    view = v;
+    document.querySelectorAll('[data-for]').forEach(el => { el.hidden = el.dataset.for !== v; });
+    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (v === 'bubbles') layout(); else { closeFocus(); clearHot(true); }
+    if (save) try { localStorage.setItem('map-view', v); } catch { /* storage may be blocked */ }
   }
-  function sectionPanel(sec) {
-    const c = courses.get(sec.code), s = streams.get(c.stream);
-    const from = D.links.filter(l => l[1] === sec.id), to = D.links.filter(l => l[0] === sec.id);
-    const files = sec.counts.notes + sec.counts.tut + sec.counts.ans;
-    pbody.innerHTML = `<button class="chip" data-back style="margin-bottom:14px">← ${c.id} overview</button>
-      <span class="eyebrow" style="color:${s.color};display:flex">${c.id}${sec.hours ? ' · ' + esc(sec.hours) : ''}</span><h2>${esc(sec.name)}</h2>
-      <p style="color:var(--white);font-weight:600">${esc(sec.summary)}</p>
-      <div class="chips">${sec.topics.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
-      ${from.length ? `<div class="p-sec"><h4>Builds on</h4><div class="mini">${from.map(l => courseBtn(l[0].split('/')[0], l[2], l[0])).join('')}</div></div>` : ''}
-      ${to.length ? `<div class="p-sec"><h4>Leads to</h4><div class="mini">${to.map(l => courseBtn(l[1].split('/')[0], l[2], l[1])).join('')}</div></div>` : ''}
-      <div class="p-sec"><h4>Notes${files ? ` · ${files} files` : ''}</h4>${sec.notes.length ? `<div class="mini">${sec.notes.map(([fid, t]) => `<button data-pdf="${fid}" data-title="${esc(c.id + ' · ' + t)}" style="--c:${s.color}">${icon('file')}<span>${esc(t)}</span><small>preview</small></button>`).join('')}</div>` : '<p class="faint" style="font-size:.85rem">No notes in the folder for this section yet. The textbook chapters below cover it.</p>'}</div>
-      ${sec.refs.length ? `<div class="p-sec"><h4>Textbook chapters</h4><div class="mini">${sec.refs.map(r => `<a href="${esc(r[2] || '#')}" target="_blank" rel="noopener" style="--c:var(--volt)">${icon('book')}<span><b style="color:var(--white)">${esc(r[0])}</b> — ${esc(r[1])}</span></a>`).join('')}</div></div>` : ''}
-      <div class="p-sec" style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary btn-sm" href="${BASE}${sec.url}">Open section ${icon('arrow')}</a></div>`;
-    pbody.scrollTop = 0;
-  }
+  document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
 
-  /* ---------- deep links: #CHE2112 or #CHE2112/section-slug ---------- */
+  /* ---------- deep links: #CHE2112, #CHE2112/section-slug, #stream:org, #bubbles ---------- */
   const start = decodeURIComponent(location.hash.slice(1));
-  if (start.startsWith('stream:')) document.querySelector(`[data-stream-chip="${CSS.escape(start.slice(7))}"]`)?.click();
-  else if (start) {
-    const [cid] = start.split('/');
-    if (B.has(cid)) setTimeout(() => openFocus(cid, sections.has(start) ? start : null), RM ? 0 : 500);
+  let initial = 'atom';
+  try { if (localStorage.getItem('map-view') === 'bubbles') initial = 'bubbles'; } catch { /* default view */ }
+  if (start === 'atom' || start === 'bubbles') initial = start;
+  setView(initial, false);
+  if (start.startsWith('stream:')) {
+    const k = start.slice(7);
+    if (view === 'atom') atom?.filterStream?.(k); else document.querySelector(`[data-stream-chip="${CSS.escape(k)}"]`)?.click();
+  } else if (start && start !== view) {
+    const [cid] = start.split('/'), sec = sections.has(start) ? start : null;
+    if (courses.has(cid)) {
+      if (view === 'atom' && atom?.selectCourse) atom.selectCourse(cid, sec);
+      else setTimeout(() => openFocus(cid, sec), RM ? 0 : 500);
+    }
   }
 })();

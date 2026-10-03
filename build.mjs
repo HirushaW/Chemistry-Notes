@@ -6,7 +6,7 @@ import { EXT, COURSE_EXT, GROUPS } from './src/data/resources.mjs';
 import { LINKS } from './src/data/links.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
-const OUT = path.join(ROOT, 'dist');
+const OUT = process.env.OUT ? path.resolve(process.env.OUT) : path.join(ROOT, 'dist');
 const BASE = process.env.BASE ?? '/Chemistry-Notes/';
 const VER = Date.now().toString(36);
 const SITE = 'Chemistry Notes';
@@ -166,44 +166,52 @@ const LINKED = LINKS.map(([a, b, idea]) => {
   return { a: A, b: B, idea };
 });
 
-// A small, non-interactive preview of the bubble map for the home page: floating course bubbles in
-// four level columns, with a demo that lights up one course's connections after another.
-function miniMap() {
-  const ORDER = ['gen', 'inorg', 'org', 'phys', 'anal', 'bio', 'ind', 'comp', 'lab'], W = 440, H = 440, top = 54, colW = W / 4, P = new Map();
-  let heads = '', bubbles = '', demo = '';
-  [1000, 2000, 3000, 4000].forEach((lv, ci) => {
-    const list = courses.filter(c => c.level === lv).sort((a, b) => ORDER.indexOf(a.stream) - ORDER.indexOf(b.stream) || a.code.localeCompare(b.code));
-    const nodes = list.map(c => ({ c, r: 11 + Math.sqrt(files.filter(f => f.code === c.code).length) * 1.45 }));
-    const cx = colW * ci + colW / 2, cy = top + (H - top) / 2;
-    nodes.forEach((n, i) => { const a = i * 2.4 + .6, rr = Math.sqrt(i + .4) * 17; n.x = cx + Math.cos(a) * rr; n.y = cy + Math.sin(a) * rr; });
-    for (let it = 0; it < 220; it++) {
-      nodes.forEach(n => { n.x += (cx - n.x) * .02; n.y += (cy - n.y) * .02; });
-      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
-        const a = nodes[i], b = nodes[j], dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || .01, min = a.r + b.r + 5;
-        if (d < min) { const f = (min - d) / d / 2; a.x -= dx * f; a.y -= dy * f; b.x += dx * f; b.y += dy * f; }
-      }
-      nodes.forEach(n => { n.x = Math.max(colW * ci + n.r + 3, Math.min(colW * (ci + 1) - n.r - 3, n.x)); n.y = Math.max(top + n.r, Math.min(H - n.r - 4, n.y)); });
-    }
-    nodes.forEach(n => P.set(n.c.code, n));
-    heads += `<text x="${cx}" y="30" text-anchor="middle" fill="#fff" style="font:800 17px var(--f-display)">${lv}</text>${ci ? `<line x1="${colW * ci}" y1="44" x2="${colW * ci}" y2="${H - 8}" stroke="rgba(220,223,255,.1)"/>` : ''}`;
-  });
-  const defs = Object.entries(STREAMS).map(([k, s]) => `<radialGradient id="mg-${k}" cx=".32" cy=".26" r=".9"><stop offset="0" stop-color="${s.color}" stop-opacity=".95"/><stop offset=".55" stop-color="${s.color}" stop-opacity=".35"/><stop offset="1" stop-color="#0b1036" stop-opacity=".9"/></radialGradient>`).join('');
-  let i = 0;
-  for (const n of P.values()) {
-    const fy = 2 + (i % 4), fx = (i % 3) - 1, dur = 6 + (i % 5);
-    bubbles += `<g><animateTransform attributeName="transform" type="translate" values="0 0;${fx} -${fy};${-fx} ${fy / 2};0 0" dur="${dur}s" begin="-${i % 7}s" repeatCount="indefinite"/><circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${n.r.toFixed(1)}" fill="url(#mg-${n.c.stream})" stroke="${STREAMS[n.c.stream].color}" stroke-opacity=".6"/></g>`;
-    i++;
-  }
-  // demo: three courses take turns "being hovered", lighting their links
-  const showcase = ['CHE2313', 'CHE2112', 'CHE2212'].filter(c => P.has(c)), cycle = showcase.length * 3;
-  showcase.forEach((code, k) => {
-    const n = P.get(code), ends = [...courses.filter(c => c.pre.includes(code)).map(c => c.code), ...byCode.get(code).pre].filter(c => P.has(c));
-    const paths = ends.map(e => { const m = P.get(e), mx = (n.x + m.x) / 2, my = (n.y + m.y) / 2 - Math.abs(m.x - n.x) * .18; return `<path class="mm-link" d="M${n.x.toFixed(1)} ${n.y.toFixed(1)} Q${mx.toFixed(1)} ${my.toFixed(1)} ${m.x.toFixed(1)} ${m.y.toFixed(1)}"/>`; }).join('');
-    demo += `<g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.08;.28;.33;1" dur="${cycle}s" begin="${k * 3}s" repeatCount="indefinite"/>${paths}<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${(n.r + 5).toFixed(1)}" fill="none" stroke="${STREAMS[n.c.stream].color}" stroke-width="2"/></g>`;
-  });
-  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:100%"><defs>${defs}</defs>${heads}${bubbles}${demo}</svg>`;
-}
 const paperTitle = p => (p.yr && p.t.replace(/\s*[-–]\s*/g, '-') === p.yr.replace('–', '-')) ? 'Examination paper' : p.t;
+const paperGrid = (c, papers) => `<div class="paper-grid">${papers.map(p => `<button class="paper" data-pdf="${p.id}" data-title="${esc(c.code + ' · ' + p.t)}"><span class="yr">${esc(p.yr || '—')}</span><span><b>${esc(paperTitle(p))}</b><small>${p.ans ? 'with answers · ' : ''}${mb(p.sz)}${p.pg ? ' · ' + plural(p.pg, 'page') : ''}</small></span></button>`).join('')}</div>`;
+const ytSearch = q => 'https://www.youtube.com/results?search_query=' + encodeURIComponent(q + ' chemistry lecture');
+const ytMore = (q, label = q) => `<a class="btn btn-ghost btn-sm yt-more" href="${esc(ytSearch(q))}" target="_blank" rel="noopener">${ic('search')}More on YouTube: ${esc(label)}${ic('ext', 'arrow')}</a>`;
+
+/* ---------- Chemistry Map data: shared by the 3D atom (home and map pages) and the bubble map ---------- */
+function mapData() {
+  const yt = (c, s) => videos[`${c.code}|${s.name}`] || [];
+  const newest = list => list.slice().sort((a, b) => (b.yr || '').localeCompare(a.yr || '') || a.o - b.o);
+  return {
+    streams: Object.entries(STREAMS).map(([id, s]) => ({ id, name: s.name, color: s.color, blurb: s.blurb, courses: courses.filter(c => c.stream === id).map(c => c.code) })),
+    courses: courses.map(c => ({
+      id: c.code, title: c.title, level: c.level, stream: c.stream, url: cUrl(c), tagline: c.tagline, about: c.about, sem: c.sem ? semLabel(c.sem).replace('Semester ', '').replace('Semesters ', '') : '', credits: c.credits,
+      counts: { notes: nFiles(c), papers: c.papers }, sections: c.sections.map(s => sid(c, s)), pre: c.pre,
+      paperList: newest(papersOf(c.code)).slice(0, 6).map(p => [p.id, paperTitle(p) === 'Examination paper' ? `${p.t} paper` : p.t, p.ans ? 1 : 0]),
+      videos: c.sections.flatMap(s => yt(c, s).slice(0, 1)).slice(0, 4).map(v => [v.id, v.t, v.ch]),
+    })),
+    sections: courses.flatMap(c => c.sections.map(s => ({
+      id: sid(c, s), code: c.code, name: s.name, url: sUrl(c, s), summary: s.summary, topics: s.topics, hours: s.hours, counts: s.counts,
+      notes: filesOf(c.code, s.name).slice(0, 6).map(f => [f.id, f.t]), refs: s.refs.slice(0, 3).map(r => [r.book, r.label, r.url]),
+      videos: yt(c, s).slice(0, 3).map(v => [v.id, v.t, v.ch]),
+    }))),
+    links: LINKED.map(l => [sid(l.a.c, l.a.s), sid(l.b.c, l.b.s), l.idea]),
+  };
+}
+const exploreScripts = () => ['map-data', 'explore-core', 'atom'].map(f => `<script src="${u(`assets/js/${f}.js`)}?v=${VER}" defer></script>`).join('');
+
+// The Chemistry Atom: a nucleus with four shells (the levels); every course is an electron. Driven by atom.js.
+function atomBlock({ head = true, hash = false } = {}) {
+  return `<div class="atom" data-atom${hash ? ' data-atom-hash' : ''}>
+  ${head ? `<div class="section-head"><div><span class="eyebrow">The Chemistry Atom</span><h2>Four levels, one atom</h2></div><p>The nucleus is chemistry itself, each shell is a level from 1000 to 4000, and every electron is a course. Spin it, then pick an electron to read about the course with its notes, past papers and videos.</p></div>` : ''}
+  <div class="atom-filters">
+    <div class="chips" role="group" aria-label="Show one stream"><button class="chip" type="button" data-atom-stream="all" aria-pressed="true">All streams</button>${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" type="button" style="--c:${s.color}" data-atom-stream="${k}" aria-pressed="false"><span class="dot"></span>${s.name}</button>`).join('')}</div>
+    <div class="chips lv-chips" role="group" aria-label="Highlight one level">${[1000, 2000, 3000, 4000].map((l, i) => `<button class="chip" type="button" data-atom-level="${l}" aria-pressed="false"><b>${l}</b><small>n=${i + 1}</small></button>`).join('')}</div>
+  </div>
+  <div class="atom-wrap">
+    <div class="atom-stage">
+      <canvas aria-hidden="true"></canvas>
+      <div class="atom-electrons" role="group" aria-label="Courses, as electrons on their level's shell"></div>
+      <div class="u-tip atom-tip" hidden></div>
+      <p class="atom-hint" aria-hidden="true"><span class="fine">Drag to rotate · hover an electron · click to explore</span><span class="touch">Drag to rotate · tap an electron to explore</span></p>
+    </div>
+    <aside class="f-panel atom-panel" hidden aria-live="polite" aria-label="Course details"><button class="btn btn-sm btn-icon close" type="button" aria-label="Close">${ic('close')}</button><div class="p-body"></div></aside>
+  </div>
+</div>`;
+}
 
 /* ---------- pages ---------- */
 const totals = {
@@ -223,7 +231,7 @@ function home() {
       <h1 class="rise" style="--i:1">Every chemistry note,<br><span class="gradient-text">1000 to 4000&nbsp;Level.</span></h1>
       <p class="lead rise" style="--i:2">${totals.files} lecture notes and tutorials and ${totals.papers} past papers, organised by course and syllabus section. Each section links the exact textbook chapters, hand-picked videos and the best free resources.</p>
       <div class="hero-cta rise" style="--i:3">
-        <a class="btn btn-primary" href="${u('map/')}">${ic('map')}Explore the Chemistry Map${ic('arrow', 'arrow')}</a>
+        <a class="btn btn-primary" href="${u('map/')}">${ic('atom')}Explore the Chemistry Map${ic('arrow', 'arrow')}</a>
         <a class="btn btn-ghost" href="${u('levels/2000/')}">${ic('grid')}Browse courses</a>
       </div>
       <div class="stats rise" style="--i:4">
@@ -241,6 +249,8 @@ function home() {
 </section>
 <div class="marquee" aria-hidden="true"><div class="marquee-track">${[...formulas, ...formulas].map(f => `<span class="formula">${esc(f)}</span>`).join('')}</div></div>
 
+<section class="section atom-sec"><div class="container">${atomBlock()}</div></section>
+
 <section class="section">
   <div class="container">
     <div class="section-head"><div><span class="eyebrow">Pick your level</span><h2>Four years, one map</h2></div><p>Each level page lists its courses by semester. Every course opens into its syllabus sections, with notes, tutorials, past papers and references.</p></div>
@@ -252,25 +262,6 @@ function home() {
         <p>${esc(LEVELS[l].blurb.split('. ')[0].replace(/\.$/, ''))}.</p>
         <div class="meta"><span><b>${cs.length}</b> courses</span>${nf.length ? `<span><b>${nf.filter(isFile).length}</b> notes</span><span><b>${nf.filter(f => f.kind === 'paper').length}</b> papers</span>` : '<span><b>syllabus</b> + free textbooks</span>'}</div>
       </a>`; }).join('')}
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:20px">
-  <div class="container">
-    <div class="card" style="padding:clamp(22px,4vw,44px);overflow:hidden">
-      <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:30px;align-items:center" class="map-teaser">
-        <div>
-          <span class="eyebrow">Chemistry Map</span>
-          <h2>See how every topic connects</h2>
-          <p class="muted">Every course floats as a bubble in its level column. Hover one to light up what it builds on and what it leads to, then click to zoom in: its sections pop out around it with their notes, papers and chapters.</p>
-          <div class="chips" style="margin:18px 0 24px">${Object.entries(STREAMS).map(([k, s]) => `<a class="chip" style="--c:${s.color}" href="${u('map/')}#stream:${k}"><span class="dot"></span>${s.name}</a>`).join('')}</div>
-          <a class="btn btn-primary" href="${u('map/')}">${ic('map')}Open the map${ic('arrow', 'arrow')}</a>
-        </div>
-        <div aria-hidden="true" style="position:relative;aspect-ratio:1">
-          ${miniMap()}
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -301,9 +292,8 @@ function home() {
   return layout({
     title: `${SITE} · UoP Chemistry Hub, 1000–4000 Level`, desc: 'Unofficial study hub for University of Peradeniya chemistry: notes, tutorials, past papers, textbook chapters and videos for every course from 1000 to 4000 Level.',
     body, page: 'home',
-    head: `<style>@media (max-width:860px){.map-teaser{grid-template-columns:1fr!important}}</style>`,
     scripts: `<script type="application/json" id="elements-data">${JSON.stringify(elements.map(e => ({ z: e.z, s: e.s, n: e.n, m: e.m, g: e.g })))}</script>
-<script src="${u('assets/js/pt-core.js')}?v=${VER}" defer></script><script src="${u('assets/js/hero.js')}?v=${VER}" defer></script>`,
+<script src="${u('assets/js/pt-core.js')}?v=${VER}" defer></script><script src="${u('assets/js/hero.js')}?v=${VER}" defer></script>${exploreScripts()}`,
   });
 }
 
@@ -382,10 +372,10 @@ function coursePage(c) {
 </div></section>
 <section class="section-tight" id="papers"><div class="container">
   <div class="section-head"><div><span class="eyebrow">Exam practice</span><h2>Past papers</h2></div>${papers.length ? `<p>${plural(papers.length, 'paper')}${c.years ? ', ' + esc(c.years) : ''}. Click to preview.</p>` : ''}</div>
-  ${papers.length ? `<div class="paper-grid">${papers.map(p => `<button class="paper" data-pdf="${p.id}" data-title="${esc(c.code + ' · ' + p.t)}"><span class="yr">${esc(p.yr || '—')}</span><span><b>${esc(paperTitle(p))}</b><small>${p.ans ? 'with answers · ' : ''}${mb(p.sz)}${p.pg ? ' · ' + plural(p.pg, 'page') : ''}</small></span></button>`).join('')}</div>` : `<div class="empty">${ic('papers')}No past papers in the collection for this course yet.</div>`}
+  ${papers.length ? paperGrid(c, papers) : `<div class="empty">${ic('papers')}No past papers in the collection for this course yet.</div>`}
 </div></section>
 ${allRefs.length ? `<section class="section-tight"><div class="container"><div class="section-head"><div><span class="eyebrow">Read</span><h2>Textbook chapters</h2></div><p>The chapters that match this syllabus. Free books open directly; others link to the catalogue record.</p></div><div class="refs">${allRefs.map(refRow).join('')}</div></div></section>` : ''}
-${vids.length ? `<section class="section-tight"><div class="container"><div class="section-head"><div><span class="eyebrow">Watch</span><h2>Video lectures</h2></div><p>One pick per section. More on each section page.</p></div><div class="videos">${vids.map(videoCard).join('')}</div></div></section>` : ''}
+<section class="section-tight"><div class="container"><div class="section-head"><div><span class="eyebrow">Watch</span><h2>Video lectures</h2></div><p>One pick per section. Each section page has more, plus a YouTube search for that topic.</p></div>${vids.length ? `<div class="videos">${vids.map(videoCard).join('')}</div>` : ''}<div class="yt-row">${ytMore(c.title)}</div></div></section>
 ${ext.length ? `<section class="section-tight"><div class="container"><div class="section-head"><div><span class="eyebrow">Explore</span><h2>Websites and tools</h2></div></div><div class="links">${ext.map(xlink).join('')}</div></div></section>` : ''}`;
   write(`${cUrl(c)}index.html`, layout({ title: `${c.code} ${c.title} · ${SITE}`, desc: c.tagline, active: 'l' + c.level, body, page: 'course' }));
 }
@@ -393,15 +383,15 @@ ${ext.length ? `<section class="section-tight"><div class="container"><div class
 function sectionPage(c, s, idx) {
   const st = streamOf(c), fs_ = filesOf(c.code, s.name);
   const notes = fs_.filter(f => f.kind === 'note'), tuts = fs_.filter(f => f.kind === 'tutorial' || f.kind === 'answers');
-  const vids = videos[`${c.code}|${s.name}`] || [];
+  const vids = videos[`${c.code}|${s.name}`] || [], papers = papersOf(c.code);
   const ext = (COURSE_EXT[c.code] || []).map(extItem).filter(Boolean);
   const from = LINKED.filter(l => l.b.s === s && l.b.c === c), to = LINKED.filter(l => l.a.s === s && l.a.c === c);
   const prev = c.sections[idx - 1], next = c.sections[idx + 1];
   const tabs = [
-    ['notes', 'Notes', 'file', notes.length], ['tutorials', 'Tutorials', 'pencil', tuts.length], ['chapters', 'Chapters', 'book', s.refs.length],
+    ['notes', 'Notes', 'file', notes.length], ['tutorials', 'Tutorials', 'pencil', tuts.length], ['papers', 'Past papers', 'papers', papers.length], ['chapters', 'Chapters', 'book', s.refs.length],
     ['videos', 'Videos', 'video', vids.length], ['websites', 'Websites', 'globe', ext.length],
-  ].filter(t => t[0] !== 'tutorials' || t[3]);
-  const first = (tabs.find(t => t[3]) || tabs[0])[0];
+  ].filter(t => !['tutorials', 'papers'].includes(t[0]) || t[3]);
+  const first = (tabs.find(t => t[3] && t[0] !== 'papers') || tabs[0])[0];
   const relRow = (l, dir) => { const o = dir === 'from' ? l.a : l.b; const oc = streamOf(o.c); return `<a class="rel" style="--c:${oc.color}" href="${u(sUrl(o.c, o.s))}"><span class="dot"></span><span><span style="color:var(--white);font-weight:700">${esc(o.s.name)}</span><small>${o.c.code} · ${o.c.level} Level</small></span><em>${esc(l.idea)}</em></a>`; };
   const panelFiles = (list, emptyMsg) => list.length ? `<div class="files" data-filter-root>${list.length > 8 ? `<div class="toolbar" style="margin-bottom:6px"><label class="input">${ic('search')}<input type="search" data-q placeholder="Filter ${list.length} files…" aria-label="Filter files"></label></div>` : ''}${list.map(f => fileRow(f, c)).join('')}</div>` : `<div class="empty">${ic('file')}${emptyMsg}</div>`;
   const body = `
@@ -419,8 +409,9 @@ function sectionPage(c, s, idx) {
   <div class="tabs" role="tablist" aria-label="Section resources">${tabs.map(([k, t, i, n]) => `<button class="tab" role="tab" id="tab-${k}" aria-controls="p-${k}" aria-selected="${k === first}">${ic(i)}${t}<span class="n">${n}</span></button>`).join('')}</div>
   <div class="tabpanel" role="tabpanel" id="p-notes" aria-labelledby="tab-notes"${first === 'notes' ? '' : ' hidden'}>${panelFiles(notes, 'No lecture notes in the folder for this section yet. The Chapters tab lists the matching textbook chapters.')}</div>
   ${tuts.length ? `<div class="tabpanel" role="tabpanel" id="p-tutorials" aria-labelledby="tab-tutorials"${first === 'tutorials' ? '' : ' hidden'}>${panelFiles(tuts, '')}</div>` : ''}
+  ${papers.length ? `<div class="tabpanel" role="tabpanel" id="p-papers" aria-labelledby="tab-papers"${first === 'papers' ? '' : ' hidden'}><p class="muted" style="margin:0 0 14px">${plural(papers.length, 'past paper')} for ${c.code}${c.years ? ', ' + esc(c.years) : ''}. Papers cover the whole course, so look for the questions on ${esc(s.name.toLowerCase())}. Click to preview.</p>${paperGrid(c, papers)}</div>` : ''}
   <div class="tabpanel" role="tabpanel" id="p-chapters" aria-labelledby="tab-chapters"${first === 'chapters' ? '' : ' hidden'}>${s.refs.length ? `<div class="refs">${s.refs.map(refRow).join('')}</div>` : `<div class="empty">${ic('book')}No chapter mapped yet for this section.</div>`}</div>
-  <div class="tabpanel" role="tabpanel" id="p-videos" aria-labelledby="tab-videos"${first === 'videos' ? '' : ' hidden'}>${vids.length ? `<div class="videos">${vids.map(videoCard).join('')}</div>` : `<div class="empty">${ic('video')}No videos picked for this section.</div>`}</div>
+  <div class="tabpanel" role="tabpanel" id="p-videos" aria-labelledby="tab-videos"${first === 'videos' ? '' : ' hidden'}>${vids.length ? `<div class="videos">${vids.map(videoCard).join('')}</div>` : `<div class="empty">${ic('video')}No videos picked for this section yet. The YouTube search below finds lectures on it.</div>`}<div class="yt-row">${ytMore(s.name)}</div></div>
   <div class="tabpanel" role="tabpanel" id="p-websites" aria-labelledby="tab-websites"${first === 'websites' ? '' : ' hidden'}>${ext.length ? `<div class="links">${ext.map(xlink).join('')}</div>` : `<div class="empty">${ic('globe')}No websites listed.</div>`}</div>
 </div></section>
 ${from.length || to.length ? `<section class="section-tight"><div class="container"><div class="section-head"><div><span class="eyebrow">Connections</span><h2>How this topic connects</h2></div></div><div class="related">
@@ -435,24 +426,22 @@ ${from.length || to.length ? `<section class="section-tight"><div class="contain
 }
 
 function mapPage() {
-  const data = {
-    streams: Object.entries(STREAMS).map(([id, s]) => ({ id, name: s.name, color: s.color, blurb: s.blurb, courses: courses.filter(c => c.stream === id).map(c => c.code) })),
-    courses: courses.map(c => ({ id: c.code, title: c.title, level: c.level, stream: c.stream, url: cUrl(c), tagline: c.tagline, about: c.about, sem: c.sem ? semLabel(c.sem).replace('Semester ', '').replace('Semesters ', '') : '', credits: c.credits, counts: { notes: nFiles(c), papers: c.papers }, sections: c.sections.map(s => sid(c, s)), pre: c.pre })),
-    sections: courses.flatMap(c => c.sections.map(s => ({ id: sid(c, s), code: c.code, name: s.name, url: sUrl(c, s), summary: s.summary, topics: s.topics, hours: s.hours, counts: s.counts, notes: filesOf(c.code, s.name).slice(0, 6).map(f => [f.id, f.t]), refs: s.refs.slice(0, 3).map(r => [r.book, r.label, r.url]) }))),
-    links: LINKED.map(l => [sid(l.a.c, l.a.s), sid(l.b.c, l.b.s), l.idea]),
-  };
   const body = `
 <section class="map-head"><div class="container">
   <div class="mh-row">
-    <div><span class="eyebrow">Chemistry Map</span><h1>How every course connects</h1><p class="muted"><span class="fine">Each bubble is a course. Hover to see what it builds on and leads to. Click to zoom in and open its sections.</span><span class="touch">Tap a bubble to see its links. Tap it again to zoom in.</span></p></div>
-    <label class="input map-find">${ic('search')}<input type="search" placeholder="Find a course or topic…" aria-label="Find a course or topic"></label>
+    <div><span class="eyebrow">Chemistry Map</span><h1>How every course connects</h1>
+      <p class="muted" data-for="atom">Each shell is a level and every electron is a course. <span class="fine">Drag to spin the atom, hover an electron to see its links, click it to open it.</span><span class="touch">Drag to spin the atom and tap an electron to open it.</span></p>
+      <p class="muted" data-for="bubbles" hidden><span class="fine">Each bubble is a course. Hover to see what it builds on and leads to. Click to zoom in and open its sections.</span><span class="touch">Tap a bubble to see its links. Tap it again to zoom in.</span></p></div>
+    <div class="view-switch" role="group" aria-label="Map view"><button type="button" data-view="atom" aria-pressed="true">${ic('atom')}3D atom</button><button type="button" data-view="bubbles" aria-pressed="false">${ic('map')}Bubbles</button></div>
   </div>
-  <div class="map-tools">
+  <div class="map-tools" data-for="bubbles" hidden>
+    <label class="input map-find">${ic('search')}<input type="search" placeholder="Find a course or topic…" aria-label="Find a course or topic"></label>
     <div class="chips" aria-label="Highlight a stream">${Object.entries(STREAMS).map(([k, s]) => `<button class="chip" style="--c:${s.color}" data-stream-chip="${k}" aria-pressed="false"><span class="dot"></span>${s.name}</button>`).join('')}</div>
     <div class="map-key"><span><i style="--k:var(--violet-text)"></i>builds on</span><span><i style="--k:var(--volt)"></i>leads to</span></div>
   </div>
 </div></section>
-<div class="universe" aria-label="Courses by level">
+<div class="container atom-host" data-for="atom">${atomBlock({ head: false, hash: true })}</div>
+<div class="universe" data-for="bubbles" hidden aria-label="Courses by level">
   <svg class="u-lines" aria-hidden="true"></svg>
   ${[1000, 2000, 3000, 4000].map(l => `<div class="u-col" data-level="${l}"><div class="u-head"><b>${l}</b><span>${LEVELS[l].sub}</span></div><div class="u-field"></div></div>`).join('')}
   <div class="u-tip" hidden></div>
@@ -461,9 +450,8 @@ function mapPage() {
   <div class="f-stage"><svg class="f-lines" aria-hidden="true"></svg><div class="f-bubbles"></div></div>
   <button class="btn btn-sm u-back" type="button">← Back to map</button>
   <aside class="f-panel" aria-live="polite"><div class="p-body"></div></aside>
-</div>
-<script type="application/json" id="map-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
-  write('map/index.html', layout({ title: `Chemistry Map · ${SITE}`, desc: 'Interactive map of every UoP chemistry course, showing how courses and topics connect from 1000 to 4000 Level.', active: 'map', body, page: 'map', scripts: `<script src="${u('assets/js/map.js')}?v=${VER}" defer></script>`, head: '<style>.site-footer{margin-top:24px}</style>' }));
+</div>`;
+  write('map/index.html', layout({ title: `Chemistry Map · ${SITE}`, desc: 'Interactive 3D atom of every UoP chemistry course: four shells for the four levels, with courses as electrons and their connections.', active: 'map', body, page: 'map', scripts: `${exploreScripts()}<script src="${u('assets/js/map.js')}?v=${VER}" defer></script>`, head: '<style>.site-footer{margin-top:24px}</style>' }));
 }
 
 function papersPage() {
@@ -565,7 +553,7 @@ function aboutPage() {
     <li><b>${totals.courses} courses</b> from 1000 to 4000 Level, each with a short description and a full summary written from the department's <i>Course Contents 2021–2022</i> handbook.</li>
     <li><b>${totals.sections} syllabus sections</b>, each with its topics, lecture notes, tutorials with answers, matching textbook chapters, videos and websites.</li>
     <li><b>${totals.files} notes and tutorials</b> and <b>${totals.papers} past papers</b>, stored in Google Drive and viewable in the browser.</li>
-    <li>A <a href="${u('map/')}">Chemistry Map</a> showing how topics build on each other across the four years.</li>
+    <li>A <a href="${u('map/')}">Chemistry Map</a>: a 3D atom whose four shells are the four levels and whose electrons are the courses, plus a bubble view, showing how topics build on each other across the four years.</li>
   </ul>
   <h2>What is not here</h2>
   <p>Textbooks are never uploaded. Each section cites the real book and chapter, and links to a free edition (OpenStax, LibreTexts) where one exists, or to the catalogue record otherwise. Lecture recordings, seminar and research material, older duplicate versions, and any personal work (reports, assignments, files carrying student names or index numbers) were left out on purpose.</p>
@@ -591,7 +579,7 @@ function notFound() {
 
 function searchIndex() {
   const idx = [
-    ['Home', 'Start page', ''], ['Chemistry Map', 'Interactive map of all courses and sections', 'map/'], ['Past paper bank', `${totals.papers} papers`, 'papers/'], ['Library', `${totals.books} textbooks`, 'library/'],
+    ['Home', 'Start page', ''], ['Chemistry Map', '3D atom of all courses: four level shells, courses as electrons', 'map/'], ['Past paper bank', `${totals.papers} papers`, 'papers/'], ['Library', `${totals.books} textbooks`, 'library/'],
     ['Periodic table', '118 elements', 'periodic-table/'], ['Resources', 'Open courses, tools and journals', 'resources/'], ['About', 'Sources and credits', 'about/'],
     ...[1000, 2000, 3000, 4000].map(l => [`${l} Level`, LEVELS[l].sub, `levels/${l}/`]),
   ].map(([t, s, url]) => ({ t, s, u: url, k: 'page' }));
@@ -614,6 +602,7 @@ function searchIndex() {
 /* ---------- run ---------- */
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync(path.join(ROOT, 'src/assets'), path.join(OUT, 'assets'), { recursive: true });
+write('assets/js/map-data.js', `window.MAP_DATA=${JSON.stringify(mapData()).replace(/</g, '\\u003c')};`);
 write('.nojekyll', '');
 write('index.html', home());
 [1000, 2000, 3000, 4000].forEach(levelPage);

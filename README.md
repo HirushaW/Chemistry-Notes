@@ -9,7 +9,8 @@ An unofficial study site for the B.Sc. chemistry courses of the University of Pe
 - **38 courses** and **88 syllabus sections**, each with a short description and a full summary written from the department's *Course Contents 2021–2022* handbook.
 - **509 lecture notes and tutorials** and **219 past papers**, stored in Google Drive and previewed in the page.
 - Textbook chapters for every section (free OpenStax and LibreTexts editions where they exist), **261 YouTube lectures** and a checked list of websites, tools and journals.
-- An interactive **Chemistry Map** that shows how topics build on each other across the four years.
+- An interactive **Chemistry Map**: a 3D atom whose four shells are the four levels and whose electrons are the courses (also on the home page), plus a bubble view, showing how topics build on each other across the four years.
+- Past papers on every course page, in a **Past papers** tab on every section page, and in the atom's course panel; a YouTube search link for every course and section.
 - An interactive **periodic table** with PubChem data and property heat maps.
 
 Textbooks are never uploaded: each section cites the book and chapter and links to a free edition or catalogue record.
@@ -39,7 +40,8 @@ Every push to `main` builds and deploys the site through GitHub Actions (`.githu
 | `src/data/resources.mjs` | External websites, open courses, tools and journals |
 | `src/data/links.mjs` | Topic links drawn on the Chemistry Map |
 | `src/data/elements.json` | PubChem periodic table data (public domain) |
-| `src/assets/` | CSS, JavaScript (map, 3D periodic table hero, background, search) and images |
+| `src/assets/` | CSS, JavaScript (3D atom, bubble map, 3D periodic table hero, background, search) and images |
+| `dist/assets/js/map-data.js` | Generated: course, section, paper and video data shared by the atom and the bubble map |
 | `tools/check-links.mjs` | Checks every external URL |
 
 ## Sources and credits
