@@ -49,6 +49,9 @@
   const thread = svg.querySelector('.sp-thread'), strand = svg.querySelector('.sp-strand'), splat = svg.querySelector('.sp-splat');
   const bug = svg.querySelector('.sp-bug'), legs = [...svg.querySelectorAll('.sp-legs path')];
   wrap.append(svg);
+  // lite effects: no glow filter on the body (the blur is redrawn every frame as the spider moves)
+  const plain = () => { if (document.documentElement.dataset.perf === 'lite') bug.removeAttribute('filter'); };
+  plain(); document.addEventListener('perfchange', plain);
 
   /* ---------- state ---------- */
   // ax: where the thread is fixed along the top; sx, sy: the spider; L: thread length. k scales to the table's width.
@@ -58,13 +61,21 @@
   let mode = 'enter', tm = 0, t = 0, busyUntil = 0;
   let el = null, tile = null, snapFrom = null, splatAt = null, splatT = 9;
 
-  function measure() {
+  // the hero, the table and the spider's box scroll together, so their offsets are measured again only when the
+  // layout changes or every half second (the table sways); the target tile, which rides the wave, is read each frame
+  let laidOut = -9;
+  function layout() {
     const w = wrap.getBoundingClientRect(), h = hero.getBoundingClientRect(), g = grid.getBoundingClientRect();
     W = w.width; k = clamp(W / 560, .62, 1);
     top = h.top - w.top + 2;                                // the thread hangs from the top of the hero
     rest = max(top + 52 * k, g.top - w.top - 70 * k);       // and the spider waits a clear gap above the table
+    laidOut = t;
+  }
+  new ResizeObserver(() => { laidOut = -9; }).observe(wrap);
+  function measure() {
+    if (t - laidOut > .5) layout();
     LT = rest - top - (mode === 'lift' ? 8 * k : 0);          // it hitches itself up a little as it pulls
-    if (el) { const r = el.getBoundingClientRect(); tile = { x: r.left - w.left + r.width / 2, y: r.top - w.top + r.height / 2 }; }
+    if (el) { const w = wrap.getBoundingClientRect(), r = el.getBoundingClientRect(); tile = { x: r.left - w.left + r.width / 2, y: r.top - w.top + r.height / 2 }; }
   }
   // the head (where the web leaves) and the end of the abdomen (where the thread holds), in wrap pixels
   const at = (lx, ly) => [sx + k * (lx * cos(phi) - ly * sin(phi)), sy + k * (lx * sin(phi) + ly * cos(phi))];

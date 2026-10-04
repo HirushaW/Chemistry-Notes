@@ -23,7 +23,8 @@ window.PT = (() => {
   // A smooth sine wave that travels diagonally across the table, writing --w (0..1) on every tile.
   // It runs at full strength when the visitor is idle and calms down while they interact.
   function wave(items, { root, idleMs = 1600, active = .12, speed = 1, spread = 1 } = {}) {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !items.length) return { stop() {} };
+    const lite = () => document.documentElement.dataset.perf === 'lite';   // lite effects tier: a still table
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || lite() || !items.length) return { stop() {} };
     let amp = 0, target = 1, lastMove = -1e9, visible = true, raf = 0;
     const host = root || items[0].el.parentElement;
     host.addEventListener('pointermove', () => { lastMove = performance.now(); }, { passive: true });
@@ -32,7 +33,7 @@ window.PT = (() => {
     document.addEventListener('visibilitychange', () => { if (!document.hidden && visible && !raf) raf = requestAnimationFrame(frame); });
     function frame(t) {
       raf = 0;
-      if (!visible || document.hidden) return;
+      if (!visible || document.hidden || lite()) return;
       target = t - lastMove > idleMs ? 1 : active;
       amp += (target - amp) * .035;                     // ease the strength in and out
       const p = t / 1000 * 2.1 * speed;
