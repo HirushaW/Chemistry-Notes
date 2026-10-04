@@ -94,7 +94,7 @@
 
     function resize() {
       const r = stage.getBoundingClientRect(); if (!r.width) return;
-      W = r.width; H = r.height; const DPR = Math.min(devicePixelRatio || 1, 2);
+      W = r.width; H = r.height; const DPR = Math.min(devicePixelRatio || 1, document.documentElement.dataset.perf === 'lite' ? 1 : 1.5);
       cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
       ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
       R = Math.min(W * (W < 640 ? .44 : .41), H * .45); es = W < 640 ? .86 : 1;

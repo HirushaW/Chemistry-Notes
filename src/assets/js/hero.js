@@ -37,25 +37,28 @@
   grid.addEventListener('pointerleave', () => tip.classList.remove('show'));
 
   if (RM) { grid.style.animation = 'none'; return; }
-
-  // the idle wave: tiles rise and zoom in a smooth diagonal swell
   const hero = wrap.closest('.hero') || wrap;
+  const lite = document.documentElement.dataset.perf === 'lite';
+  if (lite) grid.style.animation = 'none';            // lite effects: a still table, no sway, wave or tilt
+
+  // the idle wave: tiles rise and zoom in a smooth diagonal swell (CSS animations driven by PT.wave)
   PT.wave(items, { root: hero, idleMs: 1400, active: .3, speed: .8, spread: 1 });
 
-  // pointer parallax
-  let tx = 0, ty = 0, cx = 0, cy = 0, run = true;
+  // pointer parallax: written straight to the table's transform (no inherited variables, so the tiles are not restyled),
+  // and the loop runs only while the tilt is still catching up with the pointer
+  let tx = 0, ty = 0, cx = 0, cy = 0, praf = 0, run = false;
+  const tilt = () => {
+    praf = 0; cx += (tx - cx) * .08; cy += (ty - cy) * .08;
+    grid.style.transform = `translate(-50%, -50%) rotateX(${(54 + cx).toFixed(2)}deg) rotateZ(${(-26 + cy).toFixed(2)}deg)`;
+    if (run && Math.abs(tx - cx) + Math.abs(ty - cy) > .03) praf = requestAnimationFrame(tilt);
+  };
+  const follow = () => { if (!praf && run && !lite) praf = requestAnimationFrame(tilt); };
   hero.addEventListener('pointermove', ev => {
     const r = hero.getBoundingClientRect();
-    tx = ((ev.clientY - r.top) / r.height - .5) * -10; ty = ((ev.clientX - r.left) / r.width - .5) * 12;
+    tx = ((ev.clientY - r.top) / r.height - .5) * -10; ty = ((ev.clientX - r.left) / r.width - .5) * 12; follow();
   }, { passive: true });
-  hero.addEventListener('pointerleave', () => { tx = ty = 0; });
-  const loop = () => {
-    cx += (tx - cx) * .06; cy += (ty - cy) * .06;
-    grid.style.setProperty('--rx', cx.toFixed(2) + 'deg'); grid.style.setProperty('--ry', cy.toFixed(2) + 'deg');
-    if (run) requestAnimationFrame(loop);
-  };
-  new IntersectionObserver(([en]) => { const was = run; run = en.isIntersecting; if (run && !was) requestAnimationFrame(loop); }).observe(wrap);
-  requestAnimationFrame(loop);
+  hero.addEventListener('pointerleave', () => { tx = ty = 0; follow(); });
+  new IntersectionObserver(([en]) => { run = en.isIntersecting; follow(); }).observe(wrap);
 
   // the spider (spider.js) picks the element to spotlight and names it on the ticker through this hook
   const setTicker = e => { if (ticker) ticker.innerHTML = `<b style="color:${PT.color(e)}">${e.s}</b> ${e.n} · Z ${e.z} · ${e.g}`; };

@@ -175,4 +175,26 @@
     else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
     else if (e.key === 'Enter') { const a = $$('.palette-item', pal)[active]; if (a) { e.preventDefault(); a.click(); pal.close(); } }
   });
+
+  /* effects tier: the footer switch, and a one-off frame-rate check that moves a struggling device to lite */
+  const fxBtns = $$('[data-fx]');
+  const markFx = () => fxBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.fx === root.dataset.perf)));
+  markFx();
+  fxBtns.forEach(b => b.addEventListener('click', () => { try { localStorage.setItem('fx', b.dataset.fx); localStorage.removeItem('fx-auto'); } catch {} location.reload(); }));
+  let chosen = null; try { chosen = localStorage.getItem('fx'); } catch {}
+  if (!chosen && !RM && root.dataset.perf === 'full') {
+    const gaps = []; let prev = 0;
+    const probe = t => {
+      if (document.hidden) { prev = 0; return requestAnimationFrame(probe); }
+      if (prev) gaps.push(t - prev); prev = t;
+      if (gaps.length < 150) return requestAnimationFrame(probe);
+      const slow = gaps.slice().sort((a, b) => a - b)[Math.floor(gaps.length * .75)];
+      if (slow > 40) {   // a quarter of frames under ~25 fps: lighten the page for this device from now on
+        root.dataset.perf = 'lite'; markFx();
+        try { localStorage.setItem('fx-auto', 'lite'); } catch {}
+        doc.dispatchEvent(new Event('perfchange'));
+      }
+    };
+    setTimeout(() => requestAnimationFrame(probe), 1500);
+  }
 })();

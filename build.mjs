@@ -64,6 +64,7 @@ function layout({ title, desc, active = '', body, scripts = '', head = '', page 
   return `<!doctype html>
 <html lang="en" data-base="${BASE}">
 <head>
+<script>/* effects tier: lite on weak devices (or when chosen in the footer, or after a slow frame-rate check) */(function(){var d=document.documentElement,n=navigator,v;try{v=localStorage.getItem('fx')||localStorage.getItem('fx-auto')}catch(e){}if(!v){var c=n.connection;v=(c&&c.saveData)||(n.deviceMemory&&n.deviceMemory<=2)||(n.hardwareConcurrency&&n.hardwareConcurrency<=2)?'lite':'full'}d.dataset.perf=v})()</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
@@ -107,7 +108,7 @@ ${body}
     <div><h4>Explore</h4><ul><li><a href="${u('map/')}">Chemistry Map</a></li><li><a href="${u('papers/')}">Past paper bank</a></li><li><a href="${u('library/')}">Library</a></li><li><a href="${u('periodic-table/')}">Periodic table</a></li><li><a href="${u('resources/')}">Resources</a></li></ul></div>
     <div><h4>Site</h4><ul><li><a href="${u('about/')}">About and sources</a></li><li><a href="${REPO}/issues" target="_blank" rel="noopener">Report a problem</a></li><li><a href="${REPO}" target="_blank" rel="noopener">Source on GitHub</a></li></ul></div>
   </div>
-  <div class="foot-bottom"><div class="container"><span>Unofficial student project · Notes belong to their lecturers and are shared for study only</span><span>Built ${new Date().toISOString().slice(0, 10)}</span></div></div>
+  <div class="foot-bottom"><div class="container"><span>Unofficial student project · Notes belong to their lecturers and are shared for study only</span><span class="fx-switch" role="group" aria-label="Visual effects">Effects <button type="button" data-fx="full">Full</button><button type="button" data-fx="lite">Lite</button></span><span>Built ${new Date().toISOString().slice(0, 10)}</span></div></div>
 </footer>
 <dialog class="viewer" id="viewer" aria-label="Document preview">
   <div class="viewer-bar"><b>Document</b><a class="btn btn-sm btn-ghost" data-v="dl" href="#" target="_blank" rel="noopener">${ic('download')}<span>Download</span></a><a class="btn btn-sm" data-v="open" href="#" target="_blank" rel="noopener">${ic('ext')}<span>Drive</span></a><button class="btn btn-sm btn-icon" data-close aria-label="Close">${ic('close')}</button></div>
