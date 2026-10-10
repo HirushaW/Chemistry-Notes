@@ -2,6 +2,7 @@
   "name": "chemistry-notes",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "description": "Unofficial study hub for University of Peradeniya chemistry, 1000–4000 Level.",
   "type": "module",
   "scripts": {

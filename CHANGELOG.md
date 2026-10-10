@@ -24,4 +24,7 @@ The first stable release: the site as it is live today.
 - Effects tiers: Full, or Lite (chosen automatically on weak devices or after a frame-rate check, or from the footer switch) for smooth use on low-end phones and laptops.
 - Deployed to Vercel (live site) and GitHub Pages (mirror) on every push to `main`.
 
+### License
+- Open source under the MIT License, with a security policy (`SECURITY.md`).
+
 [1.0.0]: https://github.com/HirushaW/Chemistry-Notes/releases/tag/v1.0.0
