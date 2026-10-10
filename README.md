@@ -69,3 +69,11 @@ Every push to `main` is deployed twice:
 - Notes and papers belong to their lecturers and the department and are shared only for study. To report a problem or request a removal, [open an issue](https://github.com/HirushaW/Chemistry-Notes/issues).
 - Element data: PubChem Periodic Table, NCBI (public domain).
 - Videos are embedded from YouTube and remain on their creators' channels.
+
+## License
+
+The website code is released under the [MIT License](LICENSE). The licence does not
+cover the material listed in **Sources and credits** above: lecture notes and past
+papers (linked from Google Drive) belong to their lecturers and the department, the
+course structure comes from the department's handbook, and videos remain with their
+creators.
