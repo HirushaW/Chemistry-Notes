@@ -9,7 +9,7 @@
   for (const e of data) {
     const [row, col] = PT.pos(e.z), b = document.createElement('button');
     waveItems.push({ el: b, col, row: row > 8 ? row - 1.6 : row });
-    b.className = 'cell'; b.type = 'button'; b.style.gridRow = row; b.style.gridColumn = col;
+    b.className = 'cell'; b.type = 'button'; b.style.gridRow = row; b.style.gridColumn = col; b.style.setProperty('--d', row + col);
     b.style.setProperty('--c', PT.color(e));
     b.innerHTML = `<span class="z">${e.z}</span><span class="sym">${e.s}</span><span class="nm">${e.n}</span>`;
     b.setAttribute('aria-label', `${e.n}, ${e.z}`); b.dataset.z = e.z;

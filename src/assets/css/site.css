@@ -53,9 +53,10 @@ p { margin: 0 0 1em; }
 .bg-noise { position: absolute; inset: 0; opacity: .05; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
 /* ---------- header ---------- */
-.site-header { position: sticky; top: 0; z-index: 50; height: var(--header-h); border-bottom: 1px solid var(--line); view-transition-name: site-header; }
-/* the glass sits on a layer behind the header: a backdrop-filter on the header itself would trap the fixed phone menu inside the 68px bar */
-.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(7, 10, 38, .72); -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); pointer-events: none; }
+/* the glass is on the header itself: its view-transition-name isolates it, so a blur on a child layer would see nothing of the
+   page behind. A backdrop-filter also makes the header the containing block of its descendants, so the phone menu below is
+   positioned against the header (absolute, with its own height) and never `fixed`, which would squeeze it into the 68px bar */
+.site-header { position: sticky; top: 0; z-index: 50; height: var(--header-h); border-bottom: 1px solid var(--line); background: rgba(7, 10, 38, .72); -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); view-transition-name: site-header; }
 .site-header .container { height: 100%; display: flex; align-items: center; gap: 18px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--white); font-family: var(--f-display); font-weight: 800; font-size: 1.06rem; letter-spacing: -.02em; white-space: nowrap; }
 .brand:hover { color: var(--white); }
@@ -81,7 +82,7 @@ p { margin: 0 0 1em; }
 .menu-btn svg { width: 22px; height: 22px; margin: auto; }
 @media (max-width: 1020px) {
   .menu-btn { display: grid; place-items: center; }
-  .nav { position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0; flex-direction: column; align-items: stretch; gap: 2px; padding: 16px; background: rgba(7, 10, 38, .97); backdrop-filter: blur(20px); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .25s, transform .3s var(--ease), visibility .25s; overflow-y: auto; }
+  .nav { position: absolute; top: 100%; left: 0; right: 0; height: calc(100vh - var(--header-h)); height: calc(100dvh - var(--header-h)); flex-direction: column; align-items: stretch; gap: 2px; padding: 16px; background: rgb(7, 10, 38); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .25s, transform .3s var(--ease), visibility .25s; overflow-y: auto; }
   body.nav-open .nav { opacity: 1; visibility: visible; transform: none; }
   .nav a, .nav button.navbtn { padding: 14px 12px; font-size: 1.05rem; text-align: left; }
   .dd-menu { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; background: none; border: 0; padding: 0 0 0 12px; min-width: 0; }
@@ -160,9 +161,11 @@ hr.glow { border: 0; height: 1px; margin: 0; background: linear-gradient(90deg, 
 /* load-in for above-the-fold content */
 .rise { animation: rise .9s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms + 80ms); }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-/* reveal */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: calc(var(--i, 0) * 60ms); }
+/* reveal on scroll: rise and settle with a soft spring; app.js removes both classes once an element has settled */
+.reveal { opacity: 0; transform: translateY(28px) scale(.97); transition: opacity .7s var(--ease), transform .95s cubic-bezier(.16, 1, .3, 1); transition-delay: calc(var(--i, 0) * 70ms); }
 .reveal.in { opacity: 1; transform: none; }
+.eyebrow::before { transform-origin: 0 50%; transition: transform .8s var(--ease) .3s; }
+.reveal:not(.in) .eyebrow::before { transform: scaleX(0); }
 
 /* ---------- hero ---------- */
 .hero { position: relative; padding: clamp(36px, 7vw, 84px) 0 40px; overflow: hidden; }
@@ -625,6 +628,56 @@ body.focus-open { overflow: hidden; }
 .mol { position: absolute; pointer-events: none; opacity: .5; animation: float 14s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-16px) rotate(8deg); } }
 
+/* ---------- motion ---------- */
+/* page changes: the old page lifts away, the new one rises in (the header stays put through its own transition name) */
+::view-transition-old(root) { animation: vt-out .2s cubic-bezier(.4, 0, 1, 1) both; }
+::view-transition-new(root) { animation: vt-in .45s cubic-bezier(.2, .8, .2, 1) .08s both; }
+@keyframes vt-out { to { opacity: 0; transform: translateY(-10px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(16px); } }
+/* reading progress: a line under the header fills as the page scrolls (browsers with scroll-driven animations) */
+@supports (animation-timeline: scroll()) {
+  .site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--violet), var(--cyan) 55%, var(--volt)); box-shadow: 0 0 12px rgba(203, 255, 46, .55); pointer-events: none; animation: read-progress linear both; animation-timeline: scroll(root block); }
+  @keyframes read-progress { to { transform: scaleX(1); } }
+}
+/* desktop nav: the underline slides in from the left on hover and leaves to the right */
+@media (min-width: 1021px) {
+  .nav > a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; border-radius: 2px; background: var(--volt); box-shadow: 0 0 12px var(--volt); transform: scaleX(0); transform-origin: 100% 50%; transition: transform .35s var(--ease); }
+  .nav > a:hover::after, .nav > a[aria-current="page"]::after { transform: scaleX(1); transform-origin: 0 50%; }
+}
+/* phone menu: the links follow the panel in, one after another */
+@media (max-width: 1020px) {
+  body.nav-open .nav > * { animation: nav-in .45s var(--ease) backwards; }
+  body.nav-open .nav > :nth-child(1) { animation-delay: 60ms; }
+  body.nav-open .nav > :nth-child(2) { animation-delay: 95ms; }
+  body.nav-open .nav > :nth-child(3) { animation-delay: 130ms; }
+  body.nav-open .nav > :nth-child(4) { animation-delay: 165ms; }
+  body.nav-open .nav > :nth-child(5) { animation-delay: 200ms; }
+  body.nav-open .nav > :nth-child(6) { animation-delay: 235ms; }
+  body.nav-open .nav > :nth-child(7) { animation-delay: 270ms; }
+  body.nav-open .nav > :nth-child(n + 8) { animation-delay: 305ms; }
+}
+@keyframes nav-in { from { opacity: 0; transform: translateY(12px); } }
+/* primary buttons: a band of light sweeps across on hover */
+.btn-primary::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .6) 50%, transparent 65%); transform: translateX(-120%); pointer-events: none; }
+.btn-primary:hover::after { transform: translateX(120%); transition: transform .75s var(--ease); }
+.stat { transition: transform .35s var(--spring), border-color .3s; }
+.stat:hover { transform: translateY(-3px); border-color: var(--line-3); }
+/* dialogs fade and sink away when they close, and their backdrop fades both ways (browsers with discrete transitions) */
+dialog.viewer, dialog.palette { opacity: 0; transform: scale(.97) translateY(8px); transition: opacity .2s ease-in, transform .2s ease-in, overlay .2s allow-discrete, display .2s allow-discrete; }
+dialog.viewer[open], dialog.palette[open] { opacity: 1; transform: none; }
+dialog::backdrop { opacity: 0; transition: opacity .25s, overlay .25s allow-discrete, display .25s allow-discrete; }
+dialog[open]::backdrop { opacity: 1; }
+@starting-style { dialog[open]::backdrop { opacity: 0; } }
+/* entrances: hero tiles drop onto the table along the diagonal; periodic-table cells cascade in the same order */
+.pt3d .el { animation: tile-in .7s cubic-bezier(.16, 1, .3, 1) backwards; animation-delay: calc(var(--d, 0) * 16ms + 120ms); }
+@keyframes tile-in { from { opacity: 0; translate: 0 0 calc(var(--t) * 3.5); } }
+.ptable .cell { animation: cell-in .55s cubic-bezier(.16, 1, .3, 1) backwards; animation-delay: calc(var(--d, 0) * 12ms + 60ms); }
+@keyframes cell-in { from { opacity: 0; translate: 0 16px; scale: .88; } }
+/* hero: a soft glow follows the mouse (hero.js moves it by transform) */
+.hero > .container { position: relative; z-index: 1; }
+.hero-glow { position: absolute; left: -320px; top: -320px; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(circle, rgba(134, 61, 255, .2), rgba(94, 231, 255, .07) 40%, transparent 68%); opacity: 0; pointer-events: none; transition: opacity .6s; will-change: transform; }
+.hero-glow.on { opacity: 1; transition: opacity .6s, transform .5s cubic-bezier(.2, .8, .2, 1); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
@@ -634,12 +687,20 @@ body.focus-open { overflow: hidden; }
 /* lite effects tier (html[data-perf="lite"]): weak devices, detected in the page head or chosen in the footer.
    No live blurs, no drifting background, no infinite decorative animations; everything else looks the same */
 [data-perf="lite"] .aurora span, [data-perf="lite"] .mol, [data-perf="lite"] .bub, [data-perf="lite"] .bub-in, [data-perf="lite"] .f-orbit, [data-perf="lite"] .gradient-text, [data-perf="lite"] .pt3d { animation: none; }
-[data-perf="lite"] .site-header::before, [data-perf="lite"] .nav, [data-perf="lite"] .atom-wrap, [data-perf="lite"] .atom-ctrl, [data-perf="lite"] .f-panel.atom-panel, [data-perf="lite"] .u-focus { -webkit-backdrop-filter: none; backdrop-filter: none; }
+[data-perf="lite"] .site-header, [data-perf="lite"] .nav, [data-perf="lite"] .atom-wrap, [data-perf="lite"] .atom-ctrl, [data-perf="lite"] .f-panel.atom-panel, [data-perf="lite"] .u-focus { -webkit-backdrop-filter: none; backdrop-filter: none; }
 [data-perf="lite"] dialog::backdrop { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(4, 6, 24, .9); }
-[data-perf="lite"] .site-header::before { background: rgba(7, 10, 38, .95); }
+[data-perf="lite"] .site-header { background: rgba(7, 10, 38, .95); }
 [data-perf="lite"] .nav { background: rgb(7, 10, 38); }
 [data-perf="lite"] .atom-wrap { background: rgba(5, 7, 27, .82); }
 [data-perf="lite"] .atom-ctrl, [data-perf="lite"] .f-panel.atom-panel { background: rgb(11, 15, 46); }
+/* lite keeps motion simple: reveals and page changes only fade, no entrance cascades, no button sweep */
+[data-perf="lite"] .reveal { transform: none; }
+[data-perf="lite"] .pt3d .el, [data-perf="lite"] .ptable .cell { animation: none; }
+[data-perf="lite"] .btn-primary::after { display: none; }
+html[data-perf="lite"]::view-transition-old(root) { animation: vt-fade-out .15s both; }
+html[data-perf="lite"]::view-transition-new(root) { animation: vt-fade-in .2s both; }
+@keyframes vt-fade-out { to { opacity: 0; } }
+@keyframes vt-fade-in { from { opacity: 0; } }
 .fx-switch { display: inline-flex; gap: 4px; align-items: center; font: 500 .72rem var(--f-mono); color: var(--faint); }
 .fx-switch button { padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line-2); background: none; color: var(--muted); font: inherit; cursor: pointer; }
 .fx-switch button[aria-pressed="true"] { background: var(--volt); border-color: var(--volt); color: var(--void); }
