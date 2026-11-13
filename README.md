@@ -4,7 +4,7 @@ An unofficial study site for the B.Sc. chemistry courses of the University of Pe
 
 **Live site:** [chemistry-notes-sigma.vercel.app](https://chemistry-notes-sigma.vercel.app) · mirror on [GitHub Pages](https://hirushaw.github.io/Chemistry-Notes/)
 
-**Current version:** 1.0.0 (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** 1.1.0 (see [CHANGELOG.md](CHANGELOG.md))
 
 ## Features
 
@@ -14,6 +14,7 @@ An unofficial study site for the B.Sc. chemistry courses of the University of Pe
 - **The Chemistry Atom.** A 3D atom on the home page and the Chemistry Map: the nucleus is chemistry, the four coloured shells are the four levels and every electron is a course, coloured by its stream. Turn it any way, scroll or pinch to zoom into the inner shells, filter by stream and level, and open any course with its notes, papers and videos.
 - **Bubble map.** The same courses as floating bubbles, showing what each course builds on and leads to.
 - **Periodic tables.** A 3D periodic table on the home page that rolls with a gentle wave while a small glowing spider webs up one element at a time, and a full interactive table with PubChem data and property heat maps.
+- **Motion.** Animated page changes, a reading-progress line under the header, spring-settled scroll reveals, and entrances for the periodic tables and the atom, which assembles itself the first time it is seen.
 - **Fast on any device.** An *Effects: Full / Lite* switch in the footer. Lite is chosen automatically on weak devices, or after a quick frame-rate check, and drops the expensive effects while keeping the look.
 - **Search** across courses, sections, topics, notes, papers and elements (Ctrl K).
 

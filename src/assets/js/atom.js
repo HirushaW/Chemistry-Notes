@@ -52,7 +52,8 @@
     for (const sh of SHELLS) {
       sh.S = mul(ry(sh.node), rx(sh.inc)); sh.phase = 0;
       sh.color = LC[sh.lv] || '#dcdfff'; sh.rgb = rgbOf(sh.color);
-      sh.vis = 1; sh.visT = 1; sh.hl = 1; sh.hlT = 1;
+      sh.vis = RM ? 1 : 0; sh.visT = 1; sh.hl = 1; sh.hlT = 1;
+      sh.delay = .15 + (sh.n - 1) * .2;   // intro: the shells draw in from the nucleus outwards
     }
 
     /* ---------- electrons = courses, coloured by their stream (the shells keep the level colours) ---------- */
@@ -67,7 +68,7 @@
         el.innerHTML = `<span class="e-core">${c.id.replace(/^CHE\s*/, '')}</span>`;
         layer.appendChild(el);
         const a = sh.n * .7 + i / list.length * TAU;
-        const e = { c, el, sh, rgb: rgbOf(colorOf(c)), a, aT: a, show: true, vis: 1, hl: 1, hlT: 1, pop: 1, x: 0, y: 0, z: 0, zn: 1 };
+        const e = { c, el, sh, rgb: rgbOf(colorOf(c)), a, aT: a, show: true, vis: RM ? 1 : 0, delay: sh.n * .2 + .25 + i * .04, hl: 1, hlT: 1, pop: 1, x: 0, y: 0, z: 0, zn: 1 };
         E.push(e); byId.set(c.id, e);
       });
     }
@@ -135,11 +136,11 @@
       const G = qmat(view);
       for (const sh of SHELLS) {
         if (!RM) sh.phase += sh.speed * dt * rate;
-        sh.vis += (sh.visT - sh.vis) * ease(dt, 6); sh.hl += (sh.hlT - sh.hl) * ease(dt, 7);
+        sh.vis += ((RM || time >= sh.delay ? sh.visT : 0) - sh.vis) * ease(dt, 6); sh.hl += (sh.hlT - sh.hl) * ease(dt, 7);
         sh.M = mul(G, sh.S);
       }
       for (const e of E) {
-        e.vis += ((e.show ? 1 : 0) - e.vis) * ease(dt, 7);
+        e.vis += ((e.show && (RM || time >= e.delay) ? 1 : 0) - e.vis) * ease(dt, 7);   // the first time, electrons appear one after another
         e.hl += (e.hlT - e.hl) * ease(dt, 8);
         e.pop += ((e.c.id === hovered || e.c.id === selected ? 1.22 : 1) - e.pop) * ease(dt, 12);
         e.a += wrapA(e.aT - e.a) * ease(dt, 3.6);         // glide to the new slot when a filter changes
@@ -175,7 +176,8 @@
       });
     }
     function drawNucleus(G) {
-      const rn = R * .1, pulse = 1 + (RM ? 0 : sin(time * 1.7) * .04), rh = rn * zoom * 2.9 * pulse;
+      const g = RM ? 1 : Math.min(1, time / .7), grow = 1 + 2.4 * (g - 1) ** 3 + 1.4 * (g - 1) ** 2;   // the nucleus pops in with a small overshoot
+      const rn = R * .1 * grow, pulse = 1 + (RM ? 0 : sin(time * 1.7) * .04), rh = rn * zoom * 2.9 * pulse;
       const halo = ctx.createRadialGradient(ox, oy, 0, ox, oy, rh);
       halo.addColorStop(0, 'rgba(203,255,46,.3)'); halo.addColorStop(.35, 'rgba(134,61,255,.22)'); halo.addColorStop(1, 'rgba(134,61,255,0)');
       ctx.fillStyle = halo; ctx.beginPath(); ctx.arc(ox, oy, rh, 0, TAU); ctx.fill();

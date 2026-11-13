@@ -2,6 +2,26 @@
 
 All notable changes to this project are recorded here. Versions follow [Semantic Versioning](https://semver.org).
 
+## [1.1.0] — 2026-11-13
+
+Motion: richer animations and transitions across the site, plus two fixes found while testing them.
+
+### Added
+- Page changes animate: the old page lifts away and the new one rises in, while the header stays put.
+- A reading-progress line under the header fills as the page scrolls (browsers with scroll-driven animations).
+- Scroll reveals rise and settle with a soft spring; section headings now reveal too, and each eyebrow line draws in.
+- Entrances: the hero's periodic-table tiles drop into place along the diagonal, the periodic-table page's cells cascade in, and the Chemistry Atom assembles itself the first time it is seen (the nucleus pops in, the shells draw outwards, the electrons appear one after another).
+- The search palette and the PDF viewer fade out when they close, and their backdrop fades both ways.
+- A band of light sweeps across primary buttons on hover; desktop nav links get a sliding underline; the phone menu's links follow the panel in one after another; a soft glow follows the mouse across the hero.
+
+### Fixed
+- The header's glass blur works again. Since the phone-menu fix it sat on a child layer, where the header's view-transition name hid the page from it, so content showed through unblurred. The blur is back on the header itself, and the phone menu is positioned against the header so it still opens full height.
+- Page-change animations no longer get skipped while the stylesheet is being re-fetched: the view-transition opt-in is now inline in every page's head.
+- Cards no longer inherit the reveal's stagger delay on their hover tilt.
+
+### Performance and accessibility
+- Every new effect is transform or opacity only. Lite mode keeps reveals and page changes as plain fades and drops the entrance cascades, the button sweep and the hero glow. Reduced motion shows everything at once, as before.
+
 ## [1.0.0] — 2026-10-10
 
 The first stable release: the site as it is live today.
@@ -27,4 +47,5 @@ The first stable release: the site as it is live today.
 ### License
 - Open source under the MIT License, with a security policy (`SECURITY.md`).
 
+[1.1.0]: https://github.com/HirushaW/Chemistry-Notes/releases/tag/v1.1.0
 [1.0.0]: https://github.com/HirushaW/Chemistry-Notes/releases/tag/v1.0.0

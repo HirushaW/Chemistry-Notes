@@ -11,7 +11,7 @@
   for (const e of data) {
     const [row, col] = PT.pos(e.z), el = document.createElement('a');
     el.className = 'el'; el.href = `${base}periodic-table/#${e.s}`;
-    el.style.gridRow = row; el.style.gridColumn = col;
+    el.style.gridRow = row; el.style.gridColumn = col; el.style.setProperty('--d', row + col);   // place on the diagonal, for the entrance cascade
     el.style.setProperty('--c', PT.color(e));
     el.innerHTML = `<i>${e.z}</i>${e.s}`;
     el.setAttribute('aria-label', `${e.n}, atomic number ${e.z}`);
@@ -41,7 +41,7 @@
   const lite = document.documentElement.dataset.perf === 'lite';
   if (lite) grid.style.animation = 'none';            // lite effects: a still table, no sway, wave or tilt
 
-  // the idle wave: tiles rise and zoom in a smooth diagonal swell (CSS animations driven by PT.wave)
+  // the idle wave: tiles rise and zoom in a smooth diagonal swell
   PT.wave(items, { root: hero, idleMs: 1400, active: .3, speed: .8, spread: 1 });
 
   // pointer parallax: written straight to the table's transform (no inherited variables, so the tiles are not restyled),
@@ -53,11 +53,18 @@
     if (run && Math.abs(tx - cx) + Math.abs(ty - cy) > .03) praf = requestAnimationFrame(tilt);
   };
   const follow = () => { if (!praf && run && !lite) praf = requestAnimationFrame(tilt); };
+  // a soft glow follows a mouse across the hero (its own layer, moved by transform only)
+  const glow = !lite && matchMedia('(pointer: fine)').matches ? hero.appendChild(Object.assign(document.createElement('div'), { className: 'hero-glow' })) : null;
   hero.addEventListener('pointermove', ev => {
     const r = hero.getBoundingClientRect();
     tx = ((ev.clientY - r.top) / r.height - .5) * -10; ty = ((ev.clientX - r.left) / r.width - .5) * 12; follow();
+    if (glow && ev.pointerType === 'mouse') {
+      glow.style.transform = `translate(${(ev.clientX - r.left).toFixed(0)}px, ${(ev.clientY - r.top).toFixed(0)}px)`;
+      // it appears where the mouse is, then trails it: the trailing transition only applies once it is on
+      if (!glow.classList.contains('on')) { void glow.offsetWidth; glow.classList.add('on'); }
+    }
   }, { passive: true });
-  hero.addEventListener('pointerleave', () => { tx = ty = 0; follow(); });
+  hero.addEventListener('pointerleave', () => { tx = ty = 0; follow(); glow?.classList.remove('on'); });
   new IntersectionObserver(([en]) => { run = en.isIntersecting; follow(); }).observe(wrap);
 
   // the spider (spider.js) picks the element to spotlight and names it on the ticker through this hook
