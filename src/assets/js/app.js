@@ -35,12 +35,18 @@
   }, { passive: true });
   doc.addEventListener('pointerout', e => { const c = e.target.closest?.('.card[data-tilt]'); if (c && !c.contains(e.relatedTarget)) c.style.transform = ''; });
 
-  /* reveal on scroll */
+  /* reveal on scroll: grid children and section headings rise in once, then get their own transitions back */
   $$('[data-stagger]').forEach(p => [...p.children].forEach((ch, i) => { ch.classList.add('reveal'); ch.style.setProperty('--i', Math.min(i, 12)); }));
+  $$('.section-head').forEach(h => [...h.children].forEach((ch, i) => { ch.classList.add('reveal'); ch.style.setProperty('--i', i); }));
   if ('IntersectionObserver' in window && !RM) {
-    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    const io = new IntersectionObserver(es => es.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target; el.classList.add('in'); io.unobserve(el);
+      // a settled element drops the reveal classes, so a card's tilt and hover do not inherit the reveal's delay
+      setTimeout(() => el.classList.remove('reveal', 'in'), 1200 + (+el.style.getPropertyValue('--i') || 0) * 70);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: .08 });
     $$('.reveal').forEach(el => io.observe(el));
-  } else $$('.reveal').forEach(el => el.classList.add('in'));
+  } else $$('.reveal').forEach(el => el.classList.remove('reveal'));
 
   /* counters */
   const counters = $$('[data-count]');

@@ -79,6 +79,7 @@ function layout({ title, desc, active = '', body, scripts = '', head = '', page 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="${u('assets/css/site.css')}?v=${VER}">
+<style>/* inline, so a page change can animate even while the stylesheet is still being re-fetched */@view-transition{navigation:auto}@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}</style>
 ${head}
 </head>
 <body data-page="${page}">
